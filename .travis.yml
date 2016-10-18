@@ -1,0 +1,22 @@
+language: node_js
+node_js:
+- 4.0
+before_install:
+- npm install -g gulp-cli
+install:
+- npm install
+after_success:
+- chmod +x ./bin/create-release-tag.sh
+- "./bin/create-release-tag.sh"
+branches:
+  except:
+  - "/^v/"
+deploy:
+  provider: heroku
+  api_key:
+    secure: oVtGCH2vBhMGePsCcZDZ9zn86TsESR62O1uZlH0ASQgXvQrL4EuDsUUReMNVQryCxl8CTsj+30nNuQT1Xz2TE1gJan0aY+TXZt0k16SCk4zoRYC+hTV7N71gFHXKAW0Zh8tiA4yT82qsHvyR/6y+FuqxGDDt7i86nITMn3VEqNwy9YZeMbs8F0fP+Pvkku7r7jk84uzzf2u1pUXRgu4ac+s1N1ByVJ0dBEjQC7UozmHL9rYL6LRMX69RxdzjBIEJFSeFEKsYxKhQbFZ3Cjh9RN/MByNyhx5G3dxpSCcm5uA2Q7dtFiR99d1vAHvWa5tgn0IMmDnjOHsZ6uMFdZKlATX4rN59FvX+HS3Wutkur1wk49NCUVYRwnaxQHgpSFcUc2EvHdJRR2jTOgzHWYwiPgqrocegCB4MgJkrx9iA8cBbXTUHDsmSdXqWAGXXBgySu1NgF4hQ+CqESyBLr6/t7dB5hLrh4k8Juf5oo/6WVsGVvu1oy8ETywhoYc/lWzTmVwFxm6J4RZW+QVIydi9tLOkR82X37/1uFO22b344DJoOaAsMjmZtWxMLJryNRKJplhnbtMVKjP5J3suGV8/1y2GcELcMOZGNvJFLn1CPk6uALWEkuLpPP9ltYqNVbMWSSzOsWjIjXsD6Ae2fTm52qiy8ChjVvdj9GaF421x+y4s=
+  app: lcc-sp-prototype-kit
+  on: master
+notifications:
+  email: false
+sudo: false

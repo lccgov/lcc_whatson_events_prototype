@@ -1,0 +1,414 @@
+<div id="ctl00_m_g_65442288_1df9_44af_af02_ce5d92340a46">
+	
+
+<div id="eventresults-ctl00_m_g_65442288_1df9_44af_af02_ce5d92340a46" class="topOfResultsContainer row" data-bind="css: {row: !hideFilterPanel()}">
+    <div class="col-xs-12">
+        <div class="col-xs-12 eventsFilterSortContainer removeSidePadding">
+            <div class="eventsFilter col-md-3" id="eventsFilter" data-bind="visible: !hideFilterPanel()">
+                <div class="eventsFilterHeader">
+                    <h2><span class="iconTwenty iconLeft filterIcon"></span>Filters</h2>
+                       <a class="reset" data-bind="click:resetFiltersClick"><span class="resetIcon"></span>Reset Filters</a>
+                    <a id="closeIcon">Close</a>
+                </div>
+                <div class="eventsFilterType first">
+                    <h3>Search by Keyword</h3>
+                    <div class="input-group searchForm">
+                        <label class="sr-only" for="event-q">Keyword Search</label>
+                        <input class="form-control" id="event-q" type="text" placeholder="Search by name" data-bind="textInput: q, enterKey: generateNewQuery">
+                        <span class="input-group-btn">
+                            <button id="search-events" class="btn btn-lg btn-primary" type="button" data-bind="click: generateNewQuery"><span class="sr-only">Search</span></button>
+                        </span>
+                    </div>
+                    <!-- /input-group -->
+                </div>
+                <div class="eventsFilterType">
+                    <h3>
+                        <label for="location">LOCATION</label></h3>
+                    <div class="location"><input class="mapIcon" id="location" data-bind="value: location, addressAutocomplete: {}, attr: { 'data-lat': lat, 'data-lng': lng }, enterKey: locationEnterKeyClick" data-lat="" data-lng="" placeholder="Enter a location" autocomplete="off"></div>
+                    <div class="distance"><select class="form-control" id="radius" data-bind="options: availableRadius, optionsText: 'name', optionsValue: 'value', value: radius, event: { change: radiusChange }"><option value="">Distance (All)</option><option value="3">Within 3 miles</option><option value="5">Within 5 miles</option><option value="7">Within 7 miles</option><option value="9">Within 9 miles</option></select></div>
+                </div>
+                <div class="eventsFilterType">
+                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                        
+                                <div class="panel panel-default">
+                                    <div class="panel-heading" id="heading1" role="tab">
+                                        <h2 class="panel-title">
+                                            <a class="collapsed" role="button" aria-expanded="false" aria-controls="collapse1" href="#collapse1" data-toggle="collapse" data-parent="#accordion">CATEGORIES</a>
+                                        </h2>
+                                    </div>
+                                    <div class="panel-collapse collapse" id="collapse1" role="tabpanel" aria-labelledby="heading1">
+                                        <div class="panel-body">
+                                            <div class="check" id="categories">
+                                                <!-- ko foreach: categories -->
+                                                <label>
+                                                    <input type="checkbox" data-bind="attr: { value: $data.value }, checked: $data.selected, click: $parent.filterClick" value="Arts, Film and Music">
+                                                    <span data-bind="text: $data.name">Arts, Film and Music</span>
+                                                </label>
+                                                
+                                                <label>
+                                                    <input type="checkbox" data-bind="attr: { value: $data.value }, checked: $data.selected, click: $parent.filterClick" value="Comedy">
+                                                    <span data-bind="text: $data.name">Comedy</span>
+                                                </label>
+                                                
+                                                <label>
+                                                    <input type="checkbox" data-bind="attr: { value: $data.value }, checked: $data.selected, click: $parent.filterClick" value="Exhibitions">
+                                                    <span data-bind="text: $data.name">Exhibitions</span>
+                                                </label>
+                                                
+                                                <label>
+                                                    <input type="checkbox" data-bind="attr: { value: $data.value }, checked: $data.selected, click: $parent.filterClick" value="Families">
+                                                    <span data-bind="text: $data.name">Families</span>
+                                                </label>
+                                                
+                                                <label>
+                                                    <input type="checkbox" data-bind="attr: { value: $data.value }, checked: $data.selected, click: $parent.filterClick" value="Festivals, Fairs and Markets">
+                                                    <span data-bind="text: $data.name">Festivals, Fairs and Markets</span>
+                                                </label>
+                                                
+                                                <label>
+                                                    <input type="checkbox" data-bind="attr: { value: $data.value }, checked: $data.selected, click: $parent.filterClick" value="Film">
+                                                    <span data-bind="text: $data.name">Film</span>
+                                                </label>
+                                                
+                                                <label>
+                                                    <input type="checkbox" data-bind="attr: { value: $data.value }, checked: $data.selected, click: $parent.filterClick" value="Somme 100">
+                                                    <span data-bind="text: $data.name">Somme 100</span>
+                                                </label>
+                                                
+                                                <label>
+                                                    <input type="checkbox" data-bind="attr: { value: $data.value }, checked: $data.selected, click: $parent.filterClick" value="Sports">
+                                                    <span data-bind="text: $data.name">Sports</span>
+                                                </label>
+                                                
+                                                <label>
+                                                    <input type="checkbox" data-bind="attr: { value: $data.value }, checked: $data.selected, click: $parent.filterClick" value="Talks">
+                                                    <span data-bind="text: $data.name">Talks</span>
+                                                </label>
+                                                
+                                                <label>
+                                                    <input type="checkbox" data-bind="attr: { value: $data.value }, checked: $data.selected, click: $parent.filterClick" value="Theatre">
+                                                    <span data-bind="text: $data.name">Theatre</span>
+                                                </label>
+                                                
+                                                <label>
+                                                    <input type="checkbox" data-bind="attr: { value: $data.value }, checked: $data.selected, click: $parent.filterClick" value="Tours">
+                                                    <span data-bind="text: $data.name">Tours</span>
+                                                </label>
+                                                
+                                                <label>
+                                                    <input type="checkbox" data-bind="attr: { value: $data.value }, checked: $data.selected, click: $parent.filterClick" value="Walks and nature">
+                                                    <span data-bind="text: $data.name">Walks and nature</span>
+                                                </label>
+                                                
+                                                <label>
+                                                    <input type="checkbox" data-bind="attr: { value: $data.value }, checked: $data.selected, click: $parent.filterClick" value="Workshops">
+                                                    <span data-bind="text: $data.name">Workshops</span>
+                                                </label>
+                                                <!-- /ko -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                        <div class="panel panel-default">
+                            <div class="panel-heading" id="headingLast" role="tab">
+                                <h2 class="panel-title">
+                                    <a class="collapsed" role="button" aria-expanded="false" aria-controls="collapseLast" href="#collapseLast" data-toggle="collapse" data-parent="#accordion">DATE</a>
+                                </h2>
+                            </div>
+                            <div class="panel-collapse collapse" id="collapseLast" role="tabpanel" aria-labelledby="headingLast">
+                                <div class="panel-body">
+                                    <ul id="date-range">
+                                        <li><a href="#" data-bind="click: allDatesClick, style: { 'background-color': isAllDatesSelected() ? '#ECF0F1' : '#FFF' }" style="background-color: rgb(236, 240, 241);">All Dates</a></li>
+                                        <!-- ko foreach: dates -->
+                                        <li><a href="#" data-bind="text: $data.name, style: { 'background-color': $data.selected() === true ? '#ECF0F1' : '#FFF' }, click: $parent.dataRangeClick" style="background-color: rgb(255, 255, 255);">Today</a></li>
+                                        
+                                        <li><a href="#" data-bind="text: $data.name, style: { 'background-color': $data.selected() === true ? '#ECF0F1' : '#FFF' }, click: $parent.dataRangeClick" style="background-color: rgb(255, 255, 255);">Tomorrow</a></li>
+                                        
+                                        <li><a href="#" data-bind="text: $data.name, style: { 'background-color': $data.selected() === true ? '#ECF0F1' : '#FFF' }, click: $parent.dataRangeClick" style="background-color: rgb(255, 255, 255);">This Week</a></li>
+                                        
+                                        <li><a href="#" data-bind="text: $data.name, style: { 'background-color': $data.selected() === true ? '#ECF0F1' : '#FFF' }, click: $parent.dataRangeClick" style="background-color: rgb(255, 255, 255);">This Weekend</a></li>
+                                        
+                                        <li><a href="#" data-bind="text: $data.name, style: { 'background-color': $data.selected() === true ? '#ECF0F1' : '#FFF' }, click: $parent.dataRangeClick" style="background-color: rgb(255, 255, 255);">Next Week</a></li>
+                                        
+                                        <li><a href="#" data-bind="text: $data.name, style: { 'background-color': $data.selected() === true ? '#ECF0F1' : '#FFF' }, click: $parent.dataRangeClick" style="background-color: rgb(255, 255, 255);">This Month</a></li>
+                                        <!-- /ko -->
+                                        <li>
+                                            <h4>Enter your own dates</h4>
+                                            <input id="from" data-bind="datepicker: startdate, datepickerOptions: { minDate: new Date(), dateFormat: 'dd/mm/yy' }" class="searchDate hasDatepicker" type="text" placeholder="Start Date">
+                                            <input id="to" data-bind="datepicker: enddate, datepickerOptions: { minDate: new Date(), dateFormat: 'dd/mm/yy' }" class="searchDate hasDatepicker" type="text" placeholder="End Date">
+                                        </li>
+                                    </ul>
+                                    <a id="update-search" class="btn btn-primary" href="#" data-bind="click: customDateClick">Update</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="eventsFilterType" id="filterCloseButton">
+                    <a class="scroll btn btn-blue" href="#">Show Me Results</a>
+                </div>
+            </div>
+            <div class="contentBackground col-md-9" data-bind="css: {'col-md-9': !hideFilterPanel(), 'col-xs-12':hideFilterPanel() }">
+                <div class="eventsSearchSort">
+                    <div class="mapToggle" data-bind="visible: displayOptions() === 'Both'">
+                        <a class="btn active" id="listViewToggle" href="#" data-view="List" data-bind="css: { 'active': view() === 'List' }, click: changeViewClick"><span class="iconTwenty iconLeft listIcon"></span>List View</a>
+                        <a class="btn btn-toggle-right" id="mapViewToggle" href="#" data-view="Map" data-bind="css: { 'active': view() === 'Map' }, click: changeViewClick"><span class="iconTwenty iconLeft mapIcon"></span>Map View</a>
+                    </div>
+                    <div id="filterhide">
+                        <a class="btn btn-primary" href="#eventsFilter">Refine</a>
+                    </div>
+                    <div class="pull-right">
+                        
+                    <div class="mapToggle relDate" data-bind="visible: view() !== 'Map'">
+                            <a class="btn active" id="relevanceSort" data-sort="relevance" href="#" data-bind="css: { 'active': sort() !== 'date' }, click: changeSortClick">Relevance</a>
+                            <a class="btn btn-toggle-right" id="dateSort" data-sort="date" href="#" data-bind="css: { 'active': sort() === 'date' }, click: changeSortClick">Date</a>
+                        </div></div>
+                    <div class="clear"></div>
+                </div>
+                <div id="loading" data-bind="visible: showLoadingScreen" style="display: none;">
+                    <span class="loadingImage"></span>
+                    <p><span>Hold tight! </span>We're just loading something.</p>                    
+                </div>
+                <div class="eventSearchResults" id="eventSearchResultsList" data-bind="visible: view() === 'List' &amp;&amp; !showLoadingScreen()">
+                    <div id="paging">
+                        <h2>Results (<span data-bind="text: eventCount">245</span>)</h2>
+                        <div class="pagingNumber page_navigation">
+                            <!-- -->
+                        </div>
+                        <!-- ROD TODO: style filters for map -->
+                      <div class="selectedFilters">
+                            <!-- ko foreach: selectedFilters -->
+                            <a href="#" data-bind="text: name, click: $parent.deselectFilterClick">Classes</a>
+                              <a href="#" data-bind="text: name, click: $parent.deselectFilterClick">Another one</a>
+                            <!-- /ko -->
+                        </div>
+                        <div class="inner">
+                            <ul class="content" data-bind="visible: eventCount() > 0, template: { name: eventResultTemplate, foreach: events }">
+    <li>
+        <a data-bind="attr: { href: $parent.getDetailsUrl($data.id, $data.title) }" href="eventDetails.html">
+            <div class="eventsContentPod">
+                <div class="eventsContentPodWrapper">
+                    <h3 data-bind="text: title">Craft and Chat at Yeadon Library</h3>
+                    <div class="dateFull"><span class="dateTime"><span class="iconTwenty iconLeft dateIcon"></span><span data-bind="text: moment(start).format('Do MMMM YYYY h:mm a')">19th September 2016 2:00 pm</span> - <span data-bind="text: moment(end).format('Do MMMM YYYY h:mm a')">19th September 2016 3:30 pm</span></span>
+                        <!-- ko if: numberOfAdditionalDatesAvailable > 0 -->
+                        <span class="additionaldates">&amp; <!-- ko text: numberOfAdditionalDatesAvailable -->9<!-- /ko --> MORE DATES</span>
+                        <!-- /ko -->
+                    </div>
+                    <p data-bind="text: summary">Suitable for adults</p>
+                    <p data-bind="text: venueName">Yeadon library </p>
+                </div>
+            </div>
+        </a>
+    </li>
+
+    <li>
+        <a data-bind="attr: { href: $parent.getDetailsUrl($data.id, $data.title) }" href="/Pages/eventdetails.aspx?eventId=whatson-682">
+            <div class="eventsContentPod">
+                <div class="eventsContentPodWrapper">
+                    <h3 data-bind="text: title">Lego Club at Scholes Library</h3>
+                    <div class="dateFull"><span class="dateTime"><span class="iconTwenty iconLeft dateIcon"></span><span data-bind="text: moment(start).format('Do MMMM YYYY h:mm a')">19th September 2016 2:30 pm</span> - <span data-bind="text: moment(end).format('Do MMMM YYYY h:mm a')">19th September 2016 3:30 pm</span></span>
+                        <!-- ko if: numberOfAdditionalDatesAvailable > 0 -->
+                        <span class="additionaldates">&amp; <!-- ko text: numberOfAdditionalDatesAvailable -->5<!-- /ko --> MORE DATES</span>
+                        <!-- /ko -->
+                    </div>
+                    <p data-bind="text: summary">Suitable for children aged 6+</p>
+                    <p data-bind="text: venueName">Scholes library </p>
+                </div>
+            </div>
+        </a>
+    </li>
+
+    <li>
+        <a data-bind="attr: { href: $parent.getDetailsUrl($data.id, $data.title) }" href="/Pages/eventdetails.aspx?eventId=whatson-1057">
+            <div class="eventsContentPod">
+                <div class="eventsContentPodWrapper">
+                    <h3 data-bind="text: title">Open to Interpretation Conference</h3>
+                    <div class="dateFull"><span class="dateTime"><span class="iconTwenty iconLeft dateIcon"></span><span data-bind="text: moment(start).format('Do MMMM YYYY h:mm a')">20th September 2016 10:00 am</span> - <span data-bind="text: moment(end).format('Do MMMM YYYY h:mm a')">20th September 2016 5:00 pm</span></span>
+                        <!-- ko if: numberOfAdditionalDatesAvailable > 0 --><!-- /ko -->
+                    </div>
+                    <p data-bind="text: summary">A one day conference on interpreting museum collections.</p>
+                    <p data-bind="text: venueName">Leeds City Museum</p>
+                </div>
+            </div>
+        </a>
+    </li>
+
+    <li>
+        <a data-bind="attr: { href: $parent.getDetailsUrl($data.id, $data.title) }" href="/Pages/eventdetails.aspx?eventId=whatson-1155">
+            <div class="eventsContentPod">
+                <div class="eventsContentPodWrapper">
+                    <h3 data-bind="text: title">Little Lotherton Nature Walk</h3>
+                    <div class="dateFull"><span class="dateTime"><span class="iconTwenty iconLeft dateIcon"></span><span data-bind="text: moment(start).format('Do MMMM YYYY h:mm a')">20th September 2016 10:00 am</span> - <span data-bind="text: moment(end).format('Do MMMM YYYY h:mm a')">20th September 2016 12:00 pm</span></span>
+                        <!-- ko if: numberOfAdditionalDatesAvailable > 0 --><!-- /ko -->
+                    </div>
+                    <p data-bind="text: summary">Regular drop-in play sessions aimed at under-5s </p>
+                    <p data-bind="text: venueName">Lotherton Hall</p>
+                </div>
+            </div>
+        </a>
+    </li>
+
+    <li>
+        <a data-bind="attr: { href: $parent.getDetailsUrl($data.id, $data.title) }" href="/Pages/eventdetails.aspx?eventId=whatson-1206">
+            <div class="eventsContentPod">
+                <div class="eventsContentPodWrapper">
+                    <h3 data-bind="text: title">How to Promote Your Book</h3>
+                    <div class="dateFull"><span class="dateTime"><span class="iconTwenty iconLeft dateIcon"></span><span data-bind="text: moment(start).format('Do MMMM YYYY h:mm a')">20th September 2016 5:30 pm</span> - <span data-bind="text: moment(end).format('Do MMMM YYYY h:mm a')">20th September 2016 7:00 pm</span></span>
+                        <!-- ko if: numberOfAdditionalDatesAvailable > 0 --><!-- /ko -->
+                    </div>
+                    <p data-bind="text: summary">Learn how to promote your book, blog or short story with Diane M Hinds</p>
+                    <p data-bind="text: venueName">Central Library</p>
+                </div>
+            </div>
+        </a>
+    </li>
+
+    <li>
+        <a data-bind="attr: { href: $parent.getDetailsUrl($data.id, $data.title) }" href="/Pages/eventdetails.aspx?eventId=whatson-628">
+            <div class="eventsContentPod">
+                <div class="eventsContentPodWrapper">
+                    <h3 data-bind="text: title">Family History Drop In</h3>
+                    <div class="dateFull"><span class="dateTime"><span class="iconTwenty iconLeft dateIcon"></span><span data-bind="text: moment(start).format('Do MMMM YYYY h:mm a')">21st September 2016 10:00 am</span> - <span data-bind="text: moment(end).format('Do MMMM YYYY h:mm a')">21st September 2016 12:00 pm</span></span>
+                        <!-- ko if: numberOfAdditionalDatesAvailable > 0 -->
+                        <span class="additionaldates">&amp; <!-- ko text: numberOfAdditionalDatesAvailable -->3<!-- /ko --> MORE DATES</span>
+                        <!-- /ko -->
+                    </div>
+                    <p data-bind="text: summary">Help and guidance with our family history librarians</p>
+                    <p data-bind="text: venueName">Leeds Central Library</p>
+                </div>
+            </div>
+        </a>
+    </li>
+
+    <li>
+        <a data-bind="attr: { href: $parent.getDetailsUrl($data.id, $data.title) }" href="/Pages/eventdetails.aspx?eventId=whatson-1184">
+            <div class="eventsContentPod">
+                <div class="eventsContentPodWrapper">
+                    <h3 data-bind="text: title">Chapel Allerton Rhymetime</h3>
+                    <div class="dateFull"><span class="dateTime"><span class="iconTwenty iconLeft dateIcon"></span><span data-bind="text: moment(start).format('Do MMMM YYYY h:mm a')">22nd September 2016 10:30 am</span> - <span data-bind="text: moment(end).format('Do MMMM YYYY h:mm a')">22nd September 2016 11:00 am</span></span>
+                        <!-- ko if: numberOfAdditionalDatesAvailable > 0 -->
+                        <span class="additionaldates">&amp; <!-- ko text: numberOfAdditionalDatesAvailable -->6<!-- /ko --> MORE DATES</span>
+                        <!-- /ko -->
+                    </div>
+                    <p data-bind="text: summary">Rhymetime for under fives </p>
+                    <p data-bind="text: venueName">Chapel Allerton library </p>
+                </div>
+            </div>
+        </a>
+    </li>
+
+    <li>
+        <a data-bind="attr: { href: $parent.getDetailsUrl($data.id, $data.title) }" href="/Pages/eventdetails.aspx?eventId=whatson-751">
+            <div class="eventsContentPod">
+                <div class="eventsContentPodWrapper">
+                    <h3 data-bind="text: title">Temple Newsam - discovery tours</h3>
+                    <div class="dateFull"><span class="dateTime"><span class="iconTwenty iconLeft dateIcon"></span><span data-bind="text: moment(start).format('Do MMMM YYYY h:mm a')">22nd September 2016 11:00 am</span> - <span data-bind="text: moment(end).format('Do MMMM YYYY h:mm a')">22nd September 2016 12:00 pm</span></span>
+                        <!-- ko if: numberOfAdditionalDatesAvailable > 0 -->
+                        <span class="additionaldates">&amp; <!-- ko text: numberOfAdditionalDatesAvailable -->10<!-- /ko --> MORE DATES</span>
+                        <!-- /ko -->
+                    </div>
+                    <p data-bind="text: summary">Join a friendly guide for a tour of this 500 year old house</p>
+                    <p data-bind="text: venueName">Temple Newsam</p>
+                </div>
+            </div>
+        </a>
+    </li>
+
+    <li>
+        <a data-bind="attr: { href: $parent.getDetailsUrl($data.id, $data.title) }" href="/Pages/eventdetails.aspx?eventId=whatson-829">
+            <div class="eventsContentPod">
+                <div class="eventsContentPodWrapper">
+                    <h3 data-bind="text: title">Shop till you drop: The changing face of retail in Leeds</h3>
+                    <div class="dateFull"><span class="dateTime"><span class="iconTwenty iconLeft dateIcon"></span><span data-bind="text: moment(start).format('Do MMMM YYYY h:mm a')">22nd September 2016 11:00 am</span> - <span data-bind="text: moment(end).format('Do MMMM YYYY h:mm a')">22nd September 2016 3:00 pm</span></span>
+                        <!-- ko if: numberOfAdditionalDatesAvailable > 0 --><!-- /ko -->
+                    </div>
+                    <p data-bind="text: summary">Study day exploring retail history</p>
+                    <p data-bind="text: venueName">Abbey House Museum</p>
+                </div>
+            </div>
+        </a>
+    </li>
+
+    <li>
+        <a data-bind="attr: { href: $parent.getDetailsUrl($data.id, $data.title) }" href="/Pages/eventdetails.aspx?eventId=whatson-1169">
+            <div class="eventsContentPod">
+                <div class="eventsContentPodWrapper">
+                    <h3 data-bind="text: title">Contemporary Ceramics: Curator Talk</h3>
+                    <div class="dateFull"><span class="dateTime"><span class="iconTwenty iconLeft dateIcon"></span><span data-bind="text: moment(start).format('Do MMMM YYYY h:mm a')">22nd September 2016 2:00 pm</span> - <span data-bind="text: moment(end).format('Do MMMM YYYY h:mm a')">22nd September 2016 3:00 pm</span></span>
+                        <!-- ko if: numberOfAdditionalDatesAvailable > 0 --><!-- /ko -->
+                    </div>
+                    <p data-bind="text: summary">Join our Assistant Curator of Decorative Arts for a talk on contemporary ceramics in the collections at Leeds Museums and Galleries</p>
+                    <p data-bind="text: venueName">Lotherton Hall</p>
+                </div>
+            </div>
+        </a>
+    </li>
+</ul>
+                        </div>
+                        <div data-bind="visible: eventCount() === 0" style="display: none;">
+                            No results found. Please change search criteria.
+                        </div>
+                        <hr>
+                        <div class="paging">
+                            <div id="pager" class="light-theme simple-pagination"><ul><li class="active"><span class="current prev">Prev</span></li><li class="active"><span class="current">1</span></li><li><a href="#page-2" class="page-link">2</a></li><li><a href="#page-3" class="page-link">3</a></li><li><a href="#page-4" class="page-link">4</a></li><li><a href="#page-5" class="page-link">5</a></li><li class="disabled"><span class="ellipse">…</span></li><li><a href="#page-24" class="page-link">24</a></li><li><a href="#page-25" class="page-link">25</a></li><li><a href="#page-2" class="page-link next">Next</a></li></ul></div>
+                        </div>
+                    </div>
+                </div>
+                <div style="display: none" class="eventSearchResults" id="eventSearchResultsMap" data-bind="visible: view() === 'Map' ">
+                    <div class="selectedFilters">
+                        <!-- ko foreach: selectedFilters --><!-- /ko -->
+                    </div>
+                    <div id="googleMap"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script id="defaultEventResultTemplate" type="text/html">
+    <li>
+        <a data-bind="attr: { href: $parent.getDetailsUrl($data.id, $data.title) }">
+            <div class="eventsContentPod">
+                <div class="eventsContentPodWrapper">
+                    <h3 data-bind="text: title"></h3>
+                    <div class="dateFull"><span class="dateTime"><span class="iconTwenty iconLeft dateIcon"></span><span data-bind="text: moment(start).format('Do MMMM YYYY h:mm a')"></span> - <span data-bind="text: moment(end).format('Do MMMM YYYY h:mm a')"></span></span>
+                        <!-- ko if: numberOfAdditionalDatesAvailable > 0 -->
+                        <span class="additionaldates">&amp; <!-- ko text: numberOfAdditionalDatesAvailable --><!-- /ko --> MORE DATES</span>
+                        <!-- /ko -->
+                    </div>
+                    <p data-bind="text: summary"></p>
+                    <p data-bind="text: venueName"></p>
+                </div>
+            </div>
+        </a>
+    </li>
+</script>
+
+<script type="text/javascript" src="/_layouts/LCC.Events.SharePoint/Scripts/App/lib/require.js"></script>
+<script>
+    define('eventResultsConfig', function () {
+        return {
+            applyKnockOutToElementId: 'eventresults-ctl00_m_g_65442288_1df9_44af_af02_ce5d92340a46',
+            apiUrl: 'http://api.events.leeds.gov.uk/whatson',
+            searchRequest: {"q":"","startdate":"","enddate":"","sort":"","radius":"","view":"List","location":"","lat":"","lng":"","filters":[{"name":"Today","value":"Today","type":"date","selected":false},{"name":"Tomorrow","value":"Tomorrow","type":"date","selected":false},{"name":"This Week","value":"ThisWeek","type":"date","selected":false},{"name":"This Weekend","value":"ThisWeekend","type":"date","selected":false},{"name":"Next Week","value":"NextWeek","type":"date","selected":false},{"name":"This Month","value":"ThisMonth","type":"date","selected":false},{"name":"Arts, Film and Music","value":"Arts, Film and Music","type":"cat","selected":false},{"name":"Comedy","value":"Comedy","type":"cat","selected":false},{"name":"Exhibitions","value":"Exhibitions","type":"cat","selected":false},{"name":"Families","value":"Families","type":"cat","selected":false},{"name":"Festivals, Fairs and Markets","value":"Festivals, Fairs and Markets","type":"cat","selected":false},{"name":"Film","value":"Film","type":"cat","selected":false},{"name":"Somme 100","value":"Somme 100","type":"cat","selected":false},{"name":"Sports","value":"Sports","type":"cat","selected":false},{"name":"Talks","value":"Talks","type":"cat","selected":false},{"name":"Theatre","value":"Theatre","type":"cat","selected":false},{"name":"Tours","value":"Tours","type":"cat","selected":false},{"name":"Walks and nature","value":"Walks and nature","type":"cat","selected":false},{"name":"Workshops","value":"Workshops","type":"cat","selected":false}]},
+            pageSize: 10,
+            useDefaultTemplate: true,
+            additionalParams: '',
+            mapZoom: 12,
+            displayOptions: 'Both',
+            restrictionByOrganiser: '',
+            restrictionByVenue: '',
+            eventDetailsUrlTemplate: '/Pages/eventdetails.aspx?eventId={id}',
+            centreOnUsersPosition: false,
+            hideFilterPanel: false
+
+        };
+    });
+</script>
+<script type="text/javascript" src="/_layouts/LCC.Events.SharePoint/Scripts/App/EventResults-v2/main.js">
+    
+</script>
+
+
+
+</div>

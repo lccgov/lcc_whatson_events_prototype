@@ -1,0 +1,86 @@
+<section class="searchSectionHome">
+ <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+              <div id="ctl00_m_g_fd839df0_c5ac_4d0b_adb7_c1aebc652ea9">
+	
+
+<div class="activitySearchHome">
+    <div class="activitySearchHomeContent">
+        <div id="ctl00_m_g_fd839df0_c5ac_4d0b_adb7_c1aebc652ea9_pnlSearchTypeTabs">
+		
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active">
+                    <a href="#Events" aria-controls="Events" role="tab" data-toggle="tab">Events</a>
+                </li>
+                <li role="presentation">
+                    <a href="#Venues" aria-controls="Venues" role="tab" data-toggle="tab">Venues</a>
+                </li>
+            </ul>
+        
+	</div>
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="Events">
+                <input autocomplete="off" id="event-q" class="q ui-autocomplete-input" placeholder="Search for events or categories" type="text">
+                <input autocomplete="off" id="location" placeholder="Enter a location" type="text">
+                <span class="distance"><select name="ctl00$m$g_fd839df0_c5ac_4d0b_adb7_c1aebc652ea9$ddlDates" id="ctl00_m_g_fd839df0_c5ac_4d0b_adb7_c1aebc652ea9_ddlDates" class="eventDateRange">
+		<option value="">All Dates</option>
+		<option value="Today">Today</option>
+		<option value="Tomorrow">Tomorrow</option>
+		<option value="ThisWeek">This Week</option>
+		<option value="ThisWeekend">This Weekend</option>
+		<option value="NextWeek">Next Week</option>
+		<option value="ThisMonth">This Month</option>
+
+	</select></span>
+                <input id="search-events" value="Search" class="btn btn-primary" type="submit">
+            </div>
+            <div role="tabpanel" class="tab-pane" id="Venues">
+                <div id="ctl00_m_g_fd839df0_c5ac_4d0b_adb7_c1aebc652ea9_pnlVenueSearchTabContent">
+		
+                    <input id="venue-q" class="q" placeholder="Search by name" type="text">
+                    <span class="distance"><select name="ctl00$m$g_fd839df0_c5ac_4d0b_adb7_c1aebc652ea9$ddlVenueCategories" id="ctl00_m_g_fd839df0_c5ac_4d0b_adb7_c1aebc652ea9_ddlVenueCategories" class="venueCategories">
+			<option value="">All Categories</option>
+
+		</select></span>
+                    <input autocomplete="off" id="venue-location" placeholder="Enter a location" type="text">
+                    <input id="search-venues" value="Search" class="btn btn-primary" type="submit">
+                
+	</div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<script type="text/javascript" src="/_layouts/LCC.Events.SharePoint/Scripts/App/lib/require.js"></script>
+<script>
+    define('searchBoxConfig', function () {
+        return {
+            eventResultsUrl: '/Pages/eventsresults.aspx',
+            venueResultsUrl: '/Pages/venuesresults.aspx',
+            apiUrl: 'http://api.events.leeds.gov.uk/whatson',
+            categoryRestrictionByOrganiser: '',
+            eventRestrictionByOrganiser: '',
+            eventRestrictionByVenue: '',
+            eventDetailsUrlTemplate: '/Pages/eventdetails.aspx?eventId={id}'
+        };
+    });
+
+</script>
+<script type="text/javascript" src="/_layouts/LCC.Events.SharePoint/Scripts/App/SearchBox-v2/main.js"></script>
+<style>
+  .ui-autocomplete-category {
+    font-weight: bold;
+    padding: .2em .4em;
+    margin: .8em 0 .2em;
+    line-height: 1.5;
+  }
+</style>
+
+</div>
+            </div>
+        </div> 	
+    </div>
+    </section>
