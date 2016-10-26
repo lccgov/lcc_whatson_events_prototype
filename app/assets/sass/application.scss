@@ -50,6 +50,16 @@ $promo-group-background:#ddd;
 $promo-group-li-background:#fff;
 $promo-group-link-color:#333 !default;
 
+//promolist webpart
+$link-font-color:#fff;
+$span-info-color:#222E3C;
+$span-info-hover:#131A22;
+$span-info-secondary-color:#E6CC26;
+$span-arrow-base:#131A22;
+$span-third-info-base:#fff;
+$third-info-font-color:#333;
+
+
 //@import 'base';
 //@import 'cookieBanner';
 //@import 'masterHead';
@@ -70,6 +80,7 @@ $promo-group-link-color:#333 !default;
 @import 'promoListwebpart';
 @import 'eventsWebparts';
 @import 'brandColors';
+
 
 
 
@@ -121,4 +132,6 @@ body{
 .header-left {
     width:100%;
 }
+
+
 

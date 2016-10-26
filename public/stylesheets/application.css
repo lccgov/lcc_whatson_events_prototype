@@ -666,6 +666,18 @@ ul.promo-group {
           text-align: center;
           line-height: 60px;
           font-size: 19.2px; }
+      .promoListWebpart ul li a[rel="xl"]:after, .promoListWebpart ul li a[rel="pdf"]:after, .promoListWebpart ul li a[rel="doc"]:after, .promoListWebpart ul li a[rel="pp"]:after, .promoListWebpart ul li a[rel="external"]:after {
+        content: ""; }
+      .promoListWebpart ul li a[rel="xl"] .arrow:after {
+        content: "\f1c3"; }
+      .promoListWebpart ul li a[rel="pdf"] .arrow:after {
+        content: "\f1c1"; }
+      .promoListWebpart ul li a[rel="doc"] .arrow:after {
+        content: "\f1c2"; }
+      .promoListWebpart ul li a[rel="pp"] .arrow:after {
+        content: "\f1c4"; }
+      .promoListWebpart ul li a[rel="external"] .arrow:after {
+        content: "\f08e"; }
       .promoListWebpart ul li.heightTwo a {
         height: 370px; }
       .promoListWebpart ul li.one span.thirdInfo {
@@ -974,7 +986,7 @@ CHECKBOXES EVENTS FILTERS
 
 .eventsSearchSort, .venuesSearchSort {
   width: 100%;
-  background: #fff;
+  background: #000;
   padding: 21px 20px 21px 20px;
   border-bottom: 1px solid #E0E0E0;
   height: 94px;
@@ -1263,7 +1275,8 @@ CHECKBOXES EVENTS FILTERS
     .eventsFilterHeader .filterIcon:after, .eventsFilterHeader a, .venuesFilterHeader .filterIcon:after, .venuesFilterHeader a {
       color: #fff; }
     .eventsFilterHeader h2, .venuesFilterHeader h2 {
-      color: #fff; }
+      color: #fff;
+      margin-top: -5px; }
   .eventsSearchSort, .venuesSearchSort {
     height: auto;
     /*events fix*/ }
@@ -1286,6 +1299,17 @@ CHECKBOXES EVENTS FILTERS
     left: -120%;
     /*events fix*/
     top: 80px;
+    /*events fix*/ } }
+
+@media only screen and (max-width: 700px) {
+  .selectedFilters a {
+    padding: 5px 40px 5px 10px;
+    /*events fix*/
+    width: 100%;
+    /*events fix*/
+    margin: 0 0 10px 0;
+    /*events fix*/
+    font-size: 14px;
     /*events fix*/ } }
 
 .eventsFilterType, .venuesFilterType {
@@ -2206,8 +2230,12 @@ select.form-control {
   top: -4px; }
 
 @media (max-width: 700px) {
-  .activitySearchHomeContent .distance:before {
-    top: 106px; } }
+  .activitySearchHomeContent .distance {
+    float: left;
+    width: 100%;
+    display: block; }
+    .activitySearchHomeContent .distance:before {
+      top: 12px; } }
 
 select.form-control::-ms-expand {
   display: none; }
@@ -2356,8 +2384,10 @@ ACTIVITY SEARCH HOME
   border-radius: 0px;
   border: none;
   border-right: 1px solid #efefef;
-  width: 25%;
-  color: #666; }
+  width: 25%; }
+
+.activitySearchHome select {
+  background: #fff; }
 
 .activitySearchHome select::-ms-expand {
   display: none; }
