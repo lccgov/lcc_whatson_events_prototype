@@ -1,4 +1,4 @@
-# lcc sharepoint prototype kit
+# lcc whats on prototype
 An Express application to allow designers to quickly prototype designs on both desktop and mobile devices.
 
 The application includes both [lcc_frontend_toolkit](https://www.npmjs.com/package/lcc_frontend_toolkit) and [lcc_templates_nunjucks](https://www.npmjs.com/package/lcc_templates_nunjucks) npm packages.
