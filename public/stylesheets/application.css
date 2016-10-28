@@ -666,18 +666,6 @@ ul.promo-group {
           text-align: center;
           line-height: 60px;
           font-size: 19.2px; }
-      .promoListWebpart ul li a[rel="xl"]:after, .promoListWebpart ul li a[rel="pdf"]:after, .promoListWebpart ul li a[rel="doc"]:after, .promoListWebpart ul li a[rel="pp"]:after, .promoListWebpart ul li a[rel="external"]:after {
-        content: ""; }
-      .promoListWebpart ul li a[rel="xl"] .arrow:after {
-        content: "\f1c3"; }
-      .promoListWebpart ul li a[rel="pdf"] .arrow:after {
-        content: "\f1c1"; }
-      .promoListWebpart ul li a[rel="doc"] .arrow:after {
-        content: "\f1c2"; }
-      .promoListWebpart ul li a[rel="pp"] .arrow:after {
-        content: "\f1c4"; }
-      .promoListWebpart ul li a[rel="external"] .arrow:after {
-        content: "\f08e"; }
       .promoListWebpart ul li.heightTwo a {
         height: 370px; }
       .promoListWebpart ul li.one span.thirdInfo {
