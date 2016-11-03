@@ -109,7 +109,7 @@ body{
         height:192px;
         width:100%;
         background:url(../img/logo.svg) center top no-repeat;
-        margin-bottom:-20px;
+        margin:-20px 0;
 
         @media (max-width: 767px){
             width:100%;
@@ -119,15 +119,6 @@ body{
       }
 
 
-.sectionOne{
-    background:#fff;
-    color:#333;
-}
-.sectionTwo{
-    background:#1f2c38;
-}
-
-
 
 .header-left {
     width:100%;
@@ -135,3 +126,28 @@ body{
 
 
 
+
+
+.sectionTwo{
+    background:#161f28;
+}
+
+
+
+
+.sectionOne{
+    background:#fff;
+    h1, h2, h3, h4, h5, ul, ol, p, {
+    font-family:$font-primary;
+    color:#333;
+}
+}
+
+.eventsContentPod h3, .venuesContentPod h3 {
+    margin-top: 0px;
+    color: #006da5;
+}
+
+.breadcrumb span {
+    color:#333;
+}

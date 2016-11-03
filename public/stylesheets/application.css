@@ -4,7 +4,6 @@
 MAIN MENU
 *********/
 /*sharepoint styles overide*/
-@import url("http://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css");
 .ms-core-listMenu-root {
   padding: 0px; }
 
@@ -2229,14 +2228,6 @@ select.form-control {
 .activitySearchHomeContent .distance:before {
   top: -4px; }
 
-@media (max-width: 700px) {
-  .activitySearchHomeContent .distance {
-    float: left;
-    width: 100%;
-    display: block; }
-    .activitySearchHomeContent .distance:before {
-      top: 12px; } }
-
 select.form-control::-ms-expand {
   display: none; }
 
@@ -2326,7 +2317,7 @@ ACTIVITY SEARCH HOME
 ********************/
 .activitySearchHome {
   text-align: center;
-  padding: 50px 0px 80px 0px; }
+  padding: 0px 0px 50px 0px; }
   .activitySearchHome .nav-tabs {
     border-bottom: none;
     margin: 40px 0px;
@@ -2360,7 +2351,7 @@ ACTIVITY SEARCH HOME
 
 @media only screen and (max-width: 770px) {
   .activitySearchHome {
-    padding: 40px 0px 20px 0px; } }
+    padding: 0px 0px 20px 0px; } }
 
 .activitySearchHome h2 {
   margin-top: 0px;
@@ -2384,6 +2375,7 @@ ACTIVITY SEARCH HOME
   border-radius: 0px;
   border: none;
   border-right: 1px solid #efefef;
+  background-color: #fff;
   width: 25%; }
 
 .activitySearchHome select {
@@ -2407,7 +2399,9 @@ ACTIVITY SEARCH HOME
   width: 20%;
   padding: 10px;
   vertical-align: top;
-  color: #fff; }
+  color: #fff;
+  background: #e7cc26;
+  font-family: "Oswald", Helvetica, Arial; }
 
 .searchButton {
   width: 100%; }
@@ -2449,23 +2443,19 @@ ACTIVITY SEARCH HOME
     margin: 0px; }
     .nav-tabs > li a {
       padding: 10px 0 !important; }
-  .activitySearchHome input, .activitySearchHome select {
-    width: 100%;
-    float: left;
-    margin: 1% 0; }
-  .activitySearchHome input.btn {
-    width: 98%;
-    padding: 10px;
-    margin: 20px 1%  60px 1%; } }
-
-@media only screen and (max-width: 500px) {
-  .activitySearchHome input, .activitySearchHome select {
-    width: 100%;
-    float: left;
-    margin: 1%; }
-  .activitySearchHome input.btn {
-    width: 100%;
-    margin: 20px 1%  60px 1%; } }
+  .activitySearchHome {
+    padding: 0 15px 20px; }
+    .activitySearchHome input, .activitySearchHome select {
+      width: 75%;
+      border: none;
+      float: left; }
+    .activitySearchHome input.btn {
+      float: left;
+      width: 25%;
+      min-width: 25%; }
+  .eventDateRange, #location, span.distance, span.distance:before {
+    display: none;
+    width: 0px; } }
 
 .btn .btn-primary {
   background: #3498DB; }
@@ -2719,6 +2709,24 @@ footer.main .footerGlobal {
 /*********************************************
  End footer.sass variables
 *********************************************/
+/**********************
+Sharepoint overides
+********************/
+h1, h2, h3, h4, h5, ul, ol, p, input {
+  font-family: "Oswald", Helvetica, Arial;
+  color: #fff; }
+
+.ms-rtestate-field h1, .ms-rtestate-field h2, .ms-rtestate-field h3, .ms-rtestate-field h4, .ms-rtestate-field h5 {
+  font-weight: 400;
+  font-family: "Oswald", Helvetica, Arial;
+  color: #fff; }
+
+input[type=button], input[type=reset], input[type=submit], button {
+  min-width: 1em; }
+
+hr.ms-rteElement-spacer {
+  border-top: none; }
+
 body {
   font-weight: 300; }
 
@@ -2732,17 +2740,26 @@ body {
     height: 192px;
     width: 100%;
     background: url(../img/logo.svg) center top no-repeat;
-    margin-bottom: -20px; }
+    margin: -20px 0; }
     @media (max-width: 767px) {
       .sectionHeader .logo {
         width: 100%; } }
 
-.sectionOne {
-  background: #fff;
-  color: #333; }
-
-.sectionTwo {
-  background: #1f2c38; }
-
 .header-left {
   width: 100%; }
+
+.sectionTwo {
+  background: #161f28; }
+
+.sectionOne {
+  background: #fff; }
+  .sectionOne h1, .sectionOne h2, .sectionOne h3, .sectionOne h4, .sectionOne h5, .sectionOne ul, .sectionOne ol, .sectionOne p {
+    font-family: "Oswald", Helvetica, Arial;
+    color: #333; }
+
+.eventsContentPod h3, .venuesContentPod h3 {
+  margin-top: 0px;
+  color: #006da5; }
+
+.breadcrumb span {
+  color: #333; }
