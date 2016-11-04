@@ -337,15 +337,15 @@ CAROUSEL BOOTSTRAP
           font-family: FontAwesome;
           font-size: 25px;
           border-radius: 50%;
-          border: 1px solid #BA000E;
+          border: 1px solid #e7cc26;
           width: 42px;
           height: 42px;
           display: block;
           text-align: center;
           padding-top: 3px;
-          color: #BA000E; }
+          color: #e7cc26; }
         .socialBookmarks ul li a:hover:after {
-          background: #BA000E;
+          background: #e7cc26;
           color: #fff;
           text-decoration: none; }
         .socialBookmarks ul li a.facebook:after {
@@ -1268,7 +1268,7 @@ CHECKBOXES EVENTS FILTERS
     height: 85px;
     /*events fix*/
     padding: 25px 15px 15px 30px;
-    background: #006da5;
+    background: #006da5 !important;
     margin: -1px 0 0 -1px;
     border-bottom: none; }
     .eventsFilterHeader .filterIcon:after, .eventsFilterHeader a, .venuesFilterHeader .filterIcon:after, .venuesFilterHeader a {
@@ -1758,7 +1758,7 @@ EVENT DETAILS
   background: #fff; }
 
 .col-md-9.contentBackground {
-  background: #E7CC26;
+  background: #fff;
   padding: 0px; }
 
 ul.content {
@@ -1833,6 +1833,19 @@ ul.simple-pagination {
   padding: 0;
   margin: 0;
   float: left; }
+
+@media only screen and (max-width: 700px) {
+  .simple-pagination {
+    float: none; }
+    .simple-pagination li {
+      width: 50%;
+      display: none; }
+      .simple-pagination li:first-of-type, .simple-pagination li:last-of-type {
+        display: block; }
+      .simple-pagination li span, .simple-pagination li a {
+        width: 100%; }
+  .eventSearchResults #paging .paging, .venueSearchResults #paging .paging {
+    padding: 0px; } }
 
 .light-theme a, .light-theme span {
   float: left;
@@ -2444,16 +2457,15 @@ ACTIVITY SEARCH HOME
     .nav-tabs > li a {
       padding: 10px 0 !important; }
   .activitySearchHome {
-    padding: 0 15px 20px; }
+    padding: 30px 15px 30px; }
     .activitySearchHome input, .activitySearchHome select {
       width: 75%;
-      border: none;
-      float: left; }
+      border: none; }
     .activitySearchHome input.btn {
-      float: left;
+      float: right;
       width: 25%;
       min-width: 25%; }
-  .eventDateRange, #location, span.distance, span.distance:before {
+  .eventDateRange, #location, span.distance, span.distance:before, #venue-location {
     display: none;
     width: 0px; } }
 
@@ -2467,13 +2479,15 @@ ACTIVITY SEARCH HOME
 #loading {
   text-align: center;
   font-size: 32px;
-  font-family: "Oswald", Helvetica, Arial; }
+  font-family: "Oswald", Helvetica, Arial;
+  height: 250px;
+  background: #E7CC26; }
   #loading span {
     font-weight: bold; }
   #loading .loadingImage {
     width: 100%;
     height: 84px;
-    background: url(images/loading.GIF) no-repeat center center;
+    background: url("<%= asset_path('loading.GIF') %>") no-repeat center center;
     display: block; }
 
 ul.content li.resultsItemWrapper {
@@ -2527,6 +2541,18 @@ ul.content li.resultsItemWrapper {
 
 .eventListOnly {
   margin-bottom: 20px; }
+
+.alert.alert-warning p {
+  padding: 20px; }
+  .alert.alert-warning p a {
+    text-decoration: underline; }
+  .alert.alert-warning p:before {
+    font-family: FontAwesome;
+    content: "\f0a1";
+    margin: 0px 10px 0px 0;
+    position: relative;
+    top: 0px;
+    font-size: 35px; }
 
 /*********************************************
 Base.sass variables
@@ -2585,8 +2611,10 @@ body {
  globhalSearch.sass variables
 *********************************************/
 .ms-srch-sb > .ms-srch-sb-searchLink {
-  color: #fff;
-  background: #e7cc26; }
+  color: #333;
+  background: #F3F3F4; }
+  .ms-srch-sb > .ms-srch-sb-searchLink:hover {
+    color: #fff; }
 
 /*********************************************
  End globhalSearch.sass variables
@@ -2595,7 +2623,7 @@ body {
  Masterhead.sass variables
 *********************************************/
 .masterhead {
-  background: #0d1218; }
+  background: #fff; }
 
 /*********************************************
  End Masterhead.sass variables
@@ -2641,7 +2669,7 @@ body {
  ResponsiveMenu.sass variables
 *********************************************/
 ul.menu li a {
-  color: #fff; }
+  color: #333; }
   ul.menu li a:hover, ul.menu li a:focus {
     background: #1f2c38 !important; }
   ul.menu li a.main-menu, ul.menu li a.search {
@@ -2716,6 +2744,9 @@ h1, h2, h3, h4, h5, ul, ol, p, input {
   font-family: "Oswald", Helvetica, Arial;
   color: #fff; }
 
+h1, h2, h3, h4, h5 {
+  font-weight: 400; }
+
 .ms-rtestate-field h1, .ms-rtestate-field h2, .ms-rtestate-field h3, .ms-rtestate-field h4, .ms-rtestate-field h5 {
   font-weight: 400;
   font-family: "Oswald", Helvetica, Arial;
@@ -2724,14 +2755,14 @@ h1, h2, h3, h4, h5, ul, ol, p, input {
 input[type=button], input[type=reset], input[type=submit], button {
   min-width: 1em; }
 
-hr.ms-rteElement-spacer {
+hr.ms-rteElement-spacer, hr.spacerTop, hr.spacerBottom {
   border-top: none; }
 
 body {
   font-weight: 300; }
 
-.masterhead a.navbar-brand {
-  background: url(../img/lcclogo.svg) center center no-repeat; }
+.masterhead input {
+  color: #333; }
 
 .sectionHeader {
   padding: 0px;
@@ -2752,7 +2783,8 @@ body {
   background: #161f28; }
 
 .sectionOne {
-  background: #fff; }
+  background: #fff;
+  color: #333; }
   .sectionOne h1, .sectionOne h2, .sectionOne h3, .sectionOne h4, .sectionOne h5, .sectionOne ul, .sectionOne ol, .sectionOne p {
     font-family: "Oswald", Helvetica, Arial;
     color: #333; }
@@ -2761,5 +2793,5 @@ body {
   margin-top: 0px;
   color: #006da5; }
 
-.breadcrumb span {
+.breadcrumb span, span.eventDetailsBlockIcon, label span {
   color: #333; }
