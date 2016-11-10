@@ -608,7 +608,7 @@ ul.promo-group {
           display: inline-block;
           bottom: 0px;
           right: 0px;
-          padding: 20px;
+          padding: 20px 40px 20px 20px;
           background: #222E3C;
           width: 100%;
           opacity: 0.90;
@@ -687,17 +687,17 @@ ul.promo-group {
   .promoListWebpart .six a span.secondaryInfo {
     font-size: 20.8px;
     display: block; }
-  .promoListWebpart .two a span.info, .promoListWebpart .four a span.info {
+  .promoListWebpart .two a span.info, .promoListWebpart .three a span.info, .promoListWebpart .four a span.info {
     font-size: 24px;
-    padding: 20px 80px 20px 20px; }
-  .promoListWebpart .two a span.secondaryInfo, .promoListWebpart .four a span.secondaryInfo {
+    padding: 20px 100px 20px 20px; }
+  .promoListWebpart .two a span.secondaryInfo, .promoListWebpart .three a span.secondaryInfo, .promoListWebpart .four a span.secondaryInfo {
     font-size: 16px; }
-  .promoListWebpart .three a, .promoListWebpart .four.heightTwo a {
+  .promoListWebpart .four.heightTwo a {
     font-size: 36.8px; }
   @media screen and (max-width: 1000px) {
-    .promoListWebpart li.three a span.info, .promoListWebpart li.four.heightTwo a span.info, .promoListWebpart li.six a span.info {
+    .promoListWebpart a span.info, .promoListWebpart li.four.heightTwo a span.info, .promoListWebpart li.six a span.info {
       font-size: 24px; }
-    .promoListWebpart li.three a span.secondaryInfo, .promoListWebpart li.four.heightTwo a span.secondaryInfo, .promoListWebpart li.six a span.secondaryInfo {
+    .promoListWebpart a span.secondaryInfo, .promoListWebpart li.four.heightTwo a span.secondaryInfo, .promoListWebpart li.six a span.secondaryInfo {
       font-size: 19.2px; } }
   @media screen and (min-width: 1000px) {
     .promoListWebpart li.six a span.info, .promoListWebpart li.four a span.info {
@@ -732,6 +732,14 @@ ul.promo-group {
     height: 200px; }
     .promoListWebpart .contentLink h2 {
       font-size: 35.2px; }
+    .promoListWebpart .contentLink a {
+      color: #fff; }
+      .promoListWebpart .contentLink a .arrow:after {
+        color: #E6CC26; }
+      .promoListWebpart .contentLink a:hover {
+        color: #fff; }
+        .promoListWebpart .contentLink a:hover .arrow:after {
+          color: #E6CC26; }
     .promoListWebpart .contentLink.color p {
       color: #fff; }
     .promoListWebpart .contentLink.color div {
@@ -778,7 +786,7 @@ ul.promo-group {
       background-color: transparent; }
       .promoListWebpart .contentLink.heightTwo a span.info, .promoListWebpart .contentLink a span.info {
         background-color: transparent;
-        border-top: 1px solid #fff; }
+        border-top: 1px solid #ddd; }
       .promoListWebpart .contentLink.heightTwo a span.arrow, .promoListWebpart .contentLink a span.arrow {
         background-color: transparent; }
       .promoListWebpart .contentLink.heightTwo a:hover span.info, .promoListWebpart .contentLink.heightTwo a:focus span.info, .promoListWebpart .contentLink a:hover span.info, .promoListWebpart .contentLink a:focus span.info {
@@ -807,7 +815,8 @@ ul.promo-group {
     position: relative;
     font-weight: 100;
     padding-bottom: 100px;
-    height: 200px; }
+    height: 200px;
+    color: #fff; }
     .promoListWebpart .content.color div {
       background: #222E3C;
       padding: 15px 15px 30px 15px; }
@@ -1149,7 +1158,6 @@ CHECKBOXES EVENTS FILTERS
     background: #d7dfe3; }
   .eventsContentPod.image, .venuesContentPod.image {
     padding: 0px !important;
-    background: "url(images/arrow-grey-big.png) right 20px center no-repeat #fff !important";
     border: none; }
     .eventsContentPod.image .eventsContentPodWrapper, .venuesContentPod.image .eventsContentPodWrapper {
       display: table;
@@ -1181,7 +1189,6 @@ CHECKBOXES EVENTS FILTERS
         font-style: normal;
         font-family: "Oswald", Helvetica, Arial; }
         .eventsContentPod.image .dateFull .dateTime .dateIcon, .venuesContentPod.image .dateFull .dateTime .dateIcon {
-          background: transparent url("images/icon-calender-events-white.png") no-repeat scroll center 3px;
           height: 25px; }
     @media only screen and (max-width: 600px) {
       .eventsContentPod.image img, .venuesContentPod.image img {
@@ -1206,13 +1213,12 @@ CHECKBOXES EVENTS FILTERS
         width: 100%; }
         .eventsContentPod.image .eventsContentPodWrapper .paddingTopBottom, .eventsContentPod.image .eventsContentPodWrapper .removeSidePadding, .venuesContentPod.image .eventsContentPodWrapper .paddingTopBottom, .venuesContentPod.image .eventsContentPodWrapper .removeSidePadding {
           width: 100%; } }
-  .eventsContentPod:hover, .venuesContentPod:hover {
-    background: "url(images/arrow-blue-big.png) right 20px center no-repeat #fff !important"; }
   .eventsContentPod h3, .venuesContentPod h3 {
     margin-top: 0px;
     color: #006da5; }
-  .eventsContentPod p, .venuesContentPod p {
-    margin: 0px !important; }
+  .eventsContentPod p.eventLocation, .venuesContentPod p.eventLocation {
+    font-weight: bold;
+    margin: 5px 0 10px 0; }
 
 .venuesContentPod {
   margin: 0 0 0px 0; }
@@ -1344,24 +1350,20 @@ CHECKBOXES EVENTS FILTERS
     display: block;
     margin-top: 10px;
     text-transform: uppercase;
-    background: "url(images/icon-plus.png) no-repeat center left 0px";
     padding: 0 0px 0 20px;
     width: 100%;
     clear: left; }
     .eventsFilterType a.viewMore:hover, .venuesFilterType a.viewMore:hover {
-      background: "url(images/icon-plusDark.png) no-repeat center left 0px";
       color: #293238;
       cursor: pointer; }
   .eventsFilterType a.viewHide, .venuesFilterType a.viewHide {
     display: block;
     margin-top: 10px;
     text-transform: uppercase;
-    background: "url(images/icon-minus.png) no-repeat center left 0px";
     padding: 0 0px 0 20px;
     width: 100%;
     clear: left; }
     .eventsFilterType a.viewHide:hover, .venuesFilterType a.viewHide:hover {
-      background: "url(images/icon-minusDark.png) no-repeat center left 0px";
       color: #293238;
       cursor: pointer; }
 
@@ -1482,15 +1484,12 @@ CHECKBOXES EVENTS FILTERS
   width: 20px; }
 
 .backIcon {
-  background: transparent "url(images/icon-back.png) no-repeat scroll center 50%";
   margin: 2px 10px 0px -3px; }
 
 .printIcon {
-  background: transparent "url(images/icon-print.png) no-repeat scroll center center";
   margin: 2px -3px 0px 12px; }
 
 .forwardIcon {
-  background: transparent "url(images/icon-forward.png) no-repeat scroll center 50%";
   margin: 2px -3px 0px 12px; }
 
 /*EVENT SEARCH RESULTS END*/
@@ -1577,9 +1576,7 @@ CHECKBOXES EVENTS FILTERS
       position: absolute;
       font-size: 35px; }
     #closeIcon:hover {
-      background: rgba(0, 0, 0, 0.5); }
-    .ie #closeIcon#closeIcon:hover {
-      background: #E7CC26 "url(images/iconClose.png) no-repeat scroll 50% 50%"; } }
+      background: rgba(0, 0, 0, 0.5); } }
 
 @media only screen and (max-width: 500px) {
   .mapToggle a.btn {
@@ -1617,9 +1614,6 @@ EVENT DETAILS
 
 .eventDetailsBlock.active a {
   background: #ECF0F1 !important; }
-
-.eventDetailsBlock.active a .downIcon {
-  background: "url(../Images/icon-up.png) no-repeat center center"; }
 
 .eventDetails {
   margin-bottom: 20px; }
@@ -1694,15 +1688,6 @@ EVENT DETAILS
   top: 24px;
   right: 20px; }
 
-.eventDetailsBlockIconDate {
-  background: "url(images/icon-calender-events.png) no-repeat center 50%"; }
-
-.eventDetailsBlockIconCost {
-  background: "url(images/icon-cost.png) no-repeat center center"; }
-
-.eventDetailsBlockIconAge {
-  background: "url(images/icon-user.png) no-repeat center center"; }
-
 .eventDetailsBlockIconVenue {
   font-style: normal; }
   .eventDetailsBlockIconVenue:after, .eventDetailsBlockIconVenue:before {
@@ -1726,15 +1711,6 @@ EVENT DETAILS
     position: relative;
     top: -10px;
     font-size: 25px; }
-
-.eventDetailsBlockIconHours {
-  background: "url(images/icon-clock.png) no-repeat center center"; }
-
-.eventDetailsBlockIconFacilities {
-  background: url(images/icon-drink.png) no-repeat center center; }
-
-.eventDetailsBlockIconAccess {
-  background: "url(images/icon-access.png) no-repeat center center"; }
 
 .allDates {
   display: none; }
@@ -1800,7 +1776,6 @@ a.additionalData.events {
   display: inline-block;
   margin: 0px 0px 20px;
   width: 100%;
-  background: #fff "url(images/icon-plus.png) no-repeat scroll left 20px top 12px";
   border-width: 0px 1px 1px;
   border-style: solid;
   border-color: #E0E0E0;
@@ -1808,8 +1783,7 @@ a.additionalData.events {
   cursor: pointer; }
   a.additionalData.events:hover {
     text-decoration: none;
-    color: #1E2A34;
-    background: #dbc018 "url(images/icon-plusDark.png) no-repeat scroll left 20px top 12px"; }
+    color: #1E2A34; }
 
 .content .row {
   margin: 0px; }
@@ -2203,11 +2177,9 @@ input.ui-autocomplete-input {
 
 .searchForm .input-group-btn .btn:hover,
 .searchForm .input-group-btn .btn:focus {
-  background: #333 "url(images/iconSearchHover.png) no-repeat 50% 50%";
   width: 60px; }
 
 select.form-control {
-  background: "url(images/accordionPlusIcon.png) no-repeat 95% 50%";
   padding-right: 60px;
   height: 50px;
   line-height: inherit;
@@ -2398,7 +2370,6 @@ ACTIVITY SEARCH HOME
   display: none; }
 
 .activitySearchHome select {
-  background: #fff "url(images/accordionPlusIcon.png) no-repeat 95% 50%";
   padding-right: 60px;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -2425,24 +2396,20 @@ ACTIVITY SEARCH HOME
 .activitySearchHomeHeader a:link, .activitySearchHomeHeader a:visited {
   border: 2px solid #E7CC26;
   font-size: 20px;
-  background: "url(../img/iconSearch.png) no-repeat 95% 50%";
   color: #fff;
   padding: 15px 70px 15px 50px; }
 
 .activitySearchHomeHeader a:hover {
   border: 2px solid #E7CC26;
-  background: "url(../img/iconSearchHover.png) no-repeat 95% 50% #E7CC26";
   color: #fff !important;
   text-decoration: none; }
 
 .activitySearchHomeHeader.active a {
   border: 3px solid #fff;
-  background: "url(../img/arrowUp.png) no-repeat 95% 50% transparent";
   color: #fff; }
 
 .activitySearchHomeHeader.active a:hover {
   border: 3px solid #fff;
-  background: #fff "url(../img/arrowUp.png) no-repeat 95% 50%";
   color: #E7CC26 !important; }
 
 .activitySearchHomeContent {
@@ -2608,15 +2575,6 @@ body {
  End Base.sass variables
 *********************************************/
 /*********************************************
- globhalSearch.sass variables
-*********************************************/
-.ms-srch-sb > .ms-srch-sb-searchLink {
-  color: #333;
-  background: #F3F3F4; }
-  .ms-srch-sb > .ms-srch-sb-searchLink:hover {
-    color: #fff; }
-
-/*********************************************
  End globhalSearch.sass variables
 *********************************************/
 /*********************************************
@@ -2696,27 +2654,27 @@ footer.main {
     color: #fff; }
   footer.main .footer {
     background: #1f2c38; }
-    footer.main .footer li a {
+    footer.main .footer ul li a {
       border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
       color: #fff !important; }
-    footer.main .footer li a:hover, footer.main .footer li a:focus {
+    footer.main .footer ul li a:hover, footer.main .footer ul li a:focus {
       background: rgba(0, 0, 0, 0.2); }
-    footer.main .footer li a.selected {
+    footer.main .footer ul li a.selected {
       background-color: rgba(0, 0, 0, 0.2) !important; }
-    footer.main .footer li ul li:last-of-type {
+    footer.main .footer ul li ul li:last-of-type {
       border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
-    footer.main .footer li ul li a:hover, footer.main .footer li ul li a:focus {
+    footer.main .footer ul li ul li a:hover, footer.main .footer ul li ul li a:focus {
       background: rgba(0, 0, 0, 0.2);
       color: #fff; }
 
-.socialBookmarks h2 {
+footer.main .socialBookmarks h2 {
   color: #fff; }
 
-.socialBookmarks .facebook:after, .socialBookmarks .twitter:after, .socialBookmarks .youtube:after {
+footer.main .socialBookmarks .facebook:after, footer.main .socialBookmarks .twitter:after, footer.main .socialBookmarks .youtube:after {
   border: 1px solid #fff;
   color: #fff; }
 
-.socialBookmarks a:hover:after {
+footer.main .socialBookmarks a:hover:after {
   background: #fff;
   color: #1f2c38; }
 
@@ -2737,27 +2695,6 @@ footer.main .footerGlobal {
 /*********************************************
  End footer.sass variables
 *********************************************/
-/**********************
-Sharepoint overides
-********************/
-h1, h2, h3, h4, h5, ul, ol, p, input {
-  font-family: "Oswald", Helvetica, Arial;
-  color: #fff; }
-
-h1, h2, h3, h4, h5 {
-  font-weight: 400; }
-
-.ms-rtestate-field h1, .ms-rtestate-field h2, .ms-rtestate-field h3, .ms-rtestate-field h4, .ms-rtestate-field h5 {
-  font-weight: 400;
-  font-family: "Oswald", Helvetica, Arial;
-  color: #fff; }
-
-input[type=button], input[type=reset], input[type=submit], button {
-  min-width: 1em; }
-
-hr.ms-rteElement-spacer, hr.spacerTop, hr.spacerBottom {
-  border-top: none; }
-
 body {
   font-weight: 300; }
 
@@ -2770,7 +2707,7 @@ body {
   .sectionHeader .logo {
     height: 192px;
     width: 100%;
-    background: url(../img/logo.svg) center top no-repeat;
+    background: url(../images/logo.svg) center top no-repeat;
     margin: -20px 0; }
     @media (max-width: 767px) {
       .sectionHeader .logo {
