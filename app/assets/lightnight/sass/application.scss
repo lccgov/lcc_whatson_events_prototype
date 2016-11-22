@@ -176,7 +176,7 @@ a{
 
 .sectionTwo{
     color:#fff;
-    background:  lighten(#23333d,5%) url(../images/sectionTwoBack.png) repeat-y 50% 0;
+    background: url(../images/sectionTwoBack.png) repeat-y 50% 0;
 
 &:after {
     background: url(../images/sectionTwoArrow.png) repeat-y 0 0;
@@ -185,7 +185,7 @@ a{
 
 .sectionThree{
     color:#fff;
-    background: lighten(#23333d,10%) url(../images/sectionThreeBack.png) repeat-y 50% 0;
+    background: lighten(#23333d,5%) url(../images/sectionThreeBack.png) repeat-y 50% 0;
 
 &:after {
     background: url(../images/sectionThreeArrow.png) repeat-y 0 0;
