@@ -100,5 +100,3 @@
     global.LCC = LCC;
 
 })(window, jQuery);
-        
-

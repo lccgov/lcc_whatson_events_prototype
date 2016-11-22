@@ -5,6 +5,10 @@ var notify = require('gulp-notify');
 var sourcemaps = require('gulp-sourcemaps');
 var nodemon = require('gulp-nodemon');
 var rmdir = require('rmdir');
+var path = require('path');
+var util = require('util');
+var foreach = require('gulp-foreach');
+var rename = require('gulp-rename');
 
 //Clean lcc_modules
 gulp.task('clean:lcc_modules', (done) => {
@@ -13,9 +17,9 @@ gulp.task('clean:lcc_modules', (done) => {
     });
 });
 
-//Sync assets to public folder excluding SASS files
-gulp.task('sync:assets', ['clean:lcc_modules'], (done) => {
-    syncy(['app/assets/**/*', '!app/assets/sass/**'], 'public', {
+//Sync assets to public folder excluding SASS files and subsite folders
+gulp.task('sync:assets', (done) => {
+    syncy(['app/assets/**/*', '!app/assets/sass/**', '!app/assets/*_subsite/**'], 'public', {
             ignoreInDest: '**/stylesheets/**',
             base: 'app/assets',
             updateAndDelete: true
@@ -46,7 +50,7 @@ gulp.task('sync:lcc_templates_nunjucks', ['sync:lcc_frontend_toolkit'], (done) =
 
 //Compile SASS into the respective CSS and copy to public folder
 gulp.task('sass', ['sync:lcc_templates_nunjucks'], (done) => {
-   gulp.src('./app/assets/**/*.scss', {base:'./app/assets/sass'})
+   gulp.src(['./app/assets/**/*.scss', '!app/assets/*_subsite/**'], {base:'./app/assets/sass'})
       .pipe(sass({includePaths: ['./app/assets',
             'lcc_modules/lcc_frontend_toolkit/stylesheets/']}).on('error', function (err) {
           notify({ title: 'SASS Task' }).write(err.line + ': ' + err.message);
@@ -55,7 +59,38 @@ gulp.task('sass', ['sync:lcc_templates_nunjucks'], (done) => {
       .pipe(gulp.dest('./public/stylesheets/')).on('end', function() { done(); });
 });
 
-gulp.task('watch', ['sass'], (done) => {
+//Compile subsites SASS
+gulp.task('subsites:sass', ['sass'], (done) => {
+     return gulp.src(['app/assets/*_subsite/sass/*.scss'])
+        .pipe(foreach(function(stream, file) {          
+            var subsite = (path.normalize(util.format('%s%s..', path.dirname(file.path), path.sep)).split(path.sep).pop()).split('_')[0];
+            return stream.pipe(sass({includePaths: ['./app/assets/' + subsite,
+                'lcc_modules/lcc_frontend_toolkit/stylesheets/']}).on('error', function (err) {
+                notify({ title: 'SASS Task' }).write(err.line + ': ' + err.message);
+                this.emit('end');
+       	    }))
+            .pipe(rename(function(path) {
+                    path.dirname = "";
+                    return path;
+            }))
+            .pipe(gulp.dest(util.format('./public/%s/stylesheets/', subsite)));     
+        }))
+})
+
+//Copy subsites assets
+gulp.task('subsites:assets', ['subsites:sass'], (done) => {
+     return gulp.src(['app/assets/*_subsite/**/*.*', '!app/assets/*_subsite/sass/*.*'])
+        .pipe(foreach(function(stream, file) {          
+            var subsite = (path.normalize(util.format('%s%s..', path.dirname(file.path), path.sep)).split(path.sep).pop()).split('_')[0];
+            return stream.pipe(rename(function(path) {
+                path.dirname = path.dirname.split('\\').pop();
+                return path;
+            }))
+            .pipe(gulp.dest(util.format('./public/%s/', subsite)))
+        }))
+})
+
+gulp.task('watch', ['subsites:assets'], (done) => {
     gulp.watch('app/assets/sass/**/*.scss', ['sass']);
     gulp.watch(['app/assets/**/*', '!app/assets/sass/**'], ['sync:assets']);
     done();
@@ -70,5 +105,5 @@ gulp.task('nodemon', ['watch'], function () {
     })
 });
  
-gulp.task('generate-assets',  ['clean:lcc_modules', 'sync:assets', 'sync:lcc_frontend_toolkit', 'sync:lcc_templates_nunjucks', 'sass']);
+gulp.task('generate-assets',  ['clean:lcc_modules', 'sync:assets', 'sync:lcc_frontend_toolkit', 'sync:lcc_templates_nunjucks', 'sass', 'subsites:sass', 'subsites:assets']);
 gulp.task('default', ['generate-assets', 'watch', 'nodemon']);
