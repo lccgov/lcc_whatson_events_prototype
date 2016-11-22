@@ -92,7 +92,7 @@ gulp.task('subsites:assets', ['subsites:sass'], (done) => {
 
 gulp.task('watch', ['subsites:assets'], (done) => {
     gulp.watch('app/assets/sass/**/*.scss', ['sass']);
-    gulp.watch('app/assets/*_subsite/**/*.scss', ['subsites:sass']);
+    gulp.watch('app/assets/*_subsite/**/*.scss', ['subsites:assets']);
     gulp.watch(['app/assets/**/*', '!app/assets/sass/**', '!app/assets/*_subsite/sass/**'], ['sync:assets']);
     done();
 })
