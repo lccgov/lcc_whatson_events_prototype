@@ -46,8 +46,8 @@ gulp.task('sync:lcc_templates_nunjucks', ['sync:lcc_frontend_toolkit'], (done) =
 
 //Compile SASS into the respective CSS and copy to public folder
 gulp.task('sass', ['sync:lcc_templates_nunjucks'], (done) => {
-   gulp.src('./app/assets/sass/**/*.scss', {base:'./app/assets/sass'})
-      .pipe(sass({includePaths: ['./app/assets/sass',
+   gulp.src('./app/assets/**/*.scss', {base:'./app/assets/sass'})
+      .pipe(sass({includePaths: ['./app/assets',
             'lcc_modules/lcc_frontend_toolkit/stylesheets/']}).on('error', function (err) {
           notify({ title: 'SASS Task' }).write(err.line + ': ' + err.message);
           this.emit('end');
