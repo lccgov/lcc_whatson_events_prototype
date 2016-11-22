@@ -340,15 +340,15 @@ CAROUSEL BOOTSTRAP
           font-family: FontAwesome;
           font-size: 25px;
           border-radius: 50%;
-          border: 1px solid #e7cc26;
+          border: 1px solid #89c23f;
           width: 42px;
           height: 42px;
           display: block;
           text-align: center;
           padding-top: 3px;
-          color: #e7cc26; }
+          color: #89c23f; }
         .socialBookmarks ul li a:hover:after {
-          background: #e7cc26;
+          background: #89c23f;
           color: #fff;
           text-decoration: none; }
         .socialBookmarks ul li a.facebook:after {
@@ -612,7 +612,7 @@ ul.promo-group {
           bottom: 0px;
           right: 0px;
           padding: 20px 40px 20px 20px;
-          background: #222E3C;
+          background: #89c23f;
           width: 100%;
           opacity: 0.90;
           filter: alpha(opacity=90);
@@ -628,8 +628,8 @@ ul.promo-group {
           filter: alpha(opacity=100);
           /* For IE8 and earlier */ }
         .promoListWebpart ul li a .secondaryInfo {
-          font-family: "Quattrocento", Helvetica, Arial;
-          color: #E6CC26;
+          font-family: "Oswald", Helvetica, Arial;
+          color: #fff;
           width: 70%;
           display: block;
           opacity: 1;
@@ -643,14 +643,14 @@ ul.promo-group {
           padding: 30px 0;
           width: 15%;
           display: block;
-          background: #131A22;
+          background: transparent;
           height: 100%;
           text-align: center; }
           .promoListWebpart ul li a .arrow:after {
             font-family: FontAwesome;
             font-size: 35px;
             content: "\f105";
-            color: #E6CC26;
+            color: #fff;
             position: absolute;
             display: inline-block;
             vertical-align: middle;
@@ -667,7 +667,7 @@ ul.promo-group {
           max-width: 100%;
           text-align: center;
           line-height: 60px;
-          font-size: 19.2px; }
+          font-size: 21.6px; }
       .promoListWebpart ul li a[rel="xl"]:after, .promoListWebpart ul li a[rel="pdf"]:after, .promoListWebpart ul li a[rel="doc"]:after, .promoListWebpart ul li a[rel="pp"]:after, .promoListWebpart ul li a[rel="external"]:after {
         content: ""; }
       .promoListWebpart ul li a[rel="xl"] .arrow:after {
@@ -686,22 +686,22 @@ ul.promo-group {
         width: 100%;
         min-width: 100%; }
   .promoListWebpart li.six a span.info {
-    font-size: 40px; }
+    font-size: 45px; }
   .promoListWebpart .six a span.secondaryInfo {
-    font-size: 20.8px;
+    font-size: 23.4px;
     display: block; }
   .promoListWebpart .two a span.info, .promoListWebpart .three a span.info, .promoListWebpart .four a span.info {
-    font-size: 24px;
+    font-size: 27px;
     padding: 20px 100px 20px 20px; }
   .promoListWebpart .two a span.secondaryInfo, .promoListWebpart .three a span.secondaryInfo, .promoListWebpart .four a span.secondaryInfo {
-    font-size: 16px; }
+    font-size: 18px; }
   .promoListWebpart .four.heightTwo a {
-    font-size: 36.8px; }
+    font-size: 41.4px; }
   @media screen and (max-width: 1000px) {
     .promoListWebpart a span.info, .promoListWebpart li.four.heightTwo a span.info, .promoListWebpart li.six a span.info {
-      font-size: 24px; }
+      font-size: 27px; }
     .promoListWebpart a span.secondaryInfo, .promoListWebpart li.four.heightTwo a span.secondaryInfo, .promoListWebpart li.six a span.secondaryInfo {
-      font-size: 19.2px; } }
+      font-size: 21.6px; } }
   @media screen and (min-width: 1000px) {
     .promoListWebpart li.six a span.info, .promoListWebpart li.four a span.info {
       bottom: 0px;
@@ -734,7 +734,7 @@ ul.promo-group {
     padding-bottom: 100px;
     height: 200px; }
     .promoListWebpart .contentLink h2 {
-      font-size: 35.2px; }
+      font-size: 39.6px; }
     .promoListWebpart .contentLink a {
       color: #fff; }
       .promoListWebpart .contentLink a .arrow:after {
@@ -742,16 +742,16 @@ ul.promo-group {
       .promoListWebpart .contentLink a:hover {
         color: #fff; }
         .promoListWebpart .contentLink a:hover .arrow:after {
-          color: #E6CC26; }
+          color: #fff; }
     .promoListWebpart .contentLink.color p {
       color: #fff; }
     .promoListWebpart .contentLink.color div {
-      background: #222E3C;
+      background: #89c23f;
       padding: 15px 15px 30px 15px; }
     .promoListWebpart .contentLink.color.lighter div {
-      background: #2f3f53; }
+      background: #9acb5a; }
     .promoListWebpart .contentLink.color.darker div {
-      background: #151d25; }
+      background: #76a835; }
     @media only screen and (max-width: 1200px) and (min-width: 601px) {
       .promoListWebpart .contentLink.color div {
         display: table-cell;
@@ -770,7 +770,7 @@ ul.promo-group {
         .promoListWebpart .contentLink.color a .info:hover, .promoListWebpart .contentLink.color a .info:focus {
           color: #fff; }
         .promoListWebpart .contentLink.color a .info .arrow {
-          background-color: #131A22; }
+          background-color: transparent; }
     .promoListWebpart .contentLink.heightAuto {
       height: auto;
       padding-bottom: 0px; }
@@ -821,12 +821,12 @@ ul.promo-group {
     height: 200px;
     color: #fff; }
     .promoListWebpart .content.color div {
-      background: #222E3C;
+      background: #89c23f;
       padding: 15px 15px 30px 15px; }
     .promoListWebpart .content.color.lighter div {
-      background: #34475d; }
+      background: #a1ce66; }
     .promoListWebpart .content.color.darker div {
-      background: black; }
+      background: #537625; }
     .promoListWebpart .content.heightAuto {
       height: auto;
       padding-bottom: 0px; }
@@ -956,7 +956,7 @@ CHECKBOXES EVENTS FILTERS
 
 .eventsSearchHeader, venuesSearchHeader {
   width: 100%;
-  font-family: "Quattrocento", Helvetica, Arial; }
+  font-family: "Oswald", Helvetica, Arial; }
 
 .eventsSearchTitle, .venuesSearchTitle {
   width: 60%;
@@ -969,7 +969,7 @@ CHECKBOXES EVENTS FILTERS
   margin: 0px 0px 7px 0px; }
 
 .eventsSearchTitle p, .venuesSearchTitle p {
-  font-size: 32px !important;
+  font-size: 36px !important;
   color: #1E2A34;
   line-height: 1em !important;
   margin: 0px !important;
@@ -988,8 +988,8 @@ CHECKBOXES EVENTS FILTERS
 .eventsSearchChange p, .venuesSearchChange p {
   line-height: 1em;
   margin: 0px 0px 10px;
-  font-size: 32px;
-  font-family: "Quattrocento", Helvetica, Arial; }
+  font-size: 36px;
+  font-family: "Oswald", Helvetica, Arial; }
 
 .eventsSearchChangeTitle, .venuesSearchChangeTitle {
   width: 100%;
@@ -1034,7 +1034,7 @@ CHECKBOXES EVENTS FILTERS
   float: left; }
   .mapToggle a.btn {
     display: inline-block;
-    font-size: 17.6px;
+    font-size: 19.8px;
     padding: 13px 20px;
     height: 50px;
     border-radius: 0px;
@@ -1062,9 +1062,9 @@ CHECKBOXES EVENTS FILTERS
   .sortEvents span, .sortVenues span {
     font-weight: bold;
     margin: 0px 0px 10px 0px;
-    font-family: "Quattrocento", Helvetica, Arial;
+    font-family: "Oswald", Helvetica, Arial;
     text-transform: uppercase;
-    font-size: 16px;
+    font-size: 18px;
     background-color: transaparent;
     text-align: center;
     cursor: pointer;
@@ -1252,7 +1252,7 @@ CHECKBOXES EVENTS FILTERS
   height: 95px;
   /*events fix*/ }
   .eventsFilterHeader h2, .venuesFilterHeader h2 {
-    font-size: 23.2px;
+    font-size: 26.1px;
     text-transform: uppercase;
     line-height: 1.2em;
     padding: 0px;
@@ -1324,7 +1324,7 @@ CHECKBOXES EVENTS FILTERS
   padding: 0px 15px 7px 15px; }
   .eventsFilterType h3, .venuesFilterType h3 {
     margin: 15px 0px 15px 0px;
-    font-size: 19.2px;
+    font-size: 21.6px;
     text-transform: uppercase;
     display: inline-block; }
   .eventsFilterType label, .venuesFilterType label {
@@ -1392,7 +1392,7 @@ CHECKBOXES EVENTS FILTERS
   width: 100%; }
   .eventSearchResults #paging h2, .venuesSearchResults #paging h2,
   .eventSearchResults #eventsList h2, .venuesSearchResults #eventsList h2 {
-    font-size: 24px;
+    font-size: 27px;
     margin: 0px 0px 5px 0; }
     .eventSearchResults #paging h2 span, .venuesSearchResults #paging h2 span,
     .eventSearchResults #eventsList h2 span, .venuesSearchResults #eventsList h2 span {
@@ -1634,7 +1634,7 @@ EVENT DETAILS
     text-align: center;
     text-decoration: none;
     border: 2px solid #006da5;
-    font-family: "Quattrocento", Helvetica, Arial; }
+    font-family: "Oswald", Helvetica, Arial; }
     .eventAction a:hover, .eventAction a:focus, .eventAction a:visited:hover, .eventAction a:visited:focus {
       background: #fff;
       color: #006da5; }
@@ -1774,7 +1774,7 @@ ul.content {
 
 a.additionalData.events {
   color: #006da5;
-  font-family: "Quattrocento", Helvetica, Arial;
+  font-family: "Oswald", Helvetica, Arial;
   padding: 10px 20px 10px 40px;
   display: inline-block;
   margin: 0px 0px 20px;
@@ -2229,7 +2229,7 @@ select.form-control::-ms-expand {
 .keyword h2 {
   margin: 8px 10px 0 0;
   text-align: right;
-  font-size: 28.8px; }
+  font-size: 32.4px; }
   .keyword h2 span {
     color: #1E2A34; }
 
@@ -2243,7 +2243,7 @@ select.form-control::-ms-expand {
       margin: 0px 10px 5px 0px;
       text-align: left;
       text-transform: uppercase;
-      font-size: 19.2px;
+      font-size: 21.6px;
       font-weight: 700; }
     .eventsFilter .keyword .col-xs-12 {
       width: 100%; }
@@ -2319,7 +2319,7 @@ ACTIVITY SEARCH HOME
     font-size: 25px;
     font-weight: 400;
     background-color: rgba(255, 255, 255, 0.05);
-    color: #e7cc26; }
+    color: #89c23f; }
   .activitySearchHome .nav-tabs > li.active > a, .activitySearchHome .nav-tabs > li.active > a:focus, .activitySearchHome .nav-tabs > li.active > a:hover {
     color: #fff;
     cursor: default;
@@ -2387,7 +2387,7 @@ ACTIVITY SEARCH HOME
   padding: 10px;
   vertical-align: top;
   color: #fff;
-  background: #e7cc26;
+  background: #89c23f;
   font-family: "Oswald", Helvetica, Arial; }
 
 .searchButton {
@@ -2448,7 +2448,7 @@ ACTIVITY SEARCH HOME
 
 #loading {
   text-align: center;
-  font-size: 32px;
+  font-size: 36px;
   font-family: "Oswald", Helvetica, Arial;
   height: 250px;
   background: #E7CC26; }
@@ -2528,51 +2528,51 @@ ul.content li.resultsItemWrapper {
 Base.sass variables
 *********************************************/
 body {
-  font-size: 16px;
+  font-size: 18px;
   font-family: "Oswald", Helvetica, Arial;
   color: #fff;
-  background-color: #2c3e50; }
+  background-color: #fff; }
 
 .ms-rtestate-field h1.ms-rteElement-H2, .ms-rtestate-field h2.ms-rteElement-H2, .ms-rtestate-field h3.ms-rteElement-H2, .ms-rtestate-field h4.ms-rteElement-H2, .ms-rtestate-field h5.ms-rteElement-H2 {
   font-family: "Oswald", Helvetica, Arial;
   color: #fff; }
 
 .btn-primary, .button {
-  background: #e7cc26;
-  box-shadow: inset 0 1px 1px #ecd754; }
+  background: #89c23f;
+  box-shadow: inset 0 1px 1px #a1ce66; }
   .btn-primary:hover, .button:hover {
-    background: #c4ac16; }
+    background: #6e9c32; }
 
 .btn, .button {
-  border-color: #e7cc26;
+  border-color: #89c23f;
   color: #fff; }
   .btn.btn-default, .btn.alt, .button.btn-default, .button.alt {
-    border-color: #e7cc26;
-    color: #e7cc26; }
+    border-color: #89c23f;
+    color: #89c23f; }
     .btn.btn-default:hover, .btn.alt:hover, .button.btn-default:hover, .button.alt:hover {
-      background: #c4ac16;
+      background: #6e9c32;
       color: #fff; }
 
 .container-fluid {
   max-width: 1500px; }
 
 .sectionHeader {
-  background: #31465a; }
+  background: white; }
 
 .sectionOne {
-  background: #233140; }
+  background: #f2f2f2; }
 
 .sectionTwo {
-  background: #1a252f; }
+  background: #e6e6e6; }
 
 .sectionThree {
-  background: #31465a; }
+  background: white; }
 
 .sectionFour {
-  background: #354b60; }
+  background: white; }
 
 .sectionFive {
-  background: #233140; }
+  background: #f2f2f2; }
 
 /*********************************************
  End Base.sass variables
@@ -2780,20 +2780,79 @@ hr.ms-rteElement-spacer, hr.spacerTop, hr.spacerBottom {
 #DeltaWebPartAdderUpdatePanelContainer {
   z-index: 1000; }
 
+/* iconLinks -----------------------------------------------------------------*/
+ul.iconLinks {
+  text-align: center;
+  margin: 0px;
+  padding: 0px; }
+  ul.iconLinks li {
+    border-radius: 100%;
+    width: 130px;
+    height: 130px;
+    margin: 20px;
+    border: 1px solid #fff;
+    background: #fff;
+    display: inline-block;
+    position: relative; }
+    ul.iconLinks li a {
+      text-indent: -3000em;
+      display: inline-block;
+      width: 120px;
+      height: 120px;
+      position: relative;
+      -webkit-transition: -webkit-transform 0.8s ease-in-out;
+      transition: transform 0.8s ease-in-out;
+      overflow: hidden; }
+      ul.iconLinks li a:hover {
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        transform: rotate(360deg); }
+    ul.iconLinks li.facebook a:after, ul.iconLinks li.twitter a:after, ul.iconLinks li.youtube a:after, ul.iconLinks li.instagram a:after, ul.iconLinks li.email a:after {
+      font-family: FontAwesome;
+      font-size: 45px;
+      display: block;
+      text-align: center;
+      color: #89c23f;
+      position: absolute;
+      text-indent: 0px;
+      left: 35%;
+      top: 25%; }
+    ul.iconLinks li.facebook:hover:after, ul.iconLinks li.twitter:hover:after, ul.iconLinks li.youtube:hover:after, ul.iconLinks li.instagram:hover:after, ul.iconLinks li.email:hover:after {
+      background: #89c23f;
+      color: #fff;
+      text-decoration: none; }
+    ul.iconLinks li.facebook.facebook a:after, ul.iconLinks li.twitter.facebook a:after, ul.iconLinks li.youtube.facebook a:after, ul.iconLinks li.instagram.facebook a:after, ul.iconLinks li.email.facebook a:after {
+      content: "\f09a";
+      left: 40%; }
+    ul.iconLinks li.facebook.twitter a:after, ul.iconLinks li.twitter.twitter a:after, ul.iconLinks li.youtube.twitter a:after, ul.iconLinks li.instagram.twitter a:after, ul.iconLinks li.email.twitter a:after {
+      content: "\f099"; }
+    ul.iconLinks li.facebook.youtube a:after, ul.iconLinks li.twitter.youtube a:after, ul.iconLinks li.youtube.youtube a:after, ul.iconLinks li.instagram.youtube a:after, ul.iconLinks li.email.youtube a:after {
+      content: "\f167"; }
+    ul.iconLinks li.facebook.instagram a:after, ul.iconLinks li.twitter.instagram a:after, ul.iconLinks li.youtube.instagram a:after, ul.iconLinks li.instagram.instagram a:after, ul.iconLinks li.email.instagram a:after {
+      content: "\f16d";
+      top: 26%; }
+    ul.iconLinks li.facebook.email a:after, ul.iconLinks li.twitter.email a:after, ul.iconLinks li.youtube.email a:after, ul.iconLinks li.instagram.email a:after, ul.iconLinks li.email.email a:after {
+      content: "\f0e0";
+      left: 32%; }
+
 body {
   font-weight: 300; }
+
+a {
+  color: #89c23f; }
 
 .masterhead input {
   color: #333; }
 
 .sectionHeader {
   padding: 0px;
-  background: #2c3e50; }
+  background: #016B61 url(../images/headerbackground.jpg) no-repeat center bottom;
+  min-height: 275px; }
   .sectionHeader .logo {
     height: 192px;
     width: 100%;
     background: url(../images/logo.svg) center top no-repeat;
-    margin: -20px 0; }
+    margin: 20px 0; }
     @media (max-width: 767px) {
       .sectionHeader .logo {
         width: 100%; } }
@@ -2801,19 +2860,98 @@ body {
 .header-left {
   width: 100%; }
 
-.sectionTwo {
-  background: #161f28; }
+.sectionOne:after, .sectionTwo:after, .sectionThree:after, .sectionFour:after, .sectionFive:after {
+  content: "";
+  width: 208px;
+  height: 48px;
+  display: block;
+  position: absolute;
+  left: 50%;
+  margin-left: -104px;
+  z-index: 1001; }
 
 .sectionOne {
-  background: #fff;
+  background: #fff url(../images/sectionOneBack.png) repeat-y 50% 0; }
+  .sectionOne:after {
+    background: url(../images/sectionOneArrow.png) repeat-y 0 0; }
+
+.sectionOne, .sectionFour, .sectionFive {
   color: #333; }
-  .sectionOne h1, .sectionOne h2, .sectionOne h3, .sectionOne h4, .sectionOne h5, .sectionOne ul, .sectionOne ol, .sectionOne p, .sectionOne input {
+  .sectionOne h1, .sectionOne h2, .sectionOne h3, .sectionOne h4, .sectionOne h5, .sectionOne ul, .sectionOne ol, .sectionOne p, .sectionOne input, .sectionFour h1, .sectionFour h2, .sectionFour h3, .sectionFour h4, .sectionFour h5, .sectionFour ul, .sectionFour ol, .sectionFour p, .sectionFour input, .sectionFive h1, .sectionFive h2, .sectionFive h3, .sectionFive h4, .sectionFive h5, .sectionFive ul, .sectionFive ol, .sectionFive p, .sectionFive input {
     font-family: "Oswald", Helvetica, Arial;
     color: #333; }
+
+.sectionTwo {
+  color: #fff;
+  background: #2c414d url(../images/sectionTwoBack.png) repeat-y 50% 0; }
+  .sectionTwo:after {
+    background: url(../images/sectionTwoArrow.png) repeat-y 0 0; }
+
+.sectionThree {
+  color: #fff;
+  background: #364e5d url(../images/sectionThreeBack.png) repeat-y 50% 0; }
+  .sectionThree:after {
+    background: url(../images/sectionThreeArrow.png) repeat-y 0 0; }
+
+.sectionFour {
+  color: #fff;
+  background: #efefef url(../images/sectionFourBack.png) repeat-y 50% 0; }
+  .sectionFour:after {
+    background: url(../images/sectionFourArrow.png) repeat-y 0 0; }
+
+.sectionFive {
+  color: #fff;
+  background: url(../images/sectionFiveBack.jpg) no-repeat 50% bottom;
+  padding-bottom: 150px; }
+  .sectionFive:after {
+    background: url(../images/sectionFiveArrow.png) repeat-y 0 0; }
 
 .eventsContentPod h3, .venuesContentPod h3 {
   margin-top: 0px;
   color: #006da5; }
 
-.breadcrumb span, span.eventDetailsBlockIcon, label span {
-  color: #333; }
+.main-nav ul li a {
+  color: #89c23f; }
+  .main-nav ul li a.selected {
+    background: #fff !important;
+    color: #704997; }
+
+/*new events webpart and promo using the list display webpart  ----------------------------------------------------------------------*/
+.promoListWebpart .millenium a span.info {
+  background: #f9c21f; }
+
+.promoListWebpart .townhall a span.info {
+  background: #92527f; }
+
+.promoListWebpart .quarry a span.info {
+  background: #589898; }
+
+.promoListWebpart .victoria a span.info {
+  background: #4a8938; }
+
+.promoListWebpart .headrow a span.info {
+  background: #c6cf24; }
+
+.promoListWebpart .briggate a span.info {
+  background: #6db2e1; }
+
+.promoListWebpart .arena a span.info {
+  background: #8e8e97; }
+
+.promoListWebpart .university a span.info {
+  background: #da94b8; }
+
+.promoListWebpart .southbank a span.info {
+  background: #98b832; }
+
+.promoListWebpart .station a span.info {
+  background: #7b67a2; }
+
+hr.ms-rteElement-spacer, hr.spacerTop, hr.spacerBottom {
+  padding-bottom: 2.875em; }
+
+.med {
+  font-size: 35px; }
+
+.textHighLight {
+  color: #80c4da !important; }

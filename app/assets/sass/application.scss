@@ -87,6 +87,10 @@ $content-border-color:#ddd;
 @import 'promoListwebpart';
 @import 'eventsWebparts';
 @import 'brandColors';
+@import 'sharepointOverides';
+//@import 'iconLinks';
+//@import 'heroBanner';
+
 
 
 
@@ -142,7 +146,7 @@ body{
 .sectionOne{
     background:#fff;
     color:#333;
-    h1, h2, h3, h4, h5, ul, ol, p, {
+    h1, h2, h3, h4, h5, ul, ol, p, input {
     font-family:$font-primary;
     color:#333;
 }
