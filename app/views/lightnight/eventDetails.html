@@ -1,42 +1,45 @@
-{% extends "layout_multi_sections_home.html" %}
+{% extends "layout_multi_sections.html" %}
 
 {% block page_title %}
-	Home Page
+Event details
 {% endblock %}
 
 
   {% block css_register %}
-         <link href="{{ asset_path }}stylesheets/application.css" rel="stylesheet">
+         <link href="{{ asset_path }}lightnight/stylesheets/application.css" rel="stylesheet">
    {% endblock %}
 
- 
+{% block main_nav %}
+  {% include "includes/whatson/main_nav.html" %}   
+{% endblock %}   
 
 {% block header %}
 {% endblock %}
-
- {% block main_nav %}
-  {% include "includes/whatson/main_nav.html" %}
- {% endblock %}
-
-
-
+ 
  {% block sectionOneTop %}
 
 {% endblock %} 
 
-{% block sectionOneFull%}
+{% block sectionOneFull %}  
 {% endblock %}
 
-{% block sectionOneFullBottom %}{% endblock %}
+
+
 
 
  {% block breadcrumb %}
+ {% include "includes/breadcrumb_sp.html" %}
+
  {% endblock %}
 
 {% block sectionOneContent %}
 {% endblock %}
 
 {% block sectionOneRightHandColumn %}
+{% endblock %}
+
+{% block sectionOneFullBottom %}  
+{% include "includes/whatson/event-details.html" %}
 {% endblock %}
 
 {% block sectionOneThirdCol1 %}
@@ -52,10 +55,8 @@
 {% block sectionTwoTop %}
 {% endblock %} 
 
-{% block sectionTwoFull%}
- {% include "includes/whatson/events-search.html" %}
+{% block sectionTwoFull %}
 
-  
 {% endblock %}
 
 {% block sectionTwoContent %}
@@ -78,9 +79,7 @@
 {% endblock %} 
 
 {% block sectionThreeFull%}
-<span class="spacer"></span>
-  {% include "includes/whatson/promolistwebpart.html" %}
-<span class="spacer clearfix"></span>
+  
 {% endblock %}
 
 {% block sectionThreeContent %}
@@ -103,9 +102,8 @@
 {% endblock %} 
 
 {% block sectionFourFull%}
-<span class="spacer"></span>
-{% include "includes/whatson/promolistwebpart3.html" %}
-<span class="spacer clearfix"></span>  
+
+  
 {% endblock %}
 
 {% block sectionFourContent %}
@@ -129,9 +127,6 @@
 {% endblock %} 
 
 {% block sectionFiveFull%}
-<span class="spacer"></span>
-{% include "includes/whatson/promolistwebpart4.html" %}
-<span class="spacer clearfix"></span>
   
 {% endblock %}
 

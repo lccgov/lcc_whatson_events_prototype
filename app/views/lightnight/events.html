@@ -1,36 +1,38 @@
-{% extends "layout_multi_sections_home.html" %}
+{% extends "layout_multi_sections.html" %}
 
 {% block page_title %}
-	Home Page
+Events
 {% endblock %}
 
 
   {% block css_register %}
-         <link href="{{ asset_path }}stylesheets/application.css" rel="stylesheet">
+         <link href="{{ asset_path }}lightnight/stylesheets/application.css" rel="stylesheet">
    {% endblock %}
 
- 
+{% block main_nav %}
+  {% include "includes/whatson/main_nav.html" %}     
+{% endblock %}   
 
 {% block header %}
+<h1>Events</h1>
 {% endblock %}
-
- {% block main_nav %}
-  {% include "includes/whatson/main_nav.html" %}
- {% endblock %}
-
-
-
+ 
  {% block sectionOneTop %}
 
 {% endblock %} 
 
-{% block sectionOneFull%}
+{% block sectionOneFull %}  
 {% endblock %}
 
-{% block sectionOneFullBottom %}{% endblock %}
+{% block sectionOneFullBottom %}
+{% include "includes/whatson/events-results.html" %}
+{% endblock %}
+
 
 
  {% block breadcrumb %}
+ {% include "includes/breadcrumb_sp.html" %}
+
  {% endblock %}
 
 {% block sectionOneContent %}
@@ -52,10 +54,8 @@
 {% block sectionTwoTop %}
 {% endblock %} 
 
-{% block sectionTwoFull%}
- {% include "includes/whatson/events-search.html" %}
+{% block sectionTwoFull %}
 
-  
 {% endblock %}
 
 {% block sectionTwoContent %}
@@ -78,9 +78,7 @@
 {% endblock %} 
 
 {% block sectionThreeFull%}
-<span class="spacer"></span>
-  {% include "includes/whatson/promolistwebpart.html" %}
-<span class="spacer clearfix"></span>
+  
 {% endblock %}
 
 {% block sectionThreeContent %}
@@ -103,9 +101,8 @@
 {% endblock %} 
 
 {% block sectionFourFull%}
-<span class="spacer"></span>
-{% include "includes/whatson/promolistwebpart3.html" %}
-<span class="spacer clearfix"></span>  
+
+  
 {% endblock %}
 
 {% block sectionFourContent %}
@@ -129,10 +126,45 @@
 {% endblock %} 
 
 {% block sectionFiveFull%}
-<span class="spacer"></span>
-{% include "includes/whatson/promolistwebpart4.html" %}
-<span class="spacer clearfix"></span>
-  
+ <h2 class="text-center">Keep in touch</h2>
+             <ul class="iconLinks">
+            
+                <li class="facebook">
+                    
+                    <a href="https://www.facebook.com/childfriendlyleeds">
+                        
+                        facebook</a>
+                </li>
+            
+                <li class="twitter">
+                    
+                    <a href="https://twitter.com/Child_Leeds">
+                        
+                        twitter</a>
+                </li>
+            
+                <li class="youtube">
+                    
+                    <a href="mailto:childfriendlyleeds@leeds.gov.uk">
+                        
+                        You tube</a>
+                </li>
+
+                      <li class="instagram">
+                    
+                    <a href="mailto:childfriendlyleeds@leeds.gov.uk">
+                        
+                       instagram</a>
+                </li>
+
+                      <li class="email">
+                    
+                    <a href="mailto:childfriendlyleeds@leeds.gov.uk">
+                        
+                        email</a>
+                </li>
+            
+                </ul> 
 {% endblock %}
 
 {% block sectionFiveContent %}
@@ -151,6 +183,6 @@
 {% block sectionFiveThirdCol3 %}
  {% endblock %}
 
-  {% block footer_nav %}
-   {% include "includes/whatson/main_nav.html" %}
+ {% block footer_nav %}
+ {% include "includes/whatson/main_nav.html" %}
  {% endblock %}
