@@ -53,7 +53,9 @@ nunjucks.ready(function (nj) {
 app.use('/public', express.static(path.join(__dirname, '/public')))
 app.use('/public', express.static(path.join(__dirname, '/lcc_modules/lcc_templates_nunjucks/assets')))
 app.use('/public', express.static(path.join(__dirname, '/lcc_modules/lcc_frontend_toolkit')))
-app.use('/public/lightnight', express.static(path.join(__dirname, '/public/lightnight')))
+app.use('/public/lightnight/stylesheets', express.static(path.join(__dirname, '/public/lightnight/stylesheets')))
+app.use('/public/lightnight/images', express.static(path.join(__dirname, '/public/lightnight/images')))
+app.use('/public/lightnight/javascripts', express.static(path.join(__dirname, '/public/lightnight/javascripts')))
 
 // Support for parsing data in POSTs
 app.use(bodyParser.json())

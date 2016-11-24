@@ -311,9 +311,6 @@ CAROUSEL BOOTSTRAP
     background: #000;
     color: #fff; } }
 
-.carousel #carouselButtons button {
-  background: #fff; }
-
 /*END CAROUSEL BOOTSTRAP*/
 .socialBookmarks {
   background: #efefef;
@@ -814,9 +811,6 @@ ul.promo-group {
         height: auto; }
       .promoListWebpart .contentLink p strong {
         margin-top: 10px; } }
-  @media only screen and (max-width: 600px) {
-    .promoListWebpart .contentLink {
-      height: auto; } }
   .promoListWebpart .content {
     position: relative;
     font-weight: 100;
@@ -1050,7 +1044,7 @@ CHECKBOXES EVENTS FILTERS
       color: #293238;
       border-color: #BCC9CF; }
   .mapToggle a.active, .mapToggle a.active:hover, .mapToggle a.active:focus {
-    background: #89c23f;
+    background: #E7CC26;
     color: #293238;
     -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
     -moz-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
@@ -1261,7 +1255,7 @@ CHECKBOXES EVENTS FILTERS
     padding: 0px;
     margin: 0px;
     font-weight: normal;
-    color: #89c23f; }
+    color: #E7CC26; }
 
 .iconLeft.filterIcon {
   margin: -4px 10px 0px 0; }
@@ -1269,7 +1263,7 @@ CHECKBOXES EVENTS FILTERS
     font-family: FontAwesome;
     content: "\f1de";
     font-size: 25px;
-    color: #89c23f;
+    color: #E7CC26;
     margin-top: -5px; }
 
 @media only screen and (max-width: 991px) {
@@ -2271,8 +2265,8 @@ select.form-control::-ms-expand {
     margin: 0px 10px 10px 0;
     padding: 10px 40px 10px 10px;
     font-family: 'Oswald', sans-serif;
-    color: #89c23f;
-    border: 1px solid #89c23f;
+    color: #E7CC26;
+    border: 1px solid #E7CC26;
     text-decoration: none;
     position: relative; }
     .selectedFilters a:after {
@@ -2283,7 +2277,7 @@ select.form-control::-ms-expand {
       margin-top: -12px;
       position: absolute; }
     .selectedFilters a:hover {
-      background: #89c23f;
+      background: #E7CC26;
       color: #fff; }
 
 #eventSearchResultsMap .selectedFilters {
@@ -2396,6 +2390,9 @@ ACTIVITY SEARCH HOME
 .searchButton {
   width: 100%; }
 
+.activitySearchHomeHeader {
+  padding: 30px 0px; }
+
 .activitySearchHomeHeader a:link, .activitySearchHomeHeader a:visited {
   border: 2px solid #E7CC26;
   font-size: 20px;
@@ -2426,13 +2423,15 @@ ACTIVITY SEARCH HOME
     margin: 0px; }
     .nav-tabs > li a {
       padding: 10px 0 !important; }
-  .activitySearchHome input, .activitySearchHome select {
-    width: 75%;
-    border: none; }
-  .activitySearchHome input.btn {
-    float: right;
-    width: 25%;
-    min-width: 25%; }
+  .activitySearchHome {
+    padding: 30px 15px 30px; }
+    .activitySearchHome input, .activitySearchHome select {
+      width: 75%;
+      border: none; }
+    .activitySearchHome input.btn {
+      float: right;
+      width: 25%;
+      min-width: 25%; }
   .eventDateRange, #location, span.distance, span.distance:before, #venue-location {
     display: none;
     width: 0px; } }
@@ -2449,13 +2448,13 @@ ACTIVITY SEARCH HOME
   font-size: 32px;
   font-family: "Oswald", Helvetica, Arial;
   height: 250px;
-  background: #89c23f; }
+  background: #E7CC26; }
   #loading span {
     font-weight: bold; }
   #loading .loadingImage {
     width: 100%;
     height: 84px;
-    background: url("../images/loading.GIF") no-repeat center center;
+    background: url("<%= asset_path('loading.GIF') %>") no-repeat center center;
     display: block; }
 
 ul.content li.resultsItemWrapper {
@@ -2774,9 +2773,6 @@ hr.ms-rteElement-spacer, hr.spacerTop, hr.spacerBottom {
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box; }
-
-#DeltaWebPartAdderUpdatePanelContainer {
-  z-index: 1000; }
 
 /* iconLinks -----------------------------------------------------------------*/
 ul.iconLinks {
