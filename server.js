@@ -50,10 +50,9 @@ nunjucks.ready(function (nj) {
 })
 
 // Middleware to serve static assets
-process.env.PWD = process.cwd()
-app.use('/public', express.static(path.join(process.env.PWD, '/public')))
-app.use('/public', express.static(path.join(process.env.PWD, '/lcc_modules/lcc_templates_nunjucks/assets')))
-app.use('/public', express.static(path.join(process.env.PWD, '/lcc_modules/lcc_frontend_toolkit')))
+app.use('/public', express.static(path.join(__dirname, '/public')))
+app.use('/public', express.static(path.join(__dirname, '/lcc_modules/lcc_templates_nunjucks/assets')))
+app.use('/public', express.static(path.join(__dirname, '/lcc_modules/lcc_frontend_toolkit')))
 
 // Support for parsing data in POSTs
 app.use(bodyParser.json())
