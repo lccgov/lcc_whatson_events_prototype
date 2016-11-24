@@ -82,9 +82,10 @@ gulp.task('subsites:assets', ['subsites:sass'], (done) => {
      return gulp.src(['app/assets/*_subsite/**/*.*', '!app/assets/*_subsite/sass/*.*'])
         .pipe(foreach(function(stream, file) {          
             var subsite = (path.normalize(util.format('%s%s..', path.dirname(file.path), path.sep)).split(path.sep).pop()).split('_')[0];
-            return stream.pipe(rename(function(path) {
-                path.dirname = path.dirname.split('\\').pop();
-                return path;
+            return stream.pipe(rename(function(filePath) {
+                console.log(path.sep)
+                filePath.dirname = filePath.dirname.split(path.sep).pop();
+                return filePath;
             }))
             .pipe(gulp.dest(util.format('./public/%s/', subsite)))
         }))
