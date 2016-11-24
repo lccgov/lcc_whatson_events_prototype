@@ -50,13 +50,13 @@ gulp.task('sync:lcc_templates_nunjucks', ['sync:lcc_frontend_toolkit'], (done) =
 
 //Compile SASS into the respective CSS and copy to public folder
 gulp.task('sass', ['sync:lcc_templates_nunjucks'], (done) => {
-   gulp.src(['./app/assets/**/*.scss', '!app/assets/*_subsite/**'], {base:'./app/assets/sass'})
+   return gulp.src(['./app/assets/**/*.scss', '!app/assets/*_subsite/**'], {base:'./app/assets/sass'})
       .pipe(sass({includePaths: ['./app/assets',
             'lcc_modules/lcc_frontend_toolkit/stylesheets/']}).on('error', function (err) {
           notify({ title: 'SASS Task' }).write(err.line + ': ' + err.message);
           this.emit('end');
       }))
-      .pipe(gulp.dest('./public/stylesheets/')).on('end', function() { done(); });
+      .pipe(gulp.dest('./public/stylesheets/'));
 });
 
 //Compile subsites SASS
