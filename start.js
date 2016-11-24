@@ -18,7 +18,6 @@ var gulpfile = path.join(__dirname, '/gulpfile.js')
 var gulp = require('./node_modules/gulp/index.js');
 require(gulpfile);
 gulp.start();
-
 process.on('SIGINT', function () {
   // remove .port.tmp if it exists
   try {

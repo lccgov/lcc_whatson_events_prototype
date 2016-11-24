@@ -138,7 +138,7 @@ app.get(/^\/([^.]+)$/, function (req, res) {
 console.log('\nLCC SharePoint Prototype kit v' + releaseVersion)
 // Display warning not to use kit for production services.
 console.log('\nNOTICE: the kit is for building prototypes, do not use it for production services.')
-
+console.log(__dirname)
 // start the app
 utils.findAvailablePort(app, function (port) {
   console.log('Listening on port ' + port + '   url: http://localhost:' + port)
