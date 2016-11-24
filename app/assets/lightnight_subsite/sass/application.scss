@@ -24,7 +24,7 @@ $main-nav-background:#000;
 $head-background:#fff;
 
 //footer.scss
-$footer-nav-link:#fff;
+$footer-nav-link:#89c23f;
 
 // sectionSubsite.scss - socialamedia.scss - blockLinks.scss
 $section-Background:#efefef;
@@ -229,6 +229,23 @@ p {
 }
 }
 
+footer.main {
+    background: #000 url("../images/footerLogos.png") no-repeat scroll 50% 40px;
+    padding-top:220px;
+
+ @media only screen and (max-width:800px){
+    background:#000;
+    padding-top:0px;
+ }
+
+    .footer ul li a{
+        border-bottom:1px solid #444 !important;
+        color:#89c23f !important;
+    }
+
+  
+    
+}
 
 
 

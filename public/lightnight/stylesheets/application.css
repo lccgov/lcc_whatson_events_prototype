@@ -814,6 +814,9 @@ ul.promo-group {
         height: auto; }
       .promoListWebpart .contentLink p strong {
         margin-top: 10px; } }
+  @media only screen and (max-width: 600px) {
+    .promoListWebpart .contentLink {
+      height: auto; } }
   .promoListWebpart .content {
     position: relative;
     font-weight: 100;
@@ -2393,9 +2396,6 @@ ACTIVITY SEARCH HOME
 .searchButton {
   width: 100%; }
 
-.activitySearchHomeHeader {
-  padding: 30px 0px; }
-
 .activitySearchHomeHeader a:link, .activitySearchHomeHeader a:visited {
   border: 2px solid #E7CC26;
   font-size: 20px;
@@ -2426,15 +2426,13 @@ ACTIVITY SEARCH HOME
     margin: 0px; }
     .nav-tabs > li a {
       padding: 10px 0 !important; }
-  .activitySearchHome {
-    padding: 30px 15px 30px; }
-    .activitySearchHome input, .activitySearchHome select {
-      width: 75%;
-      border: none; }
-    .activitySearchHome input.btn {
-      float: right;
-      width: 25%;
-      min-width: 25%; }
+  .activitySearchHome input, .activitySearchHome select {
+    width: 75%;
+    border: none; }
+  .activitySearchHome input.btn {
+    float: right;
+    width: 25%;
+    min-width: 25%; }
   .eventDateRange, #location, span.distance, span.distance:before, #venue-location {
     display: none;
     width: 0px; } }
@@ -2916,6 +2914,17 @@ p {
   .sectionFive:after {
     background: url(../images/sectionFiveArrow.png) repeat-y 0 0;
     z-index: 1001; }
+
+footer.main {
+  background: #000 url("../images/footerLogos.png") no-repeat scroll 50% 40px;
+  padding-top: 220px; }
+  @media only screen and (max-width: 800px) {
+    footer.main {
+      background: #000;
+      padding-top: 0px; } }
+  footer.main .footer ul li a {
+    border-bottom: 1px solid #444 !important;
+    color: #89c23f !important; }
 
 .eventsContentPod h3, .venuesContentPod h3 {
   margin-top: 0px;
