@@ -53,7 +53,6 @@ nunjucks.ready(function (nj) {
 app.use('/public', express.static(path.join(__dirname, '/public')))
 app.use('/public', express.static(path.join(__dirname, '/lcc_modules/lcc_templates_nunjucks/assets')))
 app.use('/public', express.static(path.join(__dirname, '/lcc_modules/lcc_frontend_toolkit')))
-app.use('/public', express.static(path.join(__dirname, '/public/lightnight/images')))
 
 // Support for parsing data in POSTs
 app.use(bodyParser.json())
@@ -139,7 +138,7 @@ app.get(/^\/([^.]+)$/, function (req, res) {
 console.log('\nLCC SharePoint Prototype kit v' + releaseVersion)
 // Display warning not to use kit for production services.
 console.log('\nNOTICE: the kit is for building prototypes, do not use it for production services.')
-
+console.log(__dirname)
 // start the app
 utils.findAvailablePort(app, function (port) {
   console.log('Listening on port ' + port + '   url: http://localhost:' + port)

@@ -50,13 +50,13 @@ gulp.task('sync:lcc_templates_nunjucks', ['sync:lcc_frontend_toolkit'], (done) =
 
 //Compile SASS into the respective CSS and copy to public folder
 gulp.task('sass', ['sync:lcc_templates_nunjucks'], (done) => {
-   gulp.src(['./app/assets/**/*.scss', '!app/assets/*_subsite/**'], {base:'./app/assets/sass'})
+   return gulp.src(['./app/assets/**/*.scss', '!app/assets/*_subsite/**'], {base:'./app/assets/sass'})
       .pipe(sass({includePaths: ['./app/assets',
             'lcc_modules/lcc_frontend_toolkit/stylesheets/']}).on('error', function (err) {
           notify({ title: 'SASS Task' }).write(err.line + ': ' + err.message);
           this.emit('end');
       }))
-      .pipe(gulp.dest('./public/stylesheets/')).on('end', function() { done(); });
+      .pipe(gulp.dest('./public/stylesheets/'));
 });
 
 //Compile subsites SASS
@@ -82,9 +82,10 @@ gulp.task('subsites:assets', ['subsites:sass'], (done) => {
      return gulp.src(['app/assets/*_subsite/**/*.*', '!app/assets/*_subsite/sass/*.*'])
         .pipe(foreach(function(stream, file) {          
             var subsite = (path.normalize(util.format('%s%s..', path.dirname(file.path), path.sep)).split(path.sep).pop()).split('_')[0];
-            return stream.pipe(rename(function(path) {
-                path.dirname = path.dirname.split('\\').pop();
-                return path;
+            return stream.pipe(rename(function(filePath) {
+                console.log(path.sep)
+                filePath.dirname = filePath.dirname.split(path.sep).pop();
+                return filePath;
             }))
             .pipe(gulp.dest(util.format('./public/%s/', subsite)))
         }))
