@@ -1,0 +1,42 @@
+.promoListWebpart ul li.contentLink {
+  border-color: transparent; }
+  .promoListWebpart ul li.contentLink h2 {
+    font-size: 35px;
+    margin: 0.4em 0px; }
+  .promoListWebpart ul li.contentLink p {
+    font-size: 25px; }
+  .promoListWebpart ul li.contentLink .info {
+    font-size: 22px; }
+
+.promoListWebpart ul li.catergory a {
+  background-size: 540px !important;
+  background-position: top center !important;
+  text-align: center; }
+  .promoListWebpart ul li.catergory a .info {
+    background: transarent; }
+  .promoListWebpart ul li.catergory a .fa {
+    color: #fff;
+    font-size: 80px;
+    margin-top: 10px; }
+  .promoListWebpart ul li.catergory a:hover {
+    border-color: transparent; }
+  .promoListWebpart ul li.catergory a img {
+    text-align: center; }
+  .promoListWebpart ul li.catergory a .info {
+    background: transparent;
+    width: 100%;
+    opacity: 1;
+    border-top: 1px solid #888;
+    padding: 20px;
+    font-size: 18px;
+    text-transform: uppercase;
+    opacity: 1;
+    filter: alpha(opacity=1); }
+    .promoListWebpart ul li.catergory a .info .arrow {
+      background: transparent; }
+      .promoListWebpart ul li.catergory a .info .arrow:after {
+        display: none; }
+
+@media only screen and (max-width: 600px) {
+  .promoListWebpart .contentLink.heightTwo {
+    padding-bottom: 80px; } }

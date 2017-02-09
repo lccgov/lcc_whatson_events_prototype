@@ -362,53 +362,57 @@ CAROUSEL BOOTSTRAP
         .socialBookmarks ul li a.email a:after {
           content: "\f0e0"; }
 
-.sideNav #sideNavBox {
-  float: none;
-  margin-left: 0px;
-  margin-right: 0px;
-  width: 100%;
+.sideNav {
+  padding: 10px 20px 20px;
+  background: #efefef;
   margin-bottom: 20px; }
-  .sideNav #sideNavBox .ms-core-listMenu-verticalBox > .ms-core-listMenu-item, .sideNav #sideNavBox .ms-core-listMenu-verticalBox li.static > .ms-core-listMenu-item {
-    padding: 15px 10px;
-    border-bottom: 1px solid #E0E0E0;
-    margin: -1px 1px 0 0;
-    color: #006DA5;
-    display: block;
-    font-weight: normal;
-    font-size: 18px; }
-    .sideNav #sideNavBox .ms-core-listMenu-verticalBox > .ms-core-listMenu-item.selected, .sideNav #sideNavBox .ms-core-listMenu-verticalBox li.static > .ms-core-listMenu-item.selected {
-      color: '#fff'; }
-  .sideNav #sideNavBox .ms-core-listMenu-selected:link, .sideNav #sideNavBox .ms-core-listMenu-selected:visited, .sideNav #sideNavBox .ms-core-listMenu-selected {
-    background-color: #133E8D;
-    color: #fff; }
+  .sideNav h3 {
+    margin: 0.6em 0; }
+  .sideNav li {
+    list-style: none; }
+  .sideNav a {
+    font-size: 1.1em;
+    line-height: 1.2em;
+    display: inline-block;
+    margin: 0px 0px 5px;
+    padding: 10px;
+    background: #fff;
+    width: 100%; }
+    .sideNav a:hover {
+      background: #707070 !important;
+      color: #fff; }
+    .sideNav a.active {
+      color: #E67E22;
+      background: transparent; }
+      .sideNav a.active:hover {
+        background: transparent; }
 
-ul.accordionWP {
+ul.accordion {
   list-style: none;
   padding: 0px;
   margin: 0px 0 20px 0;
   border-top: 1px solid #dedede; }
-  ul.accordionWP li {
+  ul.accordion li {
     border-bottom: 1px solid #dedede; }
-    ul.accordionWP li h3.accordion {
-      margin: 0px;
+    ul.accordion li a.header {
+      display: block;
+      padding: 15px 40px 15px 15px;
+      position: relative;
       font-size: 20px; }
-      ul.accordionWP li h3.accordion a {
-        display: block;
-        padding: 15px 40px 15px 15px;
-        position: relative; }
-        ul.accordionWP li h3.accordion a:hover, ul.accordionWP li h3.accordion a:focus {
-          background: rgba(0, 0, 0, 0.05); }
-        ul.accordionWP li h3.accordion a:after {
-          font-family: FontAwesome;
-          font-size: 18px;
-          content: "\f078";
-          position: absolute;
-          right: 10px; }
-      ul.accordionWP li h3.accordion.active a:after {
-        content: "\f077"; }
-    ul.accordionWP li div div {
+      ul.accordion li a.header:hover, ul.accordion li a.header:focus {
+        background: rgba(0, 0, 0, 0.05); }
+      ul.accordion li a.header:after {
+        font-family: FontAwesome;
+        font-size: 18px;
+        content: "\f078";
+        position: absolute;
+        right: 10px;
+        color: blue; }
+    ul.accordion li.active a:after {
+      content: "\f077"; }
+    ul.accordion li div div {
       padding: 15px; }
-      ul.accordionWP li div div li {
+      ul.accordion li div div li {
         border: none; }
 
 ul.promo-group {
@@ -445,12 +449,13 @@ ul.promo-group {
         background: #216486;
         color: #fff;
         border-color: #212d3a; }
-        ul.promo-group li a:hover p {
+        ul.promo-group li a:hover p, ul.promo-group li a:hover h3 {
           color: #fff; }
       ul.promo-group li a h3 {
         margin: 0 0 0.4em;
         font-weight: 600;
-        font-size: 1em; }
+        font-size: 1em;
+        color: #333; }
       ul.promo-group li a p {
         color: #666666;
         font-size: 0.7em;
@@ -625,7 +630,8 @@ ul.promo-group {
           font-weight: 300; }
         .promoListWebpart ul li a img {
           position: absolute; }
-        .promoListWebpart ul li a:hover span.info, .promoListWebpart ul li a:focus span.info {
+        .promoListWebpart ul li a:hover span.info,
+        .promoListWebpart ul li a:focus span.info {
           background: #131A22;
           text-decoration: none;
           opacity: 1;
@@ -672,7 +678,11 @@ ul.promo-group {
           text-align: center;
           line-height: 60px;
           font-size: 19.2px; }
-      .promoListWebpart ul li a[rel="xl"]:after, .promoListWebpart ul li a[rel="pdf"]:after, .promoListWebpart ul li a[rel="doc"]:after, .promoListWebpart ul li a[rel="pp"]:after, .promoListWebpart ul li a[rel="external"]:after {
+      .promoListWebpart ul li a[rel="xl"]:after,
+      .promoListWebpart ul li a[rel="pdf"]:after,
+      .promoListWebpart ul li a[rel="doc"]:after,
+      .promoListWebpart ul li a[rel="pp"]:after,
+      .promoListWebpart ul li a[rel="external"]:after {
         content: ""; }
       .promoListWebpart ul li a[rel="xl"] .arrow:after {
         content: "\f1c3"; }
@@ -694,20 +704,29 @@ ul.promo-group {
   .promoListWebpart .six a span.secondaryInfo {
     font-size: 20.8px;
     display: block; }
-  .promoListWebpart .two a span.info, .promoListWebpart .three a span.info, .promoListWebpart .four a span.info {
+  .promoListWebpart .two a span.info,
+  .promoListWebpart .three a span.info,
+  .promoListWebpart .four a span.info {
     font-size: 24px;
     padding: 20px 100px 20px 20px; }
-  .promoListWebpart .two a span.secondaryInfo, .promoListWebpart .three a span.secondaryInfo, .promoListWebpart .four a span.secondaryInfo {
+  .promoListWebpart .two a span.secondaryInfo,
+  .promoListWebpart .three a span.secondaryInfo,
+  .promoListWebpart .four a span.secondaryInfo {
     font-size: 16px; }
   .promoListWebpart .four.heightTwo a {
     font-size: 36.8px; }
   @media screen and (max-width: 1000px) {
-    .promoListWebpart a span.info, .promoListWebpart li.four.heightTwo a span.info, .promoListWebpart li.six a span.info {
+    .promoListWebpart a span.info,
+    .promoListWebpart li.four.heightTwo a span.info,
+    .promoListWebpart li.six a span.info {
       font-size: 24px; }
-    .promoListWebpart a span.secondaryInfo, .promoListWebpart li.four.heightTwo a span.secondaryInfo, .promoListWebpart li.six a span.secondaryInfo {
+    .promoListWebpart a span.secondaryInfo,
+    .promoListWebpart li.four.heightTwo a span.secondaryInfo,
+    .promoListWebpart li.six a span.secondaryInfo {
       font-size: 19.2px; } }
   @media screen and (min-width: 1000px) {
-    .promoListWebpart li.six a span.info, .promoListWebpart li.four a span.info {
+    .promoListWebpart li.six a span.info,
+    .promoListWebpart li.four a span.info {
       bottom: 0px;
       top: 0px;
       right: 0px;
@@ -715,9 +734,11 @@ ul.promo-group {
       text-align: center;
       width: 33.3%;
       min-width: 220px; }
-    .promoListWebpart li.six a span.info, .promoListWebpart li.four.heightTwo a span.info {
+    .promoListWebpart li.six a span.info,
+    .promoListWebpart li.four.heightTwo a span.info {
       padding: 80px 20px 20px 20px; }
-      .promoListWebpart li.six a span.info .arrow, .promoListWebpart li.four.heightTwo a span.info .arrow {
+      .promoListWebpart li.six a span.info .arrow,
+      .promoListWebpart li.four.heightTwo a span.info .arrow {
         height: 80px; }
     .promoListWebpart .four a span.secondaryInfo,
     .promoListWebpart .six a span.secondaryInfo {
@@ -747,6 +768,8 @@ ul.promo-group {
         color: #fff; }
         .promoListWebpart .contentLink a:hover .arrow:after {
           color: #fff; }
+    .promoListWebpart .contentLink.color a {
+      bottom: 10px; }
     .promoListWebpart .contentLink.color p {
       color: #333; }
     .promoListWebpart .contentLink.color div {
@@ -782,7 +805,8 @@ ul.promo-group {
         position: relative; }
     .promoListWebpart .contentLink.heightTwo {
       height: 400px; }
-    .promoListWebpart .contentLink.heightTwo a, .promoListWebpart .contentLink a {
+    .promoListWebpart .contentLink.heightTwo a,
+    .promoListWebpart .contentLink a {
       position: absolute;
       z-index: auto;
       bottom: 15px;
@@ -791,12 +815,17 @@ ul.promo-group {
       height: 80px;
       width: 91.8%;
       background-color: transparent; }
-      .promoListWebpart .contentLink.heightTwo a span.info, .promoListWebpart .contentLink a span.info {
+      .promoListWebpart .contentLink.heightTwo a span.info,
+      .promoListWebpart .contentLink a span.info {
         background-color: transparent;
         border-top: 1px solid #333; }
-      .promoListWebpart .contentLink.heightTwo a span.arrow, .promoListWebpart .contentLink a span.arrow {
+      .promoListWebpart .contentLink.heightTwo a span.arrow,
+      .promoListWebpart .contentLink a span.arrow {
         background-color: transparent; }
-      .promoListWebpart .contentLink.heightTwo a:hover span.info, .promoListWebpart .contentLink.heightTwo a:focus span.info, .promoListWebpart .contentLink a:hover span.info, .promoListWebpart .contentLink a:focus span.info {
+      .promoListWebpart .contentLink.heightTwo a:hover span.info,
+      .promoListWebpart .contentLink.heightTwo a:focus span.info,
+      .promoListWebpart .contentLink a:hover span.info,
+      .promoListWebpart .contentLink a:focus span.info {
         background: #131A22; }
     .promoListWebpart .contentLink p {
       text-align: center;
@@ -839,9 +868,11 @@ ul.promo-group {
       padding-bottom: 0px; }
     .promoListWebpart .content.heightTwo {
       height: 400px; }
-    .promoListWebpart .content.heightTwo a, .promoListWebpart .content a {
+    .promoListWebpart .content.heightTwo a,
+    .promoListWebpart .content a {
       display: none; }
-      .promoListWebpart .content.heightTwo a.button, .promoListWebpart .content a.button {
+      .promoListWebpart .content.heightTwo a.button,
+      .promoListWebpart .content a.button {
         display: block;
         height: auto;
         float: left;
@@ -886,11 +917,16 @@ ul.promo-group {
   width: 100%; }
 
 @media only screen and (max-width: 1200px) {
-  .one, .two, .four {
+  .one,
+  .two,
+  .four {
     width: 50%; } }
 
 @media only screen and (max-width: 600px) {
-  .one, .two, .three, .four {
+  .one,
+  .two,
+  .three,
+  .four {
     width: 100%; } }
 
 .promoListWebpart ul li.catergory {
@@ -918,6 +954,167 @@ ul.promo-group {
       vertical-align: middle;
       display: table-cell;
       height: auto; }
+
+.promoListWebpart ul li.orange a .info {
+  background: #FF6666;
+  color: #fff; }
+  .promoListWebpart ul li.orange a .info .secondaryInfo {
+    color: #fff; }
+  .promoListWebpart ul li.orange a .info .arrow {
+    background: #ff5c5c; }
+    .promoListWebpart ul li.orange a .info .arrow:after {
+      color: #fff; }
+
+.promoListWebpart ul li.lime a .info {
+  background: #CCCC00;
+  color: #fff; }
+  .promoListWebpart ul li.lime a .info .secondaryInfo {
+    color: #fff; }
+  .promoListWebpart ul li.lime a .info .arrow {
+    background: #b3b300; }
+    .promoListWebpart ul li.lime a .info .arrow:after {
+      color: #fff; }
+
+.promoListWebpart ul li.yellow a .info {
+  background: #FFCC33;
+  color: #fff; }
+  .promoListWebpart ul li.yellow a .info .secondaryInfo {
+    color: #fff; }
+  .promoListWebpart ul li.yellow a .info .arrow {
+    background: #ffc61a; }
+    .promoListWebpart ul li.yellow a .info .arrow:after {
+      color: #fff; }
+
+.promoListWebpart ul li.magenta a .info {
+  background: #CC6699;
+  color: #fff; }
+  .promoListWebpart ul li.magenta a .info .secondaryInfo {
+    color: #fff; }
+  .promoListWebpart ul li.magenta a .info .arrow {
+    background: #c6538c; }
+    .promoListWebpart ul li.magenta a .info .arrow:after {
+      color: #fff; }
+
+.promoListWebpart ul li.pink a .info {
+  background: #FF6699;
+  color: #fff; }
+  .promoListWebpart ul li.pink a .info .secondaryInfo {
+    color: #fff; }
+  .promoListWebpart ul li.pink a .info .arrow {
+    background: #ff4d88; }
+    .promoListWebpart ul li.pink a .info .arrow:after {
+      color: #fff; }
+
+.promoListWebpart ul li.purple a .info {
+  background: #666699;
+  color: #fff; }
+  .promoListWebpart ul li.purple a .info .secondaryInfo {
+    color: #fff; }
+  .promoListWebpart ul li.purple a .info .arrow {
+    background: #5c5c8a; }
+    .promoListWebpart ul li.purple a .info .arrow:after {
+      color: #fff; }
+
+.promoListWebpart ul li.green a .info {
+  background: #009999;
+  color: #fff; }
+  .promoListWebpart ul li.green a .info .secondaryInfo {
+    color: #fff; }
+  .promoListWebpart ul li.green a .info .arrow {
+    background: teal; }
+    .promoListWebpart ul li.green a .info .arrow:after {
+      color: #fff; }
+
+.promoListWebpart .contentLink {
+  border: 15px solid #fff;
+  padding: 0px; }
+  .promoListWebpart .contentLink.heightTwo a,
+  .promoListWebpart .contentLink a {
+    width: 100%;
+    margin: 0px;
+    bottom: 0px; }
+    .promoListWebpart .contentLink.heightTwo a:hover .info,
+    .promoListWebpart .contentLink a:hover .info {
+      background: black !important; }
+  .promoListWebpart .contentLink p {
+    text-align: center;
+    font-size: 18px;
+    line-height: 25px;
+    margin: 30px; }
+    .promoListWebpart .contentLink p strong {
+      text-align: center;
+      line-height: 30px;
+      font-size: 30px;
+      margin-top: 30px;
+      display: block; }
+  .promoListWebpart .contentLink.heightTwo p strong {
+    font-size: 40px;
+    line-height: 40px;
+    margin-top: 40px; }
+  .promoListWebpart .contentLink.heightTwo.one p strong {
+    font-size: 30px;
+    line-height: 30px;
+    margin-top: 30px; }
+  .promoListWebpart .contentLink.lime {
+    background: #CCCC00; }
+    .promoListWebpart .contentLink.lime h2,
+    .promoListWebpart .contentLink.lime h3,
+    .promoListWebpart .contentLink.lime p {
+      color: #fff; }
+    .promoListWebpart .contentLink.lime a span.info {
+      border-top: 1px solid #fff; }
+  .promoListWebpart .contentLink.yellow {
+    background: #FFCC33; }
+    .promoListWebpart .contentLink.yellow h2,
+    .promoListWebpart .contentLink.yellow h3,
+    .promoListWebpart .contentLink.yellow p {
+      color: #fff; }
+    .promoListWebpart .contentLink.yellow a span.info {
+      border-top: 1px solid #fff; }
+  .promoListWebpart .contentLink.orange {
+    color: #fff;
+    background: #FF6666; }
+    .promoListWebpart .contentLink.orange h2,
+    .promoListWebpart .contentLink.orange h3,
+    .promoListWebpart .contentLink.orange p {
+      color: #fff; }
+    .promoListWebpart .contentLink.orange a span.info {
+      border-top: 1px solid #fff; }
+  .promoListWebpart .contentLink.magenta {
+    color: #fff;
+    background: #CC6699; }
+    .promoListWebpart .contentLink.magenta h2,
+    .promoListWebpart .contentLink.magenta h3,
+    .promoListWebpart .contentLink.magenta p {
+      color: #fff; }
+    .promoListWebpart .contentLink.magenta a span.info {
+      border-top: 1px solid #fff; }
+  .promoListWebpart .contentLink.pink {
+    background: #FF6699; }
+    .promoListWebpart .contentLink.pink h2,
+    .promoListWebpart .contentLink.pink h3,
+    .promoListWebpart .contentLink.pink p {
+      color: #fff; }
+    .promoListWebpart .contentLink.pink .info {
+      border-top: 1px solid #fff; }
+    .promoListWebpart .contentLink.pink a span.info {
+      border-top: 1px solid #fff; }
+  .promoListWebpart .contentLink.purple {
+    background: #666699; }
+    .promoListWebpart .contentLink.purple h2,
+    .promoListWebpart .contentLink.purple h3,
+    .promoListWebpart .contentLink.purple p {
+      color: #fff; }
+    .promoListWebpart .contentLink.purple a span.info {
+      border-top: 1px solid #fff; }
+  .promoListWebpart .contentLink.green {
+    background: #009999; }
+    .promoListWebpart .contentLink.green h2,
+    .promoListWebpart .contentLink.green h3,
+    .promoListWebpart .contentLink.green p {
+      color: #fff; }
+    .promoListWebpart .contentLink.green a span.info {
+      border-top: 1px solid #fff; }
 
 /*************************
 CHECKBOXES EVENTS FILTERS
@@ -2879,7 +3076,7 @@ p {
 
 .sectionHeader {
   padding: 0px;
-  background: #016B61 url(../images/headerBackground.jpg) no-repeat center bottom;
+  background: #016B61 url(../images/headerbackground.jpg) no-repeat center bottom;
   min-height: 275px; }
   .sectionHeader .logo {
     height: 192px;

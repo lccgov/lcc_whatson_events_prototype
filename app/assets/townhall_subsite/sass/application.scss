@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald:300,700,800,400,600');
+// available variables to change the brand colours as required
+// masterhead.scss
+
+//$head-background: #ffffff;
+
+
+// mainMenu.scss -- responsive icons color
+//$menu-link-color:#337ab7;
+
+
+//base.scss
+
+$base-background-color:#000;
+$base-font-size:18px ;
+$base-font-color:#333 ;
+$base-link-color:#59abe1 ;
+//$base-container-width:1500px ;
+$btn-background-color:#59abe1;
+$font-primary:'Oswald', Helvetica, Arial; // main font
+$font-secondary:'Oswald', Helvetica, Arial; // secondary font
+$base-highlight-color:#A93723;
+
+
+// global used on all partials to get a uniform spacing between elements
+//$base-margin-bottom:1.875em ;
+
+//headerTop
+//$search-link-background:#F3F3F4 ;
+//$search-link:#333 ;
+
+// mainNav.scss
+$main-nav-background:transparent;
+//$main-nav-link:#fff ;
+
+//footer.scss
+//$footer-font-color:#fff ;
+//$footer-nav-selected-link:#133E8D ;
+
+// sectionSubsite.scss - socialamedia.scss
+//$section-Background:#efefef ;
+
+//  socialamedia.scss
+//$social-link-color:#337ab7 ;
+
+//  sideNavigation.scss
+//$side-nav-active-background:#133E8D ;
+
+//  carousel.scss
+//$carousel-active-background:#000 ;
+//$carousel-indicators-active-background:#ccc ;
+//$carousel-caption-background: rgba(0,0,0,0.6) ;
+//$carousel-caption-font-color:#fff ;
+
+
+// blocklinks.scss
+
+//$block-link-back:#f6f6f6 ;
+//$block-link-back-hover:#3380A4 ;
+//$promo-group-border:1px solid #fff ; 
+//$promo-group-background:#EDF2F5 ; 
+//$promo-group-li-background:#EDF2F5 ;
+//$promo-group-link-color:#216486 ;
+
+$accordion-color:#A93723;
+
+
+//promolist webpart
+//$link-font-color:#fff;
+$span-info-color:#52a4ce;
+$span-info-hover:darken(#52a4ce,15%);
+$span-info-secondary-color:#131921;
+$span-arrow-base:darken($span-info-color, 15%);
+$span-third-info-base:#fff;
+//$third-info-font-color:#333;
+//$arrow-color:#fff;
+$contentFontColor:#fff;
+$content-arrow-color:#fff;
+//$content-border-color:#ddd;
+
+// section backgrounds
+$sectionHeader-background-color:rgba(255,255,255,0.2);
+$sectionOne-background-color:#fff;
+$sectionTwo-background-color:  rgba(255,255,255,0.2);
+$sectionThree-background-color:#000;
+$sectionFour-background-color:#333;
+$sectionFive-background-color:#000;
+
+//iconlinks
+//$iconLinkIconColor:#FFC82E;
+
+//heroBanner
+//$heroFontBackground:rgba(0, 0, 0, 0.5); 
+//$heroFontcolor:#fff; 
+
+$eventsfilter-hightlight-color:#333;
+
+@import 'mixins';
+@import 'variables';
+@import 'brandColors';
+
+// available sass files please un-comment out as required
+
+//@import 'mainMenuSubsites';
+@import 'breadcrumb';
+@import 'sectionSubsite';
+@import 'promo';
+@import 'carousel';
+//@import 'socialMedia';
+//@import 'sideNavigation';
+//@import 'blockLinks';
+@import 'accordion';
+@import 'promoGroup';
+@import 'alerts';
+@import 'promoListwebpart';
+@import 'eventsWebparts';
+@import 'sharepointOverides';
+@import 'iconLinks';
+@import 'heroBanner';
+
+@import '../sass/eventItem';
+@import '../sass/pageNavigation';
+@import '../sass/promoListContentLink';
+
+
+a:visited {
+    color: $base-link-color;
+    text-decoration: none;
+}
+
+
+body,.ms-backgroundImage {
+    background: #000 url(../images/bodyBackground.jpg) no-repeat center 60px;
+    font-weight:300;
+}
+
+
+.sectionHeader{
+    padding:0px;
+    background:transparent;
+
+
+ 
+
+        
+ .logo{
+        height:192px;
+        width:100%;
+        background:url(../images/logo.png) center top no-repeat;
+        margin:20px 0;
+
+        @media (max-width: 767px){
+            width:100%;
+        }
+
+    }
+      }
+
+.header-left {
+    width:100%;
+}
+
+.sectionTwo, .sectionThree, .sectionFour, .sectionFive  {
+    p,h1,h2,h3,h4,h5, ul, ol, div{
+        color:#fff !important;
+    }
+}
+
+.sectionOne{
+        div.ms-rteElement-divFull, div.ms-rteElement-divRight, div.ms-rteElement-divRight50 {
+    border: 1px solid #ddd;
+
+    h2 {
+    border-bottom: 1px solid #ddd;
+
+}
+}
+}
+// Main menu overides
+
+ .main-nav {
+
+    margin-top:-20px;
+    padding:10px 0 0px 0;
+
+
+
+    a{
+        background:rgba(#52a4ce,0.8);
+        &:hover{
+             background:darken(#52a4ce, 45%) !important ;
+        }
+    }
+
+    li li 
+	{
+	margin-right:0;
+
+	a {
+        background:transparent;
+    }
+
+	}
+
+
+}
+
+.main-nav ul li a.selected {
+    background:#3488B6 !important;
+}
+
+
+footer.main   {
+    background:rgba(0,0,0,0.5);
+
+    .footerGlobal{
+        background:rgba(0,0,0,0.8);
+    }
+}
+
+
+
+@media only screen and (max-width:768px){
+    ul.menu li a.main-menu {
+    background: rgba(82,164,206,1)!important;
+    color: #fff;
+}
+
+.main-nav {
+    background: rgba(82,164,206,1);
+    margin-top:0px;
+    
+}
+
+}
+
+@media only screen and (min-width:769px){
+.main-nav ul li {
+    display: inline;
+}
+}
+
+
+
+
+
+
+.mapToggle a.active, .mapToggle a.active:hover, .mapToggle a.active:focus {
+    background:lighten(#3488B6, 35%);
+    color:#333;
+}
+

@@ -17,7 +17,7 @@ gulp.task('clean:lcc_modules', (done) => {
     });
 });
 
-//Sync assets to public folder excluding SASS files and subsite folders
+//Sync assets to public folder excluding SASS files
 gulp.task('sync:assets', (done) => {
     syncy(['app/assets/**/*', '!app/assets/sass/**', '!app/assets/*_subsite/**'], 'public', {
             ignoreInDest: '**/stylesheets/**',
@@ -32,7 +32,7 @@ gulp.task('sync:assets', (done) => {
 gulp.task('sync:lcc_frontend_toolkit', ['sync:assets'], (done) => {
     syncy(['node_modules/lcc_frontend_toolkit/**'], 'lcc_modules/lcc_frontend_toolkit', {
             base: 'node_modules/lcc_frontend_toolkit',
-            updateAndDelete: false
+            updateAndDelete: true
         }).then(() => { 
             done();
     }).catch((err) => { done(err);})
@@ -42,21 +42,21 @@ gulp.task('sync:lcc_frontend_toolkit', ['sync:assets'], (done) => {
 gulp.task('sync:lcc_templates_nunjucks', ['sync:lcc_frontend_toolkit'], (done) => {
     syncy(['node_modules/lcc_templates_nunjucks/**'], 'lcc_modules/lcc_templates_nunjucks', {
             base: 'node_modules/lcc_templates_nunjucks',
-            updateAndDelete: false
+            update: true
         }).then(() => { 
             done();
     }).catch((err) => { done(err);})
 })
 
 //Compile SASS into the respective CSS and copy to public folder
-gulp.task('sass', ['sync:lcc_templates_nunjucks'], (done) => {
-   return gulp.src(['./app/assets/**/*.scss', '!app/assets/*_subsite/**'], {base:'./app/assets/sass'})
+gulp.task('sass', ['sync:lcc_templates_nunjucks'], function () {
+    return gulp.src(['./app/assets/**/*.scss', '!app/assets/*_subsite/**'], {base:'./app/assets/sass'})
       .pipe(sass({includePaths: ['./app/assets',
             'lcc_modules/lcc_frontend_toolkit/stylesheets/']}).on('error', function (err) {
           notify({ title: 'SASS Task' }).write(err.line + ': ' + err.message);
           this.emit('end');
       }))
-      .pipe(gulp.dest('./public/stylesheets/'));
+      .pipe(gulp.dest('./public/stylesheets/'))
 });
 
 //Compile subsites SASS
@@ -91,11 +91,10 @@ gulp.task('subsites:assets', ['subsites:sass'], (done) => {
         }))
 })
 
-gulp.task('watch', ['subsites:assets'], (done) => {
+gulp.task('watch', ['subsites:assets'], function () {
     gulp.watch('app/assets/sass/**/*.scss', ['sass']);
     gulp.watch('app/assets/*_subsite/**/*.scss', ['subsites:assets']);
     gulp.watch(['app/assets/**/*', '!app/assets/sass/**', '!app/assets/*_subsite/sass/**'], ['sync:assets']);
-    done();
 })
 
 gulp.task('nodemon', ['watch'], function () {

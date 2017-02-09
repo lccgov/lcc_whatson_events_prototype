@@ -1,0 +1,66 @@
+.eventItem {
+  float: left;
+  padding: 0 !important;
+  background: #F5F7F8;
+  margin: 1%;
+  width: 31.33333333333%;
+  list-style: none; }
+  .eventItem .btn {
+    display: block;
+    margin: 0 20px 20px; }
+  .eventItem a {
+    text-decoration: none; }
+    .eventItem a:hover .details,
+    .eventItem a:focus .details {
+      text-decoration: none;
+      background: #ECF0F1; }
+  .eventItem img {
+    width: 100%; }
+  .eventItem h3 {
+    margin: 0 0 10px; }
+  .eventItem .details {
+    padding: 20px; }
+  .eventItem .additionaldates {
+    margin: 0;
+    font-size: inherit;
+    color: #666; }
+  .eventItem p.eventDate,
+  .eventItem p.eventLocation {
+    font-size: 0.98em;
+    line-height: 1.2em;
+    padding: 10px 0; }
+  .eventItem p.eventLocation {
+    margin: 0 0 5px;
+    font-weight: bold;
+    color: #34444B; }
+    .eventItem p.eventLocation .glyphicon {
+      color: inherit;
+      margin: 0 5px 0 0; }
+  .eventItem p.eventDate {
+    color: #333;
+    margin: 0 0 5px; }
+  .eventItem p.eventSummary {
+    line-height: 1.3em;
+    margin: 0 0 5px; }
+  .eventItem .eventImage {
+    max-width: 50%;
+    float: right;
+    margin: 0 0 30px 30px; }
+  @media (max-width: 767px) {
+    .eventItem {
+      margin: 2%;
+      width: 46%; } }
+  @media (max-width: 600px) {
+    .eventItem {
+      margin: 0 0 5%;
+      width: 100%; } }
+  @media (max-width: 500px) {
+    .eventItem .eventImage {
+      max-width: 100%;
+      float: none;
+      margin: 0 0 20px 0; } }
+
+.selectedFilters a:visited {
+  color: #333; }
+  .selectedFilters a:visited:hover {
+    color: #fff; }
