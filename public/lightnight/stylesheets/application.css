@@ -768,8 +768,6 @@ ul.promo-group {
         color: #fff; }
         .promoListWebpart .contentLink a:hover .arrow:after {
           color: #fff; }
-    .promoListWebpart .contentLink.color a {
-      bottom: 10px; }
     .promoListWebpart .contentLink.color p {
       color: #333; }
     .promoListWebpart .contentLink.color div {

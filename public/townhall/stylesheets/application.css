@@ -5,12 +5,12 @@ Base.sass variables
 body {
   font-size: 18px;
   font-family: "Oswald", Helvetica, Arial;
-  color: #333;
+  color: #323232;
   background-color: #000; }
 
 .ms-rtestate-field h1.ms-rteElement-H2, .ms-rtestate-field h2.ms-rteElement-H2, .ms-rtestate-field h3.ms-rteElement-H2, .ms-rtestate-field h4.ms-rteElement-H2, .ms-rtestate-field h5.ms-rteElement-H2 {
   font-family: "Oswald", Helvetica, Arial;
-  color: #333; }
+  color: #323232; }
 
 .btn-primary, .button {
   background: #59abe1;
@@ -799,8 +799,6 @@ ul.promo-group {
         color: #fff; }
         .promoListWebpart .contentLink a:hover .arrow:after {
           color: #fff; }
-    .promoListWebpart .contentLink.color a {
-      bottom: 10px; }
     .promoListWebpart .contentLink.color p {
       color: #fff; }
     .promoListWebpart .contentLink.color div {
@@ -2778,7 +2776,7 @@ Sharepoint overides
 ********************/
 h1, h2, h3, h4, h5, ul, ol, p, input {
   font-family: "Oswald", Helvetica, Arial;
-  color: #333; }
+  color: #323232; }
 
 h1, h2, h3, h4, h5 {
   font-weight: 400; }
@@ -2786,7 +2784,7 @@ h1, h2, h3, h4, h5 {
 .ms-rtestate-field h1, .ms-rtestate-field h2, .ms-rtestate-field h3, .ms-rtestate-field h4, .ms-rtestate-field h5 {
   font-weight: 400;
   font-family: "Oswald", Helvetica, Arial;
-  color: #333; }
+  color: #323232; }
 
 input[type=button], input[type=reset], input[type=submit], button {
   min-width: 1em; }

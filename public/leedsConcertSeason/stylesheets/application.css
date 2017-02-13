@@ -799,8 +799,6 @@ ul.promo-group {
         color: #fff; }
         .promoListWebpart .contentLink a:hover .arrow:after {
           color: #fff; }
-    .promoListWebpart .contentLink.color a {
-      bottom: 10px; }
     .promoListWebpart .contentLink.color p {
       color: #fff; }
     .promoListWebpart .contentLink.color div {
