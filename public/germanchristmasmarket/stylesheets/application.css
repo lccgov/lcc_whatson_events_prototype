@@ -4,12 +4,12 @@ Base.sass variables
 *********************************************/
 body {
   font-size: 18px;
-  font-family: "Oswald", Helvetica, Arial;
+  font-family: "Open Sans", Helvetica, Arial;
   color: #323232;
   background-color: #000; }
 
 .ms-rtestate-field h1.ms-rteElement-H2, .ms-rtestate-field h2.ms-rteElement-H2, .ms-rtestate-field h3.ms-rteElement-H2, .ms-rtestate-field h4.ms-rteElement-H2, .ms-rtestate-field h5.ms-rteElement-H2 {
-  font-family: "Oswald", Helvetica, Arial;
+  font-family: "Open Sans", Helvetica, Arial;
   color: #323232; }
 
 .btn-primary, .button {
@@ -68,7 +68,7 @@ body {
  mainMenu.sass variables
 *********************************************/
 .ms-core-navigation {
-  font-family: "Oswald", Helvetica, Arial; }
+  font-family: "Open Sans", Helvetica, Arial; }
 
 .ms-core-listMenu-item, .ms-core-listMenu-item:link, .ms-core-listMenu-item:visited, .ms-tv-item:link, .ms-tv-item:visited, .ms-tv-header:link, .ms-tv-header:visited {
   color: #fff; }
@@ -1475,7 +1475,7 @@ CHECKBOXES EVENTS FILTERS
         color: #fff;
         font-size: 18px;
         font-style: normal;
-        font-family: "Oswald", Helvetica, Arial; }
+        font-family: "Open Sans", Helvetica, Arial; }
         .eventsContentPod.image .dateFull .dateTime .dateIcon, .venuesContentPod.image .dateFull .dateTime .dateIcon {
           height: 25px; }
     @media only screen and (max-width: 600px) {
@@ -1934,7 +1934,7 @@ EVENT DETAILS
   word-wrap: break-word;
   float: left;
   width: 100%;
-  font-family: "Oswald", Helvetica, Arial; }
+  font-family: "Open Sans", Helvetica, Arial; }
   .eventDetailsBlock h2, .eventDetailsBlock h3, .eventDetailsBlock h4 {
     font-size: 1.5em;
     margin: 0 0 10px 0;
@@ -2673,7 +2673,7 @@ ACTIVITY SEARCH HOME
   vertical-align: top;
   color: #fff;
   background: #59abe1;
-  font-family: "Oswald", Helvetica, Arial; }
+  font-family: "Open Sans", Helvetica, Arial; }
 
 .searchButton {
   width: 100%; }
@@ -2732,7 +2732,7 @@ ACTIVITY SEARCH HOME
 #loading {
   text-align: center;
   font-size: 36px;
-  font-family: "Oswald", Helvetica, Arial;
+  font-family: "Open Sans", Helvetica, Arial;
   height: 250px;
   background: #fff; }
   #loading span {
@@ -2827,7 +2827,7 @@ ul.cbs-List {
 Sharepoint overides
 ********************/
 h1, h2, h3, h4, h5, ul, ol, p, input {
-  font-family: "Oswald", Helvetica, Arial;
+  font-family: "Open Sans", Helvetica, Arial;
   color: #323232; }
 
 h1, h2, h3, h4, h5 {
@@ -2835,7 +2835,7 @@ h1, h2, h3, h4, h5 {
 
 .ms-rtestate-field h1, .ms-rtestate-field h2, .ms-rtestate-field h3, .ms-rtestate-field h4, .ms-rtestate-field h5 {
   font-weight: 400;
-  font-family: "Oswald", Helvetica, Arial;
+  font-family: "Open Sans", Helvetica, Arial;
   color: #323232; }
 
 input[type=button], input[type=reset], input[type=submit], button {
@@ -3295,7 +3295,8 @@ p, article ul {
   font-weight: normal; }
 
 h1, h2, h3, h4, h5 {
-  font-weight: 400; }
+  font-weight: 400;
+  font-family: "Oswald", Helvetica, Arial; }
 
 h1, h2, h3, h4, h5, ol, p, ul {
   margin-left: 0;
@@ -3311,10 +3312,11 @@ h1, h2, h3, h4, h5, ol, p, ul {
     margin: 0 0 20px; }
   h2 {
     font-size: 26px; }
-  .sectionFive h2, .sectionFour h2, section.home h2, sectionFive h2 {
+  .sectionFive h2, .sectionFour h2, section.home h2, .sectionFive h2 {
     font-size: 32px !important; } }
 
 .sectionOne {
+  margin-top: -2px;
   background-image: url(../images/gm-gold-star.png);
   background-position: top 62px right 30%;
   background-repeat: no-repeat;
@@ -3457,7 +3459,8 @@ section.home .promoListWebpart a {
   color: #251611;
   -webkit-transition: ease all 0.3s;
   /* Safari */
-  transition: ease all 0.3s; }
+  transition: ease all 0.3s;
+  font-family: "OSWALD",serif; }
 
 .promoListWebpart ul li a span.info:after {
   content: '\f054';
@@ -3643,7 +3646,10 @@ footer .col-sm-12 {
   font-weight: normal;
   font-size: 20px;
   font-family: 'Open Sans', sans-serif;
-  letter-spacing: 0; }
+  letter-spacing: 0;
+  border: none; }
+  .btn:after {
+    background: transparent; }
   .btn.pdf:after {
     content: '\f1c1';
     font-family: FontAwesome;
@@ -4016,11 +4022,17 @@ a:focus, input[type=submit]:focus {
   content: '\f08e';
   font-family: FontAwesome; }
 
-.breadcrumb > span > span:first-child > a {
-  display: none; }
-
-.breadcrumb > span > span:nth-child(2) {
-  display: none; }
+.breadcrumb {
+  padding: 17px 0;
+  margin: 0px;
+  list-style: none;
+  background-color: transparent;
+  font-family: 'Open Sans',sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  border-bottom: 1px solid #eee; }
+  .breadcrumb a:link {
+    text-decoration: none; }
 
 #siteStatement {
   background: #251611;

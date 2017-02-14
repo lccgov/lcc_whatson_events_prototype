@@ -17,9 +17,10 @@ $base-font-color:#323232 ;
 $base-link-color:#59abe1 ;
 //$base-container-width:1500px ;
 $btn-background-color:#59abe1;
-$font-primary:'Oswald', Helvetica, Arial; // main font
+$font-primary:'Open Sans', Helvetica, Arial; // main font
 $font-secondary:'Oswald', Helvetica, Arial; // secondary font
 $base-highlight-color:#A93723;
+
 
 
 // global used on all partials to get a uniform spacing between elements
@@ -375,6 +376,7 @@ p, article ul{
 
 h1, h2, h3, h4, h5 {
     font-weight: 400;
+    font-family:$font-secondary;
 }
 
 h1, h2, h3, h4, h5, ol, p, ul {
@@ -401,7 +403,7 @@ h1, h2, h3, h4, h5, ol, p, ul {
         font-size:26px;
     }
 
-    .sectionFive h2, .sectionFour h2, section.home h2, sectionFive h2{
+    .sectionFive h2, .sectionFour h2, section.home h2, .sectionFive h2{
         font-size:32px !important;
     }
     
@@ -410,6 +412,7 @@ h1, h2, h3, h4, h5, ol, p, ul {
 
 
 .sectionOne{
+    margin-top:-2px;
     background-image: url(../images/gm-gold-star.png);
     background-position:top 62px right 30%;
     background-repeat: no-repeat;
@@ -635,6 +638,7 @@ span.info {
     color:#251611;
     -webkit-transition: ease all 0.3s; /* Safari */
     transition: ease all 0.3s;
+    font-family: "OSWALD",serif;
 }
 
 span.info:after{
@@ -678,6 +682,8 @@ span.secondaryInfo {
     color:#333 !important;
     -webkit-transition: ease all 0.3s; /* Safari */
     transition: ease all 0.3s;
+
+
 }
 
 .promoListWebpart ul li a:hover span.info:after {
@@ -916,6 +922,11 @@ p{
     font-size:20px;
     font-family:'Open Sans', sans-serif;
     letter-spacing:0;
+    border:none;
+
+    &:after{
+        background:transparent;
+    }
     
     &.pdf{
         
@@ -1425,12 +1436,19 @@ a:focus, input[type=submit]:focus{
     font-family: FontAwesome;
 }
 
-.breadcrumb>span>span:first-child>a{
-display:none;
-}
+.breadcrumb {
+    padding: 17px 0 ;
+    margin:0px;
+    list-style: none;
+    background-color: transparent;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    border-bottom: 1px solid #eee;
 
-.breadcrumb>span>span:nth-child(2){
-display:none;
+    a:link{
+        text-decoration:none;
+    }
 }
 
 //cookies
