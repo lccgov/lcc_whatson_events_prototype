@@ -537,10 +537,12 @@ ul.promo-group {
   border: none;
   border-radius: 0px;
   color: #fff; }
-  .alert .container-fluid {
+  .alert h1, .alert h2, .alert h3, .alert h4, .alert p {
+    color: #fff; }
+  .alert .alertInner {
     position: relative;
     padding: 25px 25px 25px 80px; }
-    .alert .container-fluid::before {
+    .alert .alertInner::before {
       font-family: FontAwesome;
       font-weight: normal;
       font-style: normal;
@@ -553,19 +555,19 @@ ul.promo-group {
       color: #fff; }
   .alert.alert-warning {
     background: #f4d313; }
-    .alert.alert-warning .container-fluid::before {
+    .alert.alert-warning .alertInner:before {
       content: '\f071'; }
   .alert.alert-info {
     background: #5dade2; }
-    .alert.alert-info .container-fluid::before {
+    .alert.alert-info .alertInner:before {
       content: '\f0a1'; }
   .alert.alert-success {
     background: #58d68d; }
-    .alert.alert-success .container-fluid::before {
+    .alert.alert-success .alertInner::before {
       content: '\f087'; }
   .alert.alert-danger {
     background: #ec7063; }
-    .alert.alert-danger .container-fluid::before {
+    .alert.alert-danger .alertInner::before {
       content: '\f256'; }
   .alert .close {
     opacity: 0.8;
@@ -768,6 +770,8 @@ ul.promo-group {
         color: #fff; }
         .promoListWebpart .contentLink a:hover .arrow:after {
           color: #E6CC26; }
+    .promoListWebpart .contentLink.color a {
+      bottom: 10px !important; }
     .promoListWebpart .contentLink.color p {
       color: #fff; }
     .promoListWebpart .contentLink.color div {
@@ -1113,6 +1117,49 @@ ul.promo-group {
       color: #fff; }
     .promoListWebpart .contentLink.green a span.info {
       border-top: 1px solid #fff; }
+
+.promoListWebpart ul li.contentLink {
+  border-color: transparent; }
+  .promoListWebpart ul li.contentLink h2 {
+    font-size: 35px;
+    margin: 0.4em 0px; }
+  .promoListWebpart ul li.contentLink p {
+    font-size: 25px; }
+  .promoListWebpart ul li.contentLink .info {
+    font-size: 22px; }
+
+.promoListWebpart ul li.catergory a {
+  background-size: 540px !important;
+  background-position: top center !important;
+  text-align: center; }
+  .promoListWebpart ul li.catergory a .info {
+    background: transarent; }
+  .promoListWebpart ul li.catergory a .fa {
+    color: #fff;
+    font-size: 80px;
+    margin-top: 10px; }
+  .promoListWebpart ul li.catergory a:hover {
+    border-color: transparent; }
+  .promoListWebpart ul li.catergory a img {
+    text-align: center; }
+  .promoListWebpart ul li.catergory a .info {
+    background: transparent;
+    width: 100%;
+    opacity: 1;
+    border-top: 1px solid #888;
+    padding: 20px;
+    font-size: 18px;
+    text-transform: uppercase;
+    opacity: 1;
+    filter: alpha(opacity=1); }
+    .promoListWebpart ul li.catergory a .info .arrow {
+      background: transparent; }
+      .promoListWebpart ul li.catergory a .info .arrow:after {
+        display: none; }
+
+@media only screen and (max-width: 600px) {
+  .promoListWebpart .contentLink.heightTwo {
+    padding-bottom: 80px; } }
 
 /*************************
 CHECKBOXES EVENTS FILTERS
@@ -2913,6 +2960,11 @@ td .ui-state-hover {
   background: #E7CC26; }
 
 /** jquery ui datepicker overides ***/
+/** main button color for forms and comments **/
+form input[type=submit].submit {
+  background: #e7cc26; }
+
+/**End  main button color for forms and comments **/
 body {
   overflow: scroll; }
 

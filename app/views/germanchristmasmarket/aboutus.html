@@ -6,11 +6,11 @@ Events
 
 
   {% block css_register %}
-         <link href="{{ asset_path }}carriageworks/stylesheets/application.css" rel="stylesheet">
+         <link href="{{ asset_path }}townhall/stylesheets/application.css" rel="stylesheet">
    {% endblock %}
 
 {% block main_nav %}
-   {% include "carriageworks/includes/main_nav.html" %}
+   {% include "townhall/includes/main_nav.html" %}
 {% endblock %}   
 
 {% block header %}
@@ -39,16 +39,6 @@ Events
 </nav>  
 
 
-<!--<div class="sectionScroll">
-  <div class="step equal-item">
-    <h2 class="">Page Contents</h2>
-  </div>
-  <div class="step equal-item"><a class="active" href="#sectionOne">Online or Telephone</a></div>
-  <div class="step equal-item"><a href="#sectionTwo">Discounts</a></div>
-  <div class="step equal-item"><a class="" href="#sectionThree">Orchestral subscriptions</a></div>
-  <div class="step equal-item"><a href="#sectionFour">Seating </a></div>
-</div>
-    -->
        
 <h2 class="ms-rteElement-H2-center"></h2>
 
@@ -222,16 +212,15 @@ For further information on subscriptions please contact the Box Office on <stron
 <div class="col-lg-12">
 <hr class="ms-rteElement-spacer">
 <div><h2 class="ms-rteElement-H2">SEATING PLAN</h2></div>
-<a href ="">this is a link</a>
 <p>View the &#8203;interactive seating plan of Leeds Town Hall</p>
 <div class="ms-rteElement-div-center"><a class="btn btn-primary" href="https://images.tickets.com/images/primarysales/gpl/LEEDS_CC_VOS_2.html">View Seating Plan</a></div>
 <br><br>
 <div class="ms-rteElement-divLeft"><h3>STALLS LEVEL 1</h3>
-<img src="http://www.leeds.gov.uk/carriageworks/PublishingImages/LICS%20Seating%20Plan%20Web%20Lower.jpg" alt="">
+<img src="http://www.leeds.gov.uk/townhall/PublishingImages/LICS%20Seating%20Plan%20Web%20Lower.jpg" alt="">
 </div>
 
 <div class="ms-rteElement-divRight50"><h3>GALLERY LEVEL 2</h3>
-<img src="http://www.leeds.gov.uk/carriageworks/PublishingImages/Carousel/LICS%20Seating%20Plan%20Web%20Upper.jpg" alt="">
+<img src="http://www.leeds.gov.uk/townhall/PublishingImages/Carousel/LICS%20Seating%20Plan%20Web%20Upper.jpg" alt="">
 </div>
   
   </div>
@@ -258,7 +247,7 @@ For further information on subscriptions please contact the Box Office on <stron
 {% endblock %} 
 
 {% block sectionFiveFull%}
-{% include "includes/whatson/iconLinks.html" %}
+  {% include "includes/whatson/iconLinks.html" %}
 {% endblock %}
 
 {% block sectionFiveContent %}
@@ -278,5 +267,9 @@ For further information on subscriptions please contact the Box Office on <stron
  {% endblock %}
 
  {% block footer_nav %}
-   {% include "carriageworks/includes/main_nav.html" %}
+   {% include "townhall/includes/main_nav.html" %}
+ {% endblock %}
+
+  {% block reuserblecontent_footer %}
+     {% include "includes/re-userble-content-footer.html" %}
  {% endblock %}
