@@ -744,12 +744,14 @@ ul.promo-group {
     display: block; }
   .promoListWebpart .two a span.info,
   .promoListWebpart .three a span.info,
-  .promoListWebpart .four a span.info {
+  .promoListWebpart .four a span.info,
+  .promoListWebpart .quarter a span.info {
     font-size: 27px;
     padding: 20px 100px 20px 20px; }
   .promoListWebpart .two a span.secondaryInfo,
   .promoListWebpart .three a span.secondaryInfo,
-  .promoListWebpart .four a span.secondaryInfo {
+  .promoListWebpart .four a span.secondaryInfo,
+  .promoListWebpart .quarter a span.secondaryInfo {
     font-size: 18px; }
   .promoListWebpart .four.heightTwo a {
     font-size: 41.4px; }
@@ -942,6 +944,9 @@ ul.promo-group {
 .one {
   width: 16.6667%; }
 
+.quarter {
+  width: 25%; }
+
 .two {
   width: 33.33333%; }
 
@@ -957,14 +962,16 @@ ul.promo-group {
 @media only screen and (max-width: 1200px) {
   .one,
   .two,
-  .four {
+  .four,
+  .quarter {
     width: 50%; } }
 
 @media only screen and (max-width: 600px) {
   .one,
   .two,
   .three,
-  .four {
+  .four,
+  .quarter {
     width: 100%; } }
 
 .promoListWebpart ul li.catergory {

@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald:300,700,800,400,600');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,700,800,400,600');
 // available variables to change the brand colours as required
 // masterhead.scss
 
@@ -11,7 +12,7 @@
 
 //base.scss
 
-$base-background-color:#000;
+$base-background-color:#333;
 $base-font-size:18px ;
 $base-font-color:#323232 ;
 $base-link-color:#59abe1 ;
@@ -129,7 +130,8 @@ a:visited {
 
 
 body,.ms-backgroundImage {
-    background: #000 url(../images/header-bk.jpg) no-repeat center 60px;
+    background: #000 url(../images/header-bk.jpg) no-repeat center 0px fixed;
+
     font-weight:300;
 }
 
@@ -165,7 +167,7 @@ body,.ms-backgroundImage {
     float: right;
     background: url(../images/gm-2016-date-header.svg) center center no-repeat;
     margin: 0px 0 21px;
-    text-indent: -4000px
+    text-indent: -10000px
 }
 
 .ie8 &:after {
@@ -246,7 +248,8 @@ body,.ms-backgroundImage {
     ul li a{
          font-size:24px;
          padding:20px 10px;
-          text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.4);
+         text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.4);
+         font-family:$font-secondary;
 
     }
 
@@ -356,7 +359,7 @@ h2{
     font-size:28px;
 }
 
-section.home h2, sectionFive h2{
+ .sectionFive h2{
     font-size:40px;
 }
 
@@ -403,7 +406,7 @@ h1, h2, h3, h4, h5, ol, p, ul {
         font-size:26px;
     }
 
-    .sectionFive h2, .sectionFour h2, section.home h2, .sectionFive h2{
+    .sectionFive h2, .sectionFour h2, .sectionFive h2{
         font-size:32px !important;
     }
     
@@ -424,9 +427,6 @@ h1, h2, h3, h4, h5, ol, p, ul {
     position:relative;
 }
 
-.sectionTwo{
-    background: #251611;
-}
 
 .sectionThree{
     background: #FFFFFF;
@@ -475,9 +475,7 @@ h1, h2, h3, h4, h5, ol, p, ul {
     
 }
 
-.sectionOne.home .container:after{
-    display:none;
-}
+
 
 .sectionFour{
     background:#5B824C;
@@ -560,11 +558,7 @@ h1, h2, h3, h4, h5, ol, p, ul {
     font-size:40px;
 }
 
-.sectionFour.home{
-    -webkit-box-shadow: 0px -10px 20px 0px rgba(0,0,0,0.5);
--moz-box-shadow: 0px -10px 20px 0px rgba(0,0,0,0.5);
-box-shadow: 0px -10px 20px 0px rgba(0,0,0,0.5);
-}
+
 
 .sectionFive{
     background: transparent;
@@ -602,11 +596,7 @@ box-shadow: 0px -10px 20px 0px rgba(0,0,0,0.5);
 
 /*new events webpart and promo using the list display webpart  ----------------------------------------------------------------------*/
 
-section.home .promoListWebpart a{
-    -webkit-box-shadow: 0 10px 20px 0 rgba(0,0,0,.5);
-    -moz-box-shadow: 0 10px 20px 0 rgba(0,0,0,.5);
-    box-shadow: 0 10px 20px 0 rgba(0,0,0,.5);
-}
+
 
 
 .promoListWebpart {
@@ -926,6 +916,7 @@ p{
 
     &:after{
         background:transparent;
+
     }
     
     &.pdf{
@@ -934,6 +925,8 @@ p{
             content: '\f1c1';
             font-family: FontAwesome;
             margin-left: 20px;
+            position:relative;
+            line-height: 1em;
         }
     }
 }
@@ -1475,11 +1468,6 @@ a:focus, input[type=submit]:focus{
         
 }
 
-//nav override
-.utilitiesSection li a:hover, #nav-wrap a:hover, #nav-wrap .s4-tn li.static a:hover, .navbar #menu-icon:hover, .navbar #nav-wrap .s4-tn li.static>.menu-item:hover, .navbar .menu a:hover, .navbar #menu-icon:hover, .navbar a.iconLink:hover{
-    background:transparent!important;
-    color: $color-red !important;
-}
 
 //highlight promo
 
@@ -1581,36 +1569,7 @@ box-shadow: 3px 3px 5px 0px rgba(51,51,51,0.4);
     
 }
 
-//SECTION TWO FIX
 
-.sectionTwo .col-lg-12{
-    display: inline-block;
-    width: 100%;
-}
-
-.sectionTwo {
-    background:transparent;
-}
-
-.sectionTwo .promoListWebpart {
-    display:inline-block;
-    width:100%;
-    padding:50px 0;
-}
-
-.sectionTwo .promoListWebpart a {
-    -webkit-box-shadow: 0 10px 20px 0 rgba(0,0,0,.5);
-    -moz-box-shadow: 0 10px 20px 0 rgba(0,0,0,.5);
-    box-shadow: 0 10px 20px 0 rgba(0,0,0,.5);
-}
-
-@media (max-width: 600px){
-    
-    .sectionTwo .promoListWebpart {
-        padding:40px 0;
-    }
-    
-}
 
 //helper classes
 

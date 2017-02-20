@@ -1,0 +1,228 @@
+{% extends "layout_multi_sections_home.html" %}
+
+{% block page_title %}
+	Icecube Home Page
+{% endblock %}
+
+
+  {% block css_register %}
+         <link href="{{ asset_path }}iceCube/stylesheets/application.css" rel="stylesheet">
+   {% endblock %}
+
+ 
+
+{% block header %}
+{% endblock %}
+
+ {% block main_nav %}
+   {% include "icecube/includes/main_nav.html" %}
+ {% endblock %}
+
+
+
+ {% block sectionOneTop %}
+ <div class="openingHours">
+   <div class="container-fluid">
+   <ul>
+     <li><h3><i class="fa fa-clock-o" aria-hidden="true"></i> Opening times</h3></li>
+     <li><p>mon - thurs<span>12pm - 8pm</span></p></li>
+     <li><p>fri<span>12pm - 9pm</span></p></li>
+     <li><p>sat<span>10am - 9pm</span></p></li>
+     <li><p>Sun<span>10am - 7pm</span></p></li>
+   </ul>
+</div>
+</div>
+{% endblock %} 
+
+{% block sectionOneFull%}
+             <hr class="ms-rteElement-spacer">
+<article>  
+			            <p class="lead">The Ice Cube, Yorkshire’s coolest wintertime attraction, will be returning to Millennium Square in January 2017 for more icy fun and adventure for all the family including a new covered ice rink!</p>
+<p>Chase away those winter blues with fun outdoor activities for all the family. Enjoy our:</p>
+
+
+
+       {% include "icecube/includes/promolistwebpart4.html" %}
+
+ <hr class="ms-rteElement-spacer">
+
+<p>Open throughout the Leeds School Half Term holiday it’s the ideal way to entertain the kids, so why not join us for a magical skating experience. The Ice Cube is in Millennium Square off Calverley Street in the heart of the city centre – <strong><a href="/c/Pages/IceCube/How-to-find-us.aspx">How to find us</a></strong>. You can also view the <strong><a href="/c/Pages/IceCube/Venue-and-rink-rules.aspx">Venue Conditions</a></strong>.</p>
+
+
+ <hr class="ms-rteElement-spacer">		
+                  
+                </article>
+
+{% endblock %}
+
+   {% block sectionOneHalf %}
+
+   
+   {% endblock %}
+      {% block sectionOneHalfRight %}
+      {% endblock %}
+
+{% block sectionOneFullBottom %}{% endblock %}
+
+
+ {% block breadcrumb %}
+ {% endblock %}
+
+{% block sectionOneContent %}
+{% endblock %}
+
+{% block sectionOneRightHandColumn %}
+{% endblock %}
+
+{% block sectionOneThirdCol1 %}
+ {% endblock %}
+
+ {% block sectionOneThirdCol2 %}
+ {% endblock %}
+
+{% block sectionOneThirdCol3 %}
+ {% endblock %}
+
+
+{% block sectionTwoTop %}
+{% endblock %} 
+
+{% block sectionTwoFull%}
+{% endblock %}
+
+{% block sectionTwoContent %}
+{% endblock %}
+
+{% block sectionTwoRightHandColumn %}
+{% endblock %}
+
+{% block sectionTwoThirdCol1 %}
+ {% endblock %}
+
+ {% block sectionTwoThirdCol2 %}
+ {% endblock %}
+
+{% block sectionTwoThirdCol3 %}
+ {% endblock %}
+
+
+{% block sectionThreeTop %}
+{% endblock %} 
+
+{% block sectionThreeFull%}
+
+{% endblock %}
+
+{% block sectionThreeContent %}
+{% endblock %}
+
+{% block sectionThreeRightHandColumn %}
+{% endblock %}
+
+{% block sectionThreeThirdCol1 %}
+ {% endblock %}
+
+ {% block sectionThreeThirdCol2 %}
+ {% endblock %}
+
+{% block sectionThreeThirdCol3 %}
+ {% endblock %}
+
+
+{% block sectionFourTop %}
+{% endblock %} 
+
+{% block sectionFourFull%}  
+<div class="webcam">
+    <h2>Never miss a moment!</h2>
+    <p>You can watch all the action from Ice Cube <strong>live on our webcam</strong></p>
+    <a class="btn btn-go btn-white" href="http://whatson.leeds.gov.uk/germanchristmasmarket/Pages/millenniumcam.aspx">Watch Live Now</a>
+</div>
+{% endblock %}
+
+{% block sectionFourContent %}
+{% endblock %}
+
+{% block sectionFourRightHandColumn %}
+{% endblock %}
+
+{% block sectionFourThirdCol1 %}
+ {% endblock %}
+
+ {% block sectionFourThirdCol2 %}
+ {% endblock %}
+
+{% block sectionFourThirdCol3 %}
+ {% endblock %}
+
+
+
+{% block sectionFiveTop %}
+{% endblock %} 
+
+{% block sectionFiveFull%}
+<div class="col-lg-12">
+              <div id="contact" class="box-third">
+    <h2>Connect With Us</h2>
+    <ul class="connect">
+        <li><a href="https://twitter.com/millsqleeds" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i>@millsqleeds <span class="sr-only">External link. Opens in a new window.</span></a></li>
+        <li><a href="https://www.facebook.com/ChristkindelmarktLeeds" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i>/ChristkindelmarktLeeds <span class="sr-only">External link. Opens in a new window.</span></a></li>
+        <li><a href="mailto:events@leeds.gov.uk"><i class="fa fa-envelope" aria-hidden="true"></i>events@leeds.gov.uk</a></li>
+        <li><i class="fa fa-phone" aria-hidden="true"></i>0113 378 6988</li>
+    </ul>
+</div>
+<div class="box-third">
+    <iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" class="twitter-timeline twitter-timeline-rendered" style="position: static; visibility: visible; display: inline-block; width: 100%; height: 300px; padding: 0px; border: none; max-width: 100%; min-width: 180px; margin-top: 0px; margin-bottom: 0px; min-height: 200px;" data-widget-id="profile:millsqleeds" title="Twitter Timeline"></iframe>
+</div>
+<div class="box-third">
+    <img src="/public/icecube/images/logo.svg" class="img-responsive" style="width:70%; margin:0 auto;">
+</div>
+
+<!--SCRIPT FOR TWITTER FEED-->
+<script>
+    window.twttr = (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0],
+        t = window.twttr || {};
+      if (d.getElementById(id)) return t;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "https://platform.twitter.com/widgets.js";
+      fjs.parentNode.insertBefore(js, fjs);
+
+      t._e = [];
+      t.ready = function(f) {
+        t._e.push(f);
+      };
+
+      return t;
+    }(document, "script", "twitter-wjs"));
+</script>
+
+                </div>
+
+  
+{% endblock %}
+
+{% block sectionFiveContent %}
+{% endblock %}
+
+{% block sectionFiveRightHandColumn %}
+{% endblock %}
+
+{% block sectionFiveThirdCol1 %}
+ {% endblock %}
+
+ {% block sectionFiveThirdCol2 %}
+
+ {% endblock %}
+
+{% block sectionFiveThirdCol3 %}
+ {% endblock %}
+
+  {% block footer_nav %}
+     {% include "icecube/includes/main_nav.html" %}
+ {% endblock %}
+
+  {% block reuserblecontent_footer %}
+     {% include "includes/re-userble-content-footer.html" %}
+ {% endblock %}

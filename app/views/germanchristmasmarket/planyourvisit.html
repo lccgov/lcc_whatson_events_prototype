@@ -1,0 +1,376 @@
+{% extends "layout_multi_sections.html" %}
+
+{% block page_title %}
+Plan your visit
+{% endblock %}
+
+
+  {% block css_register %}
+         <link href="{{ asset_path }}germanchristmasmarket/stylesheets/application.css" rel="stylesheet">
+   {% endblock %}
+
+{% block main_nav %}
+   {% include "germanchristmasmarket/includes/main_nav.html" %}
+{% endblock %}   
+
+{% block header %}
+<h1>Plan your visit</h1>
+{% endblock %}
+ 
+ {% block sectionOneTop %}
+
+{% endblock %} 
+
+{% block sectionOneFull %}  
+{% endblock %}
+
+{% block sectionOneFullBottom %}
+
+<article>  
+			            <div class="text-wrapper">
+    <p class="lead">Christkindelmarkt is located on Millennium Square in the heart of Leeds city centre and is easily accessible from Calverley Street, Cookridge Street and Portland Crescent</p>
+
+   
+</div>
+
+<div class="travel-info">
+
+    <div class="box-third">
+        <h2><i class="fa fa-map-marker" aria-hidden="true"></i>Venue Address</h2>
+        <p>Millennium Square, Leeds, LS2 3AD</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2356.32812821897!2d-1.5504502341443347!3d53.80144473007692!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48795c1ce33fff99%3A0x6457c56ad94a1220!2sMillennium+Square%2C+Leeds+LS2+3AD!5e0!3m2!1sen!2suk!4v1476362307058" width="100%" height="207" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+    </div>
+
+    <div class="box-third">
+        <h2><i class="fa fa-car" aria-hidden="true"></i>Travel Options</h2>
+
+        <div class="panel-group" id="travel-options" role="tablist" aria-multiselectable="true">
+
+          <div class="panel panel-green">
+            <div class="panel-heading" role="tab" id="heading-bus-info">
+              <h3 class="panel-title">
+                <a role="button" data-toggle="collapse" data-parent="#travel-options" href="#bus-info" aria-expanded="false" aria-controls="collapse-bus-info" class="collapsed">
+                  By Bus
+                </a>
+              </h3>
+            </div>
+            <div id="bus-info" class="panel-collapse collapse" role="tabpanel" aria-labelledby="bus-info">
+              <div class="panel-body">
+                <p>A number of bus routes pass through the city centre and stop in close proximity to Millennium Square on The Headrow and Woodhouse Lane. For all bus service timetable and further information please contact West Yorkshire Metro on <strong>0113 245 7676</strong> or visit <strong><a href="http://www.wymetro.com/" class="external">www.wymetro.com <span class="sr-only">External link.</span></a></strong></p>
+              </div>
+            </div>
+          </div>
+
+            <div class="panel panel-green">
+            <div class="panel-heading" role="tab" id="heading-rail-info">
+              <h3 class="panel-title">
+                <a role="button" data-toggle="collapse" data-parent="#travel-options" href="#rail-info" aria-expanded="false" aria-controls="collapse-rail-info" class="collapsed">
+                  By Rail
+                </a>
+              </h3>
+            </div>
+            <div id="rail-info" class="panel-collapse collapse" role="tabpanel" aria-labelledby="rail-info">
+              <div class="panel-body">
+                <p>Leeds City train station is only a 10 minute walk away from Millennium Square via City Square leading into Park Row and Cookridge Street. For train services and timetable information visit <strong><a href="http://www.nationalrail.co.uk/" class="external">www.nationalrail.co.uk <span class="sr-only">External link.</span></a></strong></p>
+              </div>
+            </div>
+          </div>
+
+            <div class="panel panel-green">
+            <div class="panel-heading" role="tab" id="heading-car-info">
+              <h3 class="panel-title">
+                <a role="button" data-toggle="collapse" data-parent="#travel-options" href="#car-info" aria-expanded="false" aria-controls="collapse-car-info" class="collapsed">
+                  By Car
+                </a>
+              </h3>
+            </div>
+            <div id="car-info" class="panel-collapse collapse" role="tabpanel" aria-labelledby="car-info">
+              <div class="panel-body">
+                <p>A variety of street and secure parking options are available around the Civic Quarter. For further information on city centre parking visit <strong><a href="http://www.leeds.gov.uk/residents/Pages/Parking-in-Leeds.aspx" class="external">www.leeds.gov.uk <span class="sr-only">External link.</span></a></strong> or call parking services on <strong>0113 395 0050</strong>.</p>
+                  
+                  <p>There are designated taxi ranks located nearby. In order to avoid congestion and access issues on the day,all persons attending are requested not to arrange pick up/drop off directly outside the main gates.</p>
+              </div>
+            </div>
+          </div>
+
+            <div class="panel panel-green">
+            <div class="panel-heading" role="tab" id="heading-coach-info">
+              <h3 class="panel-title">
+                <a role="button" data-toggle="collapse" data-parent="#travel-options" href="#coach-info" aria-expanded="false" aria-controls="collapse-coach-info" class="collapsed">
+                  By Coach
+                </a>
+              </h3>
+            </div>
+            <div id="coach-info" class="panel-collapse collapse" role="tabpanel" aria-labelledby="coach-info">
+              <div class="panel-body">
+                  <p>For information regarding coach parking please email <strong><a href="mailto:tourinfo@leeds.gov.uk &#10;">tourinfo@leeds.gov.uk</a></strong> or call the visitors centre on <strong>0113 242 5242</strong>.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+    </div>
+
+    <div class="box-third">
+        <h2><i class="fa fa-wheelchair" aria-hidden="true"></i>Venue Accessibility</h2>
+        <a class="btn btn-outline scroll" href="#venue-accessiblity-details">View the Venues Accessibility Information</a>
+        <h2><i class="fa fa-question" aria-hidden="true"></i>FAQs</h2>
+        <a class="btn btn-outline scroll" href="#frequently-asked-questions">View our Most Frequently Asked Questions </a>
+    </div>
+
+</div>
+
+<div class="highlight black">
+    <h2><i class="fa fa-clock-o" aria-hidden="true"></i>Opening Times</h2>
+    <p>Fri 11 Nov until Sun 18 Dec 2016 - 10:30am* to 9:30pm (7:30pm Sundays) <span>*Open from  12pm on Friday 11/11 and Sunday 13/11 in respect of Armistice Day and Remembrance Sunday</span></p>
+</div>
+
+
+<hr>
+
+<h2 id="venue-accessiblity-details">Venue Accessibility Details</h2>
+
+
+<div id="ctl00_m_g_1278baa9_d17c_42f0_be82_a45192f3a1b7">
+	<div class="concertina" 'panel-group'=""><h3></h3><div class="expandContent"><h3><a href="#"><span id="tooltip" class="sr-only">Click to expand</span>Facilities</a></h3><div style="display: none;"><p></p><p>Disabled Persons Toilets and High Dependency Unit (HDU) / Changing Places Toilet are available on site adjacent to the Civic Hall. This unit includes a tracking hoist (please contact the council’s events team for more information on hoist type if required as slings will not be provided), height adjustable changing bench, peninsular layout toilet and a height adjustable wash basin. This will be accessible by a RADAR lock (a key will be available on site if you do not have one).</p>
+
+<p>Two disabled person’s toilets with a choice of right and left handed transfer are also available within the permanent toilet facilities of Millennium Square. Both are accessed by RADAR locks and via a ramped approach.</p><p></p></div></div><div class="expandContent"><h3><a href="#"><span id="tooltip" class="sr-only">Click to expand</span>Blue Badge Parking</a></h3><div style="display: none;"><p></p><p><strong>Blue Badge Parking</strong></p>
+
+<p>Nearby on street designated disabled persons parking (4 hour time limit, no return within 1 hour) is available on:</p>
+<p>Portland Gate (to the North side of the Square)
+<br>Portland Crescent (to the North side of the Square)
+<br>Rossington Street (to the South East side of the Square)
+<br>Cookridge Street (to the South side of the Square)
+<br>Alexander Street (to the South side of the Square)
+<br>Calverley Street (to the West side of the Square)</p>
+
+<p>Woodhouse Lane multi storey car park also provides non-time limited designated disabled persons parking on Levels 1 and 7 which is free for blue badge holders.</p>
+
+<p>Further information on city centre parking is available from the <b><a href="http://www.leeds.gov.uk/residents/Pages/Parking-in-Leeds.aspx">Parking in Leeds</a></b>  page. You can call parking services on <strong>0113 395 0050</strong>.</p>
+
+<p><strong>Blue Badge Drop-off</strong></p>
+<p>There are a number of drop-off areas around the venue with the nearest accessible locations to the entrance gates on Rossington Street and Portland Gate</p><p></p></div></div><div class="expandContent"><h3><a href="#"><span id="tooltip" class="sr-only">Click to expand</span>Terrain / Ground Conditions</a></h3><div style="display: none;"><p></p><p><strong>Terrain / Ground Conditions</strong></p>
+<p>Millennium Square is a hard-standing paved area which follows the natural topography of the surrounding ground levels and slopes down from North to South.</p>
+<p></p></div></div><div class="expandContent"><h3><a href="#"><span id="tooltip" class="sr-only">Click to expand</span>Contact Information</a></h3><div style="display: none;"><p>For all enquiries regarding access for disabled people at the Christkindelmarkt, please contact the Events team with Leeds City Council on <strong>0113 378 6988</strong> or by email to <strong><a href="mailto:events@leeds.gov.uk">events@leeds.gov.uk</a></strong>.</p></div></div></div>
+</div><hr>
+                        
+<h2 id="frequently-asked-questions">Frequently Asked Questions</h2><div id="ctl00_m_g_67c1267b_00a8_40ec_9de8_c0ea77fc7667">
+	<div class="concertina" 'panel-group'=""><h3></h3><div class="expandContent"><h3><a href="#"><span id="tooltip" class="sr-only">Click to expand</span>What and where is Millennium Square?</a></h3><div style="display: none;"><p>Millennium Square is an outdoor public space and bespoke live entertainment venue located within the civic quarter of the city centre. The venue is surrounded by some of the city’s most significant and iconic buildings including; Leeds Civic Hall, Leeds Town Hall, Leeds City Museum, Leeds General Infirmary and the Carriageworks Theatre / Electric Press complex. </p></div></div><div class="expandContent"><h3><a href="#"><span id="tooltip" class="sr-only">Click to expand</span>What is Leeds ‘Christkindelmarkt’?</a></h3><div style="display: none;"><p>Leeds ‘Christkindelmarkt’ is one of the largest and best established authentic German Christmas Markets in the UK. Established in 2002, the Market is a partnership between Leeds City Council and Frankfurt Am Main (City Council) in Germany. ‘Christkindelmarkt’ attracts in excess of 800,000 visitors to our city who want to savour this continental style, festive atmosphere, and it's now a key element of the city’s annual events programme.</p></div></div><div class="expandContent"><h3><a href="#"><span id="tooltip" class="sr-only">Click to expand</span>How do I access the Christkindelmarkt?</a></h3><div style="display: none;"><p>The main entrance / exit points to the market are located on Cookridge Street adjacent to Leeds City Museum, Calverley Street and on Portland Crescent.</p></div></div><div class="expandContent"><h3><a href="#"><span id="tooltip" class="sr-only">Click to expand</span>Are there plenty of toilet facilities?</a></h3><div style="display: none;"><p>Yes, there are public toilets available in the North East of the Square underneath the Broderick terrace including two disabled toilets and a baby change facility. A dedicated changing places / high dependency unit is also available at the market.</p></div></div><div class="expandContent"><h3><a href="#"><span id="tooltip" class="sr-only">Click to expand</span>Is there an ATM/cash machine at the event?</a></h3><div style="display: none;"><p>There are no onsite cash facilities available. However there is a cash machine on the Electric Press building next door to the Christkindelmarkt.</p></div></div><div class="expandContent"><h3><a href="#"><span id="tooltip" class="sr-only">Click to expand</span>Can I smoke at the event?</a></h3><div style="display: none;"><p>As an outdoor venue, smoking is permitted but please be considerate towards other visitors. No smoking is permitted inside the indoor venues.</p></div></div><div class="expandContent"><h3><a href="#"><span id="tooltip" class="sr-only">Click to expand</span>Can I take photos at the Christmas Market?</a></h3><div style="display: none;"><p>Recreational photography of family, friends and / or scenic views of the venue / event is permitted other than where other persons attending the event can be clearly identified as the main focus. Please therefore be respectful to other people’s privacy at all times or you may be challenged and asked to stop and / or leave.
+
+<br><br>
+
+Photography/filming/recording for professional/commercial use is not permitted without prior written authorisation from the organisers.
+
+<br><br>
+
+All persons entering the Christkindelmarkt consent to any photography, filming and recording as arranged by the organiser for possible future transmission or promotional purposes.
+
+<br><br>
+
+No tripods or other large photography/film equipment may be used, unless by those with written authorisation from the organisers
+</p></div></div><div class="expandContent"><h3><a href="#"><span id="tooltip" class="sr-only">Click to expand</span>How can I get a stall at the market?</a></h3><div style="display: none;"><p></p><p>The stalls are all organised via Frankfurt Council in Germany as they have to be of German origin they also hire all of the staff for this event.
+If you are interested in becoming a trader at other markets in Leeds please visit our <strong><a href="http://www.leeds.gov.uk/leedsmarkets/Pages/become-a-trader.aspx">Become a trader</a></strong> page</p><p></p></div></div><div class="expandContent"><h3><a href="#"><span id="tooltip" class="sr-only">Click to expand</span>Can I make a reservation?</a></h3><div style="display: none;"><p>Reservations are available and recommended for the Alp Chalet restaurant and can only be made in person at the venue.
+
+Visits to the Kuh Stall and Ski Hutte venues are strictly by walk in only subject to capacity.</p></div></div><div class="expandContent"><h3><a href="#"><span id="tooltip" class="sr-only">Click to expand</span>What is new for 2016?</a></h3><div style="display: none;"><p>A new concept has been developed for 2016 as part of a two year transformation with new venues and stalls being introduced.
+
+<br>
+
+The new features for 2016 will include:
+
+<br><br>
+
+- An open air square with a small stage that will feature a daily programme of light entertainment and a children’s show every Sunday morning (except 13th Nov)
+
+<br><br>
+
+- Santa’s Breakfast Experience in the Alp Chalet every Sunday morning (except 13th Nov)
+
+<br><br>
+
+- The brand new Ski Hutte bar, set in a bespoke authentic alpine chalet with a range of food and drink available, offering an apres-ski inspired ambience
+
+<br><br>
+
+The Frankfurterscheune (party tent) will not be featured in the new market layout.
+
+</p></div></div><div class="expandContent"><h3><a href="#"><span id="tooltip" class="sr-only">Click to expand</span>I have lost some property at the Christkindelmarkt, who should I contact?</a></h3><div style="display: none;"><p></p><p>Please email details of your lost property to <strong><a href="mailto:events@leeds.gov.uk">events@leeds.gov.uk</a></strong></p> 
+
+
+<p></p></div></div></div>
+</div>            
+       
+                                <div id="ctl00_PlaceHolderMain_RichHtmlField2_label" style="display:none">PageOverview</div><div id="ctl00_PlaceHolderMain_RichHtmlField2__ControlWrapper_RichHtmlField" class="ms-rtestate-field" style="display:inline" aria-labelledby="ctl00_PlaceHolderMain_RichHtmlField2_label"></div>
+		
+                  
+                </article>         
+
+
+{% endblock %}
+
+
+
+ {% block breadcrumb %}
+ {% include "includes/breadcrumb_sp.html" %}
+
+ {% endblock %}
+
+{% block sectionOneContent %}
+{% endblock %}
+
+{% block sectionOneRightHandColumn %}
+{% endblock %}
+
+{% block sectionOneThirdCol1 %}
+ {% endblock %}
+
+ {% block sectionOneThirdCol2 %}
+ {% endblock %}
+
+{% block sectionOneThirdCol3 %}
+ {% endblock %}
+
+
+{% block sectionTwoTop %}
+{% endblock %} 
+
+{% block sectionTwoFull %}
+
+
+
+
+{% endblock %}
+
+{% block sectionTwoContent %}
+{% endblock %}
+
+{% block sectionTwoRightHandColumn %}
+{% endblock %}
+
+{% block sectionTwoThirdCol1 %}
+ {% endblock %}
+
+ {% block sectionTwoThirdCol2 %}
+ {% endblock %}
+
+{% block sectionTwoThirdCol3 %}
+ {% endblock %}
+
+
+{% block sectionThreeTop %}
+{% endblock %} 
+
+{% block sectionThreeFull%}
+
+{% endblock %}
+
+{% block sectionThreeContent %}
+{% endblock %}
+
+{% block sectionThreeRightHandColumn %}
+{% endblock %}
+
+{% block sectionThreeThirdCol1 %}
+ {% endblock %}
+
+ {% block sectionThreeThirdCol2 %}
+ {% endblock %}
+
+{% block sectionThreeThirdCol3 %}
+ {% endblock %}
+
+
+{% block sectionFourTop %}
+{% endblock %} 
+
+{% block sectionFourFull%}
+<div class="webcam">
+    <h2>Never miss a moment!</h2>
+    <p>You can watch all the action of the Christmas Market <strong>live on our webcam</strong></p>
+    <a class="btn btn-go btn-white" href="http://whatson.leeds.gov.uk/germanchristmasmarket/Pages/millenniumcam.aspx">Watch Live Now</a>
+</div>
+{% endblock %}
+
+{% block sectionFourContent %}
+{% endblock %}
+
+{% block sectionFourRightHandColumn %}
+{% endblock %}
+
+{% block sectionFourThirdCol1 %}
+ {% endblock %}
+
+ {% block sectionFourThirdCol2 %}
+ {% endblock %}
+
+{% block sectionFourThirdCol3 %}
+ {% endblock %}
+
+
+
+{% block sectionFiveTop %}
+{% endblock %} 
+
+{% block sectionFiveFull%}
+
+              <div id="contact" class="box-third">
+    <h2>Connect With Us</h2>
+    <ul class="connect">
+        <li><a href="https://twitter.com/millsqleeds" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i>@millsqleeds <span class="sr-only">External link. Opens in a new window.</span></a></li>
+        <li><a href="https://www.facebook.com/ChristkindelmarktLeeds" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i>/ChristkindelmarktLeeds <span class="sr-only">External link. Opens in a new window.</span></a></li>
+        <li><a href="mailto:events@leeds.gov.uk"><i class="fa fa-envelope" aria-hidden="true"></i>events@leeds.gov.uk</a></li>
+        <li><i class="fa fa-phone" aria-hidden="true"></i>0113 378 6988</li>
+    </ul>
+</div>
+<div class="box-third">
+    <iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" class="twitter-timeline twitter-timeline-rendered" style="position: static; visibility: visible; display: inline-block; width: 100%; height: 300px; padding: 0px; border: none; max-width: 100%; min-width: 180px; margin-top: 0px; margin-bottom: 0px; min-height: 200px;" data-widget-id="profile:millsqleeds" title="Twitter Timeline"></iframe>
+</div>
+<div class="box-third">
+    <img src="http://whatson.leeds.gov.uk/Style%20Library/germanchristmasmarket/img/MAGICAL_LEEDS_LOGO.png" class="img-responsive">
+</div>
+
+<!--SCRIPT FOR TWITTER FEED-->
+<script>
+    window.twttr = (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0],
+        t = window.twttr || {};
+      if (d.getElementById(id)) return t;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "https://platform.twitter.com/widgets.js";
+      fjs.parentNode.insertBefore(js, fjs);
+
+      t._e = [];
+      t.ready = function(f) {
+        t._e.push(f);
+      };
+
+      return t;
+    }(document, "script", "twitter-wjs"));
+</script>
+
+               
+{% endblock %}
+
+{% block sectionFiveContent %}
+{% endblock %}
+
+{% block sectionFiveRightHandColumn %}
+{% endblock %}
+
+{% block sectionFiveThirdCol1 %}
+ {% endblock %}
+
+ {% block sectionFiveThirdCol2 %}
+
+ {% endblock %}
+
+{% block sectionFiveThirdCol3 %}
+ {% endblock %}
+
+ {% block footer_nav %}
+   {% include "townhall/includes/main_nav.html" %}
+ {% endblock %}
+
+  {% block reuserblecontent_footer %}
+     {% include "includes/re-userble-content-footer.html" %}
+ {% endblock %}

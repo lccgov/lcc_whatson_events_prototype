@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Oswald:300,700,800,400,600");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,700,800,400,600");
 /*********************************************
 Base.sass variables
 *********************************************/
@@ -6,7 +7,7 @@ body {
   font-size: 18px;
   font-family: "Open Sans", Helvetica, Arial;
   color: #323232;
-  background-color: #000; }
+  background-color: #333; }
 
 .ms-rtestate-field h1.ms-rteElement-H2, .ms-rtestate-field h2.ms-rteElement-H2, .ms-rtestate-field h3.ms-rteElement-H2, .ms-rtestate-field h4.ms-rteElement-H2, .ms-rtestate-field h5.ms-rteElement-H2 {
   font-family: "Open Sans", Helvetica, Arial;
@@ -744,12 +745,14 @@ ul.promo-group {
     display: block; }
   .promoListWebpart .two a span.info,
   .promoListWebpart .three a span.info,
-  .promoListWebpart .four a span.info {
+  .promoListWebpart .four a span.info,
+  .promoListWebpart .quarter a span.info {
     font-size: 27px;
     padding: 20px 100px 20px 20px; }
   .promoListWebpart .two a span.secondaryInfo,
   .promoListWebpart .three a span.secondaryInfo,
-  .promoListWebpart .four a span.secondaryInfo {
+  .promoListWebpart .four a span.secondaryInfo,
+  .promoListWebpart .quarter a span.secondaryInfo {
     font-size: 18px; }
   .promoListWebpart .four.heightTwo a {
     font-size: 41.4px; }
@@ -942,6 +945,9 @@ ul.promo-group {
 .one {
   width: 16.6667%; }
 
+.quarter {
+  width: 25%; }
+
 .two {
   width: 33.33333%; }
 
@@ -957,14 +963,16 @@ ul.promo-group {
 @media only screen and (max-width: 1200px) {
   .one,
   .two,
-  .four {
+  .four,
+  .quarter {
     width: 50%; } }
 
 @media only screen and (max-width: 600px) {
   .one,
   .two,
   .three,
-  .four {
+  .four,
+  .quarter {
     width: 100%; } }
 
 .promoListWebpart ul li.catergory {
@@ -3145,7 +3153,7 @@ a:visited {
   text-decoration: none; }
 
 body, .ms-backgroundImage {
-  background: #000 url(../images/header-bk.jpg) no-repeat center 60px;
+  background: #000 url(../images/header-bk.jpg) no-repeat center 0px fixed;
   font-weight: 300; }
 
 .sectionHeader {
@@ -3170,7 +3178,7 @@ body, .ms-backgroundImage {
       float: right;
       background: url(../images/gm-2016-date-header.svg) center center no-repeat;
       margin: 0px 0 21px;
-      text-indent: -4000px; }
+      text-indent: -10000px; }
     .ie8 .sectionHeader .logo:after {
       background: url(../images/gm-2016-date-header.png) center center no-repeat; }
     @media (min-width: 600px) and (max-width: 991px) {
@@ -3225,7 +3233,8 @@ body, .ms-backgroundImage {
   .main-nav ul li a {
     font-size: 24px;
     padding: 20px 10px;
-    text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.4); }
+    text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.4);
+    font-family: "Oswald", Helvetica, Arial; }
   .main-nav li li {
     margin-right: 0; }
     .main-nav li li a {
@@ -3280,7 +3289,7 @@ h1 {
 h2 {
   font-size: 28px; }
 
-section.home h2, sectionFive h2 {
+.sectionFive h2 {
   font-size: 40px; }
 
 p, article ul {
@@ -3312,7 +3321,7 @@ h1, h2, h3, h4, h5, ol, p, ul {
     margin: 0 0 20px; }
   h2 {
     font-size: 26px; }
-  .sectionFive h2, .sectionFour h2, section.home h2, .sectionFive h2 {
+  .sectionFive h2, .sectionFour h2, .sectionFive h2 {
     font-size: 32px !important; } }
 
 .sectionOne {
@@ -3325,9 +3334,6 @@ h1, h2, h3, h4, h5, ol, p, ul {
 
 .sectionOne .container {
   position: relative; }
-
-.sectionTwo {
-  background: #251611; }
 
 .sectionThree {
   background: #FFFFFF; }
@@ -3354,9 +3360,6 @@ h1, h2, h3, h4, h5, ol, p, ul {
 @media (max-width: 1200px) {
   .sectionOne {
     background: #fff; } }
-
-.sectionOne.home .container:after {
-  display: none; }
 
 .sectionFour {
   background: #5B824C;
@@ -3413,11 +3416,6 @@ h1, h2, h3, h4, h5, ol, p, ul {
 .sectionFour h2, .sectionFive h2 {
   font-size: 40px; }
 
-.sectionFour.home {
-  -webkit-box-shadow: 0px -10px 20px 0px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 0px -10px 20px 0px rgba(0, 0, 0, 0.5);
-  box-shadow: 0px -10px 20px 0px rgba(0, 0, 0, 0.5); }
-
 .sectionFive {
   background: transparent;
   padding: 60px 0;
@@ -3439,11 +3437,6 @@ h1, h2, h3, h4, h5, ol, p, ul {
         color: #fff; }
 
 /*new events webpart and promo using the list display webpart  ----------------------------------------------------------------------*/
-section.home .promoListWebpart a {
-  -webkit-box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.5);
-  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.5); }
-
 .promoListWebpart ul li.one a {
   font-size: 24px; }
 
@@ -3653,7 +3646,9 @@ footer .col-sm-12 {
   .btn.pdf:after {
     content: '\f1c1';
     font-family: FontAwesome;
-    margin-left: 20px; }
+    margin-left: 20px;
+    position: relative;
+    line-height: 1em; }
 
 .btn-lg {
   border-radius: 0;
@@ -4046,10 +4041,6 @@ a:focus, input[type=submit]:focus {
     color: #fff;
     padding: 15px; }
 
-.utilitiesSection li a:hover, #nav-wrap a:hover, #nav-wrap .s4-tn li.static a:hover, .navbar #menu-icon:hover, .navbar #nav-wrap .s4-tn li.static > .menu-item:hover, .navbar .menu a:hover, .navbar #menu-icon:hover, .navbar a.iconLink:hover {
-  background: transparent !important;
-  color: #D02337 !important; }
-
 .highlight-promo {
   width: 100%;
   padding: 30px;
@@ -4109,27 +4100,6 @@ a:focus, input[type=submit]:focus {
     padding: 15px; }
   p {
     margin: 0 0 10px; } }
-
-.sectionTwo .col-lg-12 {
-  display: inline-block;
-  width: 100%; }
-
-.sectionTwo {
-  background: transparent; }
-
-.sectionTwo .promoListWebpart {
-  display: inline-block;
-  width: 100%;
-  padding: 50px 0; }
-
-.sectionTwo .promoListWebpart a {
-  -webkit-box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.5);
-  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.5); }
-
-@media (max-width: 600px) {
-  .sectionTwo .promoListWebpart {
-    padding: 40px 0; } }
 
 .no-margin-top {
   margin-top: 0 !important; }
