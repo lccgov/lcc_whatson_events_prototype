@@ -64,7 +64,7 @@ $main-nav-background:transparent;
 //$promo-group-li-background:#EDF2F5 ;
 //$promo-group-link-color:#216486 ;
 
-$accordion-color:#A93723;
+$accordion-color:#5b824c;
 
 
 //promolist webpart
@@ -96,31 +96,39 @@ $sectionFive-background-color:transparent;
 //$heroFontcolor:#fff; 
 
 $eventsfilter-hightlight-color:#333;
+@import 'base';
 
-@import 'mixins';
-@import 'variables';
-@import 'brandColors';
-
-// available sass files please un-comment out as required
-
-//@import 'mainMenuSubsites';
-@import 'breadcrumb';
-@import 'sectionSubsite';
-@import 'promo';
-@import 'carousel';
-//@import 'socialMedia';
-//@import 'sideNavigation';
-//@import 'blockLinks';
+@import '2010-typography-overrides';
 @import 'accordion';
-@import 'promoGroup';
-@import 'alerts';
-@import 'promoListwebpart';
-@import 'eventsWebparts';
-@import 'sharepointOverides';
-@import 'iconLinks';
-@import 'heroBanner';
-@import 'pageNavigation';
-@import '../sass/eventItem';
+@import 'a-to-z';
+@import 'block-links';
+@import 'block-quote';
+@import 'brand-colors';
+@import 'carousel';
+@import 'content-link'; //subsite only
+@import 'description-list';
+@import 'doc-list'; //needs aligning with lcc_doc-list and a.doc within typography - DH
+@import 'events-search-results';
+@import 'events-webparts';
+@import 'group-promo';
+@import 'hero-banner';
+@import 'hero-banner-overlay'; //needs aligning with hero-bnner - RM
+@import 'icon-links';
+@import 'mega-promo';
+@import 'news';
+@import 'open-data'; //is it leeds.gov.uk specific? - does it need re-naming- DH
+@import 'journey-page';
+@import 'phase-banner'; //work needed to have in page beta banner
+@import 'polaroids'; //subsite only
+@import 'promo';
+@import 'promo-list-webpart'; //subsite only
+@import 'section-subsite'; //subsite only
+@import 'sharepoint-overrides'; 
+@import 'side-nav'; //needs aligning with side-navigation - DH & RM
+//@import 'side-navigation'; //needs aligning with side-nav - DH & RM
+//@import 'survey-webpart'; //is it leeds.gov specific? Relys on where-i-live which should be in the fet but renamed to search-panel - DH
+@import 'url-helper';
+//@import 'webchat';
 
 
 a:visited {
@@ -250,6 +258,10 @@ body,.ms-backgroundImage {
          padding:20px 10px;
          text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.4);
          font-family:$font-secondary;
+
+         @media (max-width:767px){
+             text-shadow:none;
+         }
 
     }
 
@@ -1265,6 +1277,12 @@ article img{
 //bootsrap accordion
 
 
+ul.accordion li a.header {
+   color:#5b824c;
+   text-decoration:none;
+   font-weight:400;
+}
+
 
 .panel-group, .concertina {
     margin: 20px 0 30px;
@@ -1577,6 +1595,20 @@ box-shadow: 3px 3px 5px 0px rgba(51,51,51,0.4);
     margin-top:0 !important;
 }
 
+
+ul.accordion li a.header,  ul.accordion li a.header:visited {
+    color: #5b824c;
+  
+
+    &:after{
+        color:#5b824c;
+    }
+
+
+}
+
+
+
 @media (max-width: 600px){
     
     .no-padding-mobile {
@@ -1587,4 +1619,76 @@ box-shadow: 3px 3px 5px 0px rgba(51,51,51,0.4);
         margin-top:20px !important;
     }
     
+}
+
+
+.sectionOne .ms-srch-result #Paging li {
+    display: inline;
+    margin: 0 3px;
+}
+.sectionOne .ms-srch-result #PagingLink a {
+    margin: 0px;
+    padding: 5px 15px;
+    position: relative;
+    top: 1px;
+    color: #fff;
+    background-color: $base-link-color;
+    display: inline-block;
+}
+.sectionOne .ms-srch-result #PagingSelf a {
+    margin: 0px;
+    padding: 5px 15px;
+    position: relative;
+    top: 1px;
+    color: #fff;
+    background-color:#333;
+    display: inline-block;
+}
+.sectionOne .ms-srch-result #Paging a:hover {
+    color: #fff;
+    background-color: #333;
+}
+.sectionOne li#PagingImageLink a {
+    padding: 16px;
+    border-radius: 100%;
+}
+.sectionOne .col-md-8 .ms-promlink-button-image {
+    margin: -7px 0 20px -7px;
+}
+.sectionOne #PageLinkPrev .ms-promlink-button-image::before {
+    font-family: FontAwesome;
+    content: "\f060";
+    position: relative;
+    top: -5px;
+    left: -1px;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+.sectionOne #PageLinkNext .ms-promlink-button-image::before {
+    font-family: FontAwesome;
+    content: "\f061";
+    position: relative;
+    top: -5px;
+    left: -1px;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+.sectionOne #PageLinkPrev img.ms-srch-pagingPrev, .sectionOne #PageLinkNext img.ms-srch-pagingNext {
+    display: none;
+}
+.ms-srch-sb-borderFocused {
+    border: none!important;
+    width: 100%
+}
+.col-md-8 .ms-srch-sbLarge-fullWidth {
+    width: 80%;
+}
+.col-md-8 #SearchBox {
+    padding: 8px 10px 3px 10px;
+    width: 100%;
+    max-width: 900px;}
+
+
+        #nav-search {
+    display: none;
 }

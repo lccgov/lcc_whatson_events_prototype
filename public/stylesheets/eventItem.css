@@ -7,7 +7,7 @@
   list-style: none; }
   .eventItem .btn {
     display: block;
-    margin: 0 20px 20px; }
+    margin: 20px; }
   .eventItem a {
     text-decoration: none; }
     .eventItem a:hover .details,
@@ -19,7 +19,8 @@
   .eventItem h3 {
     margin: 0 0 10px; }
   .eventItem .details {
-    padding: 20px; }
+    padding: 20px;
+    border-bottom: 1px solid #ECF0F1; }
   .eventItem .additionaldates {
     margin: 0;
     font-size: inherit;
@@ -64,3 +65,77 @@
   color: #333; }
   .selectedFilters a:visited:hover {
     color: #fff; }
+
+.iconLinks h2 {
+  text-align: center; }
+
+.dateTickets {
+  background: #f6f6f6;
+  margin: 0 0 50px 0;
+  display: block;
+  clear: both;
+  padding: 20px; }
+
+.dateTickets img {
+  float: right;
+  padding: 10px;
+  border: 1px solid #D5DFEA;
+  margin: 20px 0 0 0;
+  background: #fff;
+  margin-top: 20px;
+  max-width: 100%; }
+  @media (max-width: 767px) {
+    .dateTickets img {
+      width: 100%; } }
+
+.dateTickets .dateBox {
+  border: NONE;
+  background: transparent;
+  margin: 20px 0; }
+
+.dateTickets .dateBox li {
+  background: #fff;
+  width: 48%;
+  margin: 3% 1% 0 1%; }
+
+.dateTickets .dateBox li h2 {
+  font-weight: 300;
+  font-size: 1.5em; }
+
+.dateTickets .dateBox p {
+  color: #333;
+  margin: 0;
+  font-size: 13px !important; }
+
+.dateTickets .dateBox a {
+  font-size: 1em !important;
+  font-weight: 400 !important;
+  margin-top: 3%; }
+
+.dateTickets .dateBox,
+.dateTickets .contentBoxBorder {
+  margin: 0 !important; }
+
+.dateTickets .dateBox h2,
+.dateTickets .contentBoxBorder h2 {
+  background-color: transparent !important;
+  font-size: 1.5em;
+  padding: 15px; }
+
+.dateTickets .dateBox p,
+.dateTickets .contentBoxBorder p {
+  margin-bottom: 15px; }
+
+.dateTickets .dateBox p span,
+.dateTickets .contentBoxBorder p span {
+  font-weight: 300; }
+
+.dateTickets .contentBoxBorder {
+  display: block;
+  border: 0;
+  background: transparent !important;
+  border: 0 !important; }
+
+.dateTickets .contentBoxBorder .btn {
+  white-space: normal;
+  clear: left; }

@@ -72,32 +72,39 @@ $eventsfilter-hightlight-color:#89c23f;
 
 
 
-//@import 'base';
-//@import 'cookieBanner';
-//@import 'masterHead';
-@import 'mainMenu';
-@import 'breadcrumb';
-@import 'variables';
-@import 'mixins';
-//@import 'footer';
-@import 'promo';
-@import 'carousel';
-@import 'socialMedia';
-@import 'sideNavigation';
-//@import 'globalSearch';
-//@import 'typography';
-@import 'accordion';
-@import 'promoGroup';
-@import 'alerts';
-@import 'promoListwebpart';
-@import 'eventsWebparts';
-@import 'brandColors';
-@import 'sharepointOverides';
-@import 'iconLinks';
-//@import 'heroBanner';
-@import 'pageNavigation';
-@import '../sass/eventItem';
+@import 'base';
 
+@import '2010-typography-overrides';
+@import 'accordion';
+@import 'a-to-z';
+@import 'block-links';
+@import 'block-quote';
+@import 'brand-colors';
+@import 'carousel';
+@import 'content-link'; //subsite only
+@import 'description-list';
+@import 'doc-list'; //needs aligning with lcc_doc-list and a.doc within typography - DH
+@import 'events-search-results';
+@import 'events-webparts';
+@import 'group-promo';
+@import 'hero-banner';
+@import 'hero-banner-overlay'; //needs aligning with hero-bnner - RM
+@import 'icon-links';
+@import 'mega-promo';
+@import 'news';
+@import 'open-data'; //is it leeds.gov.uk specific? - does it need re-naming- DH
+@import 'journey-page';
+@import 'phase-banner'; //work needed to have in page beta banner
+@import 'polaroids'; //subsite only
+@import 'promo';
+@import 'promo-list-webpart'; //subsite only
+@import 'section-subsite'; //subsite only
+@import 'sharepoint-overrides'; 
+@import 'side-nav'; //needs aligning with side-navigation - DH & RM
+//@import 'side-navigation'; //needs aligning with side-nav - DH & RM
+//@import 'survey-webpart'; //is it leeds.gov specific? Relys on where-i-live which should be in the fet but renamed to search-panel - DH
+@import 'url-helper';
+//@import 'webchat';
 
 
 
@@ -106,6 +113,13 @@ $eventsfilter-hightlight-color:#89c23f;
 body{
     font-weight:300;
 }
+
+.btn{
+    text-decoration:none;
+}
+
+
+
 @media only screen and(max-width:768px){
 img{
     max-width:100%;
@@ -114,6 +128,12 @@ img{
 
 a{
     color:$base-link-color;
+    &:hover{
+        color:lighten($base-link-color,10%)
+    }
+    &:visited{
+      color:lighten($base-link-color,10%)
+    }
 }
 
 p {
@@ -127,7 +147,7 @@ p {
 // logo overides to accomodate diiferent logo aspect ratios
 .sectionHeader{
     padding:0px;
-    background: #016B61 url(../images/headerbackground.jpg) no-repeat center bottom;
+    background: #000c0c url(../images/headerbackground.jpg) no-repeat center bottom;
     min-height:275px;
 
  
@@ -136,7 +156,7 @@ p {
  .logo{
         height:192px;
         width:100%;
-        background:url(../images/logo.svg) center top no-repeat;
+        background:url(../images/logo.png) center top no-repeat;
         margin:20px 0;
 
         @media (max-width: 767px){
@@ -222,7 +242,7 @@ p {
 
 .sectionFive{
     color:#fff;
-   background:#318E7C url(../images/sectionFiveBack.jpg) no-repeat 50% bottom;
+   background:#866dae url(../images/sectionFiveBack.jpg) no-repeat 50% bottom;
     padding-bottom: 150px;
 
 &:after {
@@ -235,9 +255,15 @@ footer.main {
     background: #000 url("../images/footerLogos.png") no-repeat scroll 50% 40px;
     padding-top:220px;
 
- @media only screen and (max-width:800px){
-    background:#000;
-    padding-top:0px;
+ @media only screen and (max-width:900px){
+  background: #000 url("../images/footerLogosResponsiveM.png") no-repeat scroll 50% 40px;   
+  padding-top:400px;
+ }
+
+
+ @media only screen and (max-width:600px){
+    background: #000 url("../images/footerLogosResponsive.png") no-repeat scroll 50% 40px;
+    padding-top:600px;
  }
 
     .footer ul li a{
@@ -741,4 +767,100 @@ div.ms-rteElement-divRight.highlight h3 {
     a{
         color:#006da5;
     }
+}
+
+ .btn.btn-primary, .btn {
+    white-space: inherit;
+}
+
+@media only screen and (max-width: 600px){
+
+
+
+.promoListWebpart .contentLink a {
+   position:relative;
+   height:auto;
+
+   .info{
+    position:relative;
+   }
+}
+}
+
+@media only screen and (max-width: 500px){
+
+img{
+    width:100%;
+}
+}
+
+.sectionOne .ms-srch-result #Paging li {
+    display: inline;
+    margin: 0 3px;
+}
+.sectionOne .ms-srch-result #PagingLink a {
+    margin: 0px;
+    padding: 5px 15px;
+    position: relative;
+    top: 1px;
+    color: #fff;
+    background-color: $base-link-color;
+    display: inline-block;
+}
+.sectionOne .ms-srch-result #PagingSelf a {
+    margin: 0px;
+    padding: 5px 15px;
+    position: relative;
+    top: 1px;
+    color: #fff;
+    background-color:#333;
+    display: inline-block;
+}
+.sectionOne .ms-srch-result #Paging a:hover {
+    color: #fff;
+    background-color: #333;
+}
+.sectionOne li#PagingImageLink a {
+    padding: 16px;
+    border-radius: 100%;
+}
+.sectionOne .col-md-8 .ms-promlink-button-image {
+    margin: -7px 0 20px -7px;
+}
+.sectionOne #PageLinkPrev .ms-promlink-button-image::before {
+    font-family: FontAwesome;
+    content: "\f060";
+    position: relative;
+    top: -5px;
+    left: -1px;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+.sectionOne #PageLinkNext .ms-promlink-button-image::before {
+    font-family: FontAwesome;
+    content: "\f061";
+    position: relative;
+    top: -5px;
+    left: -1px;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+.sectionOne #PageLinkPrev img.ms-srch-pagingPrev, .sectionOne #PageLinkNext img.ms-srch-pagingNext {
+    display: none;
+}
+.ms-srch-sb-borderFocused {
+    border: none!important;
+    width: 100%
+}
+.col-md-8 .ms-srch-sbLarge-fullWidth {
+    width: 80%;
+}
+.col-md-8 #SearchBox {
+    padding: 8px 10px 3px 10px;
+    width: 100%;
+    max-width: 900px;}
+
+
+        #nav-search {
+    display: none;
 }

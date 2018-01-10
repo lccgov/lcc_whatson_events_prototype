@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,700,800,400,600');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,700,800,400,600');
 // available variables to change the brand colours as required
-// masterhead.scss
+    
 
 //$head-background: #ffffff;
 
@@ -13,7 +13,7 @@
 //base.scss
 
 $base-background-color:#fff;
-$base-font-size:18px ;
+$base-font-size:16px ;
 $base-font-color:#323232 ;
 $base-link-color:#59abe1 ;
 //$base-container-width:1500px ;
@@ -64,7 +64,7 @@ $main-nav-link:#3498db ;
 //$promo-group-li-background:#EDF2F5 ;
 //$promo-group-link-color:#216486 ;
 
-$accordion-color:#A93723;
+$accordion-color:#59abe1;
 
 
 //promolist webpart
@@ -96,31 +96,41 @@ $sectionFive-background-color:rgba(0,0,0,0.5);
 //$heroFontcolor:#fff; 
 
 $eventsfilter-hightlight-color:#333;
+$highlight:#0070ad;
 
-@import 'mixins';
-@import 'variables';
-@import 'brandColors';
+@import 'base';
 
-// available sass files please un-comment out as required
-
-//@import 'mainMenuSubsites';
-@import 'breadcrumb';
-@import 'sectionSubsite';
-@import 'promo';
-@import 'carousel';
-//@import 'socialMedia';
-//@import 'sideNavigation';
-//@import 'blockLinks';
+@import '2010-typography-overrides';
 @import 'accordion';
-@import 'promoGroup';
-@import 'alerts';
-@import 'promoListwebpart';
-@import 'eventsWebparts';
-@import 'sharepointOverides';
-@import 'iconLinks';
-@import 'heroBanner';
-@import 'pageNavigation';
-@import '../sass/eventItem';
+@import 'a-to-z';
+@import 'block-links';
+@import 'block-quote';
+@import 'brand-colors';
+@import 'carousel';
+@import 'content-link'; //subsite only
+@import 'description-list';
+@import 'doc-list'; //needs aligning with lcc_doc-list and a.doc within typography - DH
+@import 'events-search-results';
+@import 'events-webparts';
+@import 'group-promo';
+@import 'hero-banner';
+@import 'hero-banner-overlay'; //needs aligning with hero-bnner - RM
+@import 'icon-links';
+@import 'mega-promo';
+@import 'news';
+@import 'open-data'; //is it leeds.gov.uk specific? - does it need re-naming- DH
+@import 'journey-page';
+@import 'phase-banner'; //work needed to have in page beta banner
+@import 'polaroids'; //subsite only
+@import 'promo';
+@import 'promo-list-webpart'; //subsite only
+@import 'section-subsite'; //subsite only
+@import 'sharepoint-overrides'; 
+@import 'side-nav'; //needs aligning with side-navigation - DH & RM
+//@import 'side-navigation'; //needs aligning with side-nav - DH & RM
+//@import 'survey-webpart'; //is it leeds.gov specific? Relys on where-i-live which should be in the fet but renamed to search-panel - DH
+@import 'url-helper';
+//@import 'webchat';
 
 
 a:visited {
@@ -144,12 +154,12 @@ hr.ms-rteElement-spacer, hr.spacerTop, hr.spacerBottom {
 background:#2C3E50 url(../images/slide.svg) no-repeat right bottom -1px ; 
         
  .logo{
-        width: 150px;
+        width: 300px;
         margin: 35px 0;
         background-size: 100%;
         height: 150px;
         float: none;
-        background:url(../images/logo.svg) left center no-repeat;
+        background:url(../images/icecube-logo.svg) left center no-repeat;
         background-size:100%;
 
         @media (max-width: 767px){
@@ -159,11 +169,11 @@ background:#2C3E50 url(../images/slide.svg) no-repeat right bottom -1px ;
       }
 
       .header-right:after {
-    content: "FRI 27JAN - SUN 19FEB";
+    content: "FRI 2FEB - SUN 25FEB";
     letter-spacing: 8px;
     display: block;
     float: right;
-    background:orange;
+    background:$highlight;
     padding:20px 50px;
     color:#fff;
     font-weight:400;
@@ -186,7 +196,7 @@ background:#2C3E50 url(../images/slide.svg) no-repeat right bottom -1px ;
     color:#9ad6fd;
 }
 
-    p,h1,h2,h3,h4,h5{
+    p,h1,h2,h3,h4,h5, {
       display:inline-block;
       width:100%;
       max-width:59em;
@@ -194,19 +204,23 @@ background:#2C3E50 url(../images/slide.svg) no-repeat right bottom -1px ;
 
 .sectionOne{
         div.ms-rteElement-divFull, div.ms-rteElement-divRight, div.ms-rteElement-divRight50 {
-    border: 1px solid #ddd;
+    border: 1px solid #bbcada;
 
     h2 {
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #bbcada;
 
 }
 }
+}
+
+.page-navigation{
+    border-color:#bbcada;
 }
 // Main menu overides
 
  .main-nav {
 
-     border-bottom:1px solid darken(#f6f6f6,2%);
+     border-bottom:1px solid #bbcada;
 
     ul li a{
          font-size:18px;
@@ -214,10 +228,11 @@ background:#2C3E50 url(../images/slide.svg) no-repeat right bottom -1px ;
          font-family:$font-primary;
          font-weight:600;
          text-transform:uppercase;
+         text-decoration: none;
 
       &.selected  {
-            background:transparent !important;
-            color:orange;
+    
+            color:$highlight;
         }
 
     }
@@ -243,6 +258,14 @@ footer.main   {
 
     .footerGlobal{
         background:darken(#1A4C6D, 5%);
+    }
+
+    nav ul a{
+        text-decoration:none;
+
+        &:hover{
+            text-decoration:underline;
+        }
     }
 }
 
@@ -276,15 +299,12 @@ footer.main   {
 
 }
 
-@media only screen and (min-width:769px){
-.main-nav ul li {
-    display: inline;
-}
-}
+
 
 .openingHours{
-    background:#f6f6f6;
+    background:#fff;
     text-transform: uppercase;
+    border-bottom:1px solid #bbcada;
 
     
     ul{
@@ -304,7 +324,7 @@ footer.main   {
           
 
             &:first-of-type{
-               background:orange;
+               background:$highlight;
 
                @media only screen and (max-width:769px){
                    width:100%;
@@ -338,7 +358,7 @@ footer.main   {
         font-family: $font-primary;
         margin:0px;
         font-size:16px;
-        border-right:1px solid #ddd;
+        border-right:1px solid #bbcada;
         padding:0 30px;
         span{
             display:block;
@@ -389,7 +409,7 @@ footer.main   {
          .info{
               opacity: 1;
               filter: alpha(opacity=1);
-              border-right:1px solid #ddd;
+              border-right:1px solid #bbcada;
               font-weight:600;
 
 
@@ -414,13 +434,9 @@ footer.main   {
     }
 }
 
-//brand colors
-$color-red: #D02337;
-$color-black: #251611;
-$color-gold: #AC9155;
-$color-green: #5B824C;
 
-//links
+
+
 
 
 
@@ -436,7 +452,7 @@ $color-green: #5B824C;
 
 h1{
     font-size:40px;
-    margin:0 0 30px;
+    margin:30px 0 10px;
 }
 
 h2{
@@ -698,11 +714,11 @@ h1, h2, h3, h4, h5, ol, p, ul {
 }
 
 .connect li a:hover{
-    color:orange;
+    color:$highlight;
 }
 
 .connect li a:hover i{
-    background:orange;
+    background:$highlight;
 }
 
 @media (min-width: 990px) and (max-width: 1200px){
@@ -732,20 +748,7 @@ h1, h2, h3, h4, h5, ol, p, ul {
 //buttons
 
 .btn{
-    border-radius:0;
-    padding:16px 20px;
-    display:inline-block;
-    white-space: normal;
-    font-weight:normal;
-    font-size:20px;
-  
-    letter-spacing:0;
-    border:none;
 
-    &:after{
-        background:transparent;
-
-    }
     
     &.pdf{
         
@@ -785,7 +788,6 @@ h1, h2, h3, h4, h5, ol, p, ul {
 .btn-go{
     background:#00823b;
     color:#fff;
-    padding:20px 60px 20px 20px;
     font-size:20px;
     position:relative;
 }
@@ -825,7 +827,7 @@ h1, h2, h3, h4, h5, ol, p, ul {
 //highlight box
 
 div.highlight{
-    border:1px solid #bbcada;
+    border:1px solid $btn-background-color;
     padding:20px;
     display:inline-block;
     width:100%;
@@ -884,7 +886,7 @@ div.highlight.red{
 
 .highlight h2 i {
     margin: 0 10px 0 0;
-    color: #5B824C;
+    color: $highlight;
 }
 
 .highlight.black{
@@ -925,8 +927,8 @@ hr.brand {
         background-size:90%;
         margin:-30px auto 0 auto;
        border:3px solid #fff;
-       line-height:6em;
-       color:orange;
+       line-height:7em;
+       color:$highlight;
 
         
     }
@@ -1036,17 +1038,16 @@ article img{
 
 .travel-info h2 i{
     margin:0 10px 0 0;
-    color:#5B824C;
+    color:$highlight;
 }
 
 .btn-outline{
     font-size:20px;
     line-height:1.2;
     padding:20px 60px 20px 20px;
-    border:1px solid #5B824C;
+    border:1px solid $btn-background-color;
     text-align:left;
-    background:#fff;
-    color: #5B824C !important;
+    color: $btn-background-color !important ;
     position:relative;
 }
 
@@ -1065,7 +1066,7 @@ article img{
 
 
 .btn-outline:hover{
-    background:#5B824C;
+    background:$btn-background-color;
     color: #fff !important;
 }
 
@@ -1097,7 +1098,7 @@ article img{
 
 
 
-.panel-group, .concertina {
+.panel-group{
     margin: 20px 0 30px;
     display:inline-block;
     width:100%;
@@ -1117,23 +1118,17 @@ article img{
 }
 
 .panel-green>.panel-heading {
-    color: #5B824C !important;
+    color: $btn-background-color !important;
     background-color: #fff;
     border-radius:0;
     padding:0;
-    border:1px solid #5B824C;
+    border:1px solid $btn-background-color;
     position:relative;
 }
 
-.expandContent h3 {
-    background: transparent;
-    border: 0;
-    border-top: none;
-    margin: 0;
-    padding: 0;
-}
 
-.panel-green>.panel-heading h3, .concertina .expandContent h3{
+
+.panel-green>.panel-heading h3{
   
     font-size:20px;
     font-weight:normal;
@@ -1144,12 +1139,12 @@ article img{
     display:inline-block;
     width:100%;
     padding:20px 60px 20px 20px;
-    background:#5B824C;
+    background:$btn-background-color;
     text-decoration:none;
 }
 
-.panel-green>.panel-heading h3 a.collapsed, .concertina .expandContent h3 a{
-    color: #5B824C !important;
+.panel-green>.panel-heading h3 a.collapsed{
+    color: $btn-background-color !important;
     background:#fff;
     display:inline-block;
     width:100%;
@@ -1157,11 +1152,6 @@ article img{
     text-decoration:none;
 }
 
-.concertina .expandContent, .expandContent:first-of-type{
-    border:1px solid #5B824C;
-    margin-top: -1px;
-    position:relative;
-}
 
 .panel-green>.panel-heading h3 a:after, .concertina .expandContent h3.active a:after{
     content: '\f068';
@@ -1183,7 +1173,7 @@ article img{
 
 .panel-green>.panel-heading h3 a:hover, .concertina .expandContent h3 a:hover{
     color: #fff !important;
-    background:#5B824C !important;
+    background:$btn-background-color !important;
 }
 
 .expandContent div {
@@ -1192,7 +1182,7 @@ article img{
 
 
 .panel-green>.panel-heading+.panel-collapse>.panel-body {
-    border: 1px solid #5B824C;
+    border: 1px solid $btn-background-color;
     background: #ffffff;
 }
 
@@ -1208,12 +1198,52 @@ article img{
     display:none
 }
 
+ul.accordion
+{
+
+ border-color:#59abe1;   
+
+ li {
+    border: 1px solid #59abe1;
+    border-top:none;
+
+    a.header {
+    text-decoration:none;
+
+    &:after{
+    content: '\f067';
+    font-family: FontAwesome;
+    font-size:20px;
+    right:25px;
+}
+
+&.active:after{
+     content: '\f068';
+
+}
+
+
+
+    &:hover{
+        background:#59abe1;
+        color:#fff;
+
+        &:after{
+            color:#fff;
+        }
+        }
+    }
+}
+
+}
+
+
 //table
 
 .table {
     margin: 20px 0;
-    border: 1px solid lighten(#2C3E50,55%);
-    border-bottom: 1px solid lighten(#2C3E50,55%);
+    border: 1px solid $btn-background-color;
+    border-bottom: 1px solid $btn-background-color;
 }
 
 .table th{
@@ -1246,14 +1276,8 @@ article img{
     
 }
 
-/*accessibility*/
 
-a:focus, input[type=submit]:focus{
-    background:#FFBF47 !important;
-    color:#333 !important;
-    text-decoration:none;
-    text-shadow:none;
-}
+
 
 .external:after{
     content: '\f08e';
@@ -1268,35 +1292,11 @@ a:focus, input[type=submit]:focus{
 
     font-size: 16px;
     font-weight: 400;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #bbcada;
 
     a:link{
         text-decoration:none;
     }
-}
-
-//cookies
-
-#siteStatement {
-    background: #251611;
-    color: #fff;
-    
-    p{
-        
-        a{
-            color: #fff;
-            text-decoration: underline;
-            
-        }
-    }
-    
-    a.submit{
-        background: #5B824C;
-        display: inline-block;
-        color:#fff;
-        padding:15px;
-    }
-        
 }
 
 
@@ -1310,7 +1310,7 @@ a:focus, input[type=submit]:focus{
     position:relative;
     
     .promo-alert{
-            background:orange;
+            background:$highlight;
             padding:20px;
             color:#fff;
             position:absolute;
@@ -1418,3 +1418,82 @@ box-shadow: 3px 3px 5px 0px rgba(51,51,51,0.4);
     }
     
 }
+
+
+//sidenav
+.sideNav {
+    padding: 0px;
+    margin:30px 0;
+    border-bottom:5px solid #bbcada;
+    background:transparent;
+
+    h3{
+        margin:0;
+        background: $highlight;
+        color:#fff;
+        padding:20px 15px;
+    }
+
+    ul{
+        margin:0;
+        padding:0;
+
+        li{
+            margin: 0;
+            padding:0;
+
+            &:first-of-type a{
+                  background: $btn-background-color;
+                  color:#fff;
+                  padding:20px 15px;
+
+                   &.active, &.active:hover {
+                    color: #fff;
+                    background:$highlight !important;
+
+
+
+                }
+     
+            }
+
+            a {
+                font-size: 1.2em;
+                margin: 0;
+                padding: 20px 15px;
+                background: transparent;
+                width: 100%;
+                border-bottom: 1px solid #bbcada;
+                text-decoration:none !important;
+                font-weight:600;
+
+                &:hover{
+                    color: darken($base-link-color, 10%);
+                    background:#f2f2f2 !important;
+                }
+
+                &.active, &.active:hover {
+                    color: $highlight;
+                    background:transparent !important;
+                    cursor:default;
+                }
+            }
+        }
+
+      }
+
+    
+}
+
+.ms-core-listMenu-horizontalBox .ms-core-listMenu-selected, .ms-core-listMenu-horizontalBox .ms-core-listMenu-selected:link, .ms-core-listMenu-horizontalBox .ms-core-listMenu-selected:visited, .ms-core-listMenu-horizontalBox a.ms-core-listMenu-item.ms-core-listMenu-selected:hover, .ms-core-listMenu-horizontalBox a.ms-core-listMenu-item:hover, .ms-tv-selected:link, a.ms-tv-header:hover, a.ms-tv-item:hover {
+    background-color: #f2f2f2;
+    color: $highlight;
+}
+
+
+.ms-srch-sb > .ms-srch-sb-searchLink:before {
+    color:#0070ad;
+}
+
+
+
