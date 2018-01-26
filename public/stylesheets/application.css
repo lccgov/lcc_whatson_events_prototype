@@ -417,8 +417,8 @@ p.sharepoint,
     background: rgba(19, 62, 141, 0.1); }
   .text-highlight.text-highlight--green,
   .text-block.text-highlight--green {
-    border-color: green;
-    background: rgba(0, 128, 0, 0.1); }
+    border-color: #e7cc26;
+    background: rgba(231, 204, 38, 0.1); }
   .text-highlight.text-highlight--red,
   .text-block.text-highlight--red {
     border-color: #c0392b;
@@ -871,70 +871,70 @@ h2 + h3 {
 .form-group input.btn.btn-primary,
 .form-group input[type=submit],
 .limitedrte-Style-BUTTON {
-  background-color: green;
-  color: white;
-  border-color: green; }
+  background-color: #e7cc26;
+  color: #fff;
+  border-color: #e7cc26; }
   .btn-primary:hover,
   .form-group input[type=button]:hover,
   .form-group input.btn.btn-primary:hover,
   .form-group input[type=submit]:hover,
   .limitedrte-Style-BUTTON:hover {
-    background: #009a00;
-    color: white;
-    border-color: #009a00; }
+    background: #ead13d;
+    color: #fff;
+    border-color: #ead13d; }
   .btn-primary:active,
   .form-group input[type=button]:active,
   .form-group input.btn.btn-primary:active,
   .form-group input[type=submit]:active,
   .limitedrte-Style-BUTTON:active {
-    background: #004d00 !important;
-    color: white !important;
-    border-color: #004d00 !important; }
+    background: #c4ac16 !important;
+    color: #fff !important;
+    border-color: #c4ac16 !important; }
   .btn-primary:visited,
   .form-group input[type=button]:visited,
   .form-group input.btn.btn-primary:visited,
   .form-group input[type=submit]:visited,
   .limitedrte-Style-BUTTON:visited {
-    color: white; }
+    color: #fff; }
 
 .btn-secondary,
 .form-group input[type=button].btn-secondary {
-  background-color: blue;
-  color: white;
-  border-color: blue; }
+  background-color: green;
+  color: #fff;
+  border-color: green; }
   .btn-secondary:hover,
   .form-group input[type=button].btn-secondary:hover {
-    background: #1a1aff;
-    color: white;
-    border-color: #1a1aff; }
+    background: #009a00;
+    color: #fff;
+    border-color: #009a00; }
   .btn-secondary:active,
   .form-group input[type=button].btn-secondary:active {
-    background: #0000cc !important;
-    color: white !important;
-    border-color: #0000cc !important; }
+    background: #004d00 !important;
+    color: #fff !important;
+    border-color: #004d00 !important; }
   .btn-secondary:visited,
   .form-group input[type=button].btn-secondary:visited {
-    color: white; }
+    color: #fff; }
 
 .btn-outline,
 .form-group input[type=button].btn-outline {
-  background-color: blue;
-  color: blue;
-  border-color: blue;
+  background-color: #e7cc26;
+  color: #e7cc26;
+  border-color: #e7cc26;
   background: transparent !important; }
   .btn-outline:hover,
   .form-group input[type=button].btn-outline:hover {
-    background: #1a1aff;
-    color: blue;
-    border-color: #1a1aff; }
+    background: #ead13d;
+    color: #e7cc26;
+    border-color: #ead13d; }
   .btn-outline:active,
   .form-group input[type=button].btn-outline:active {
-    background: #0000cc !important;
-    color: blue !important;
-    border-color: #0000cc !important; }
+    background: #c4ac16 !important;
+    color: #e7cc26 !important;
+    border-color: #c4ac16 !important; }
   .btn-outline:visited,
   .form-group input[type=button].btn-outline:visited {
-    color: blue; }
+    color: #e7cc26; }
 
 form {
   width: 100%;
